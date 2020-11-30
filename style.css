@@ -1,0 +1,17 @@
+#accordionExample {
+    max-width:75%;
+
+}
+body {
+    background-color: #A35E60;
+}
+.hr{
+    border-color:#FCD16B;
+    width:75%;
+}
+
+#navBar {
+    width: 75%;
+    background-color:black;
+    color: pink;
+}
