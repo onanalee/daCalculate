@@ -6,8 +6,11 @@
 function convert2(){
     let unit = $('#lengthUnit option:selected').val();
     let unit2 = $('#lengthUnit2 option:selected').val();
-    console.log(unit);
-    console.log(unit2);
+    if (unit === '(m) meter' && unit2 === '(mi) mile') {
+        let before = $('#lengthBefore').val();
+        let after = before * 1.6
+        $('#lengthAfter').val(after);
+    }
 }
 
 function begin(){
