@@ -17,7 +17,7 @@
     </head>
 
 
-    <body>
+    <body onload="begin()">
         <select>
             <option value="en">English</option>
             <option value="kr">한국어</option>
@@ -51,25 +51,30 @@
 
 
         <section id="accordionAll">
-            <div class="accordion">
-                <div>Length</div>
-                <div>
+            <div class="accordion"  onclick="length()" >
+                <div class="title">Length</div>
+                <div class="length">
                     <input type="number">
                     <select>
+                        <option>(nm) nanometer</option>
+                        <option>(μm) micrometer</option>
                         <option>(mm) millimeter</option>
                         <option>(cm) centimeter</option>
                         <option>(m) meter</option>
                         <option>(km) kilometer</option>
-                        <option></option>
-                        <option>light-year</option>
                         <option>-----------</option>
-                        <option>inch</option>
-                        <option>feet</option>
-                        <option>yard</option>
-                        <option>mile</option>
-                        <option>nautical mile</option>
+                        <option>(in) inch</option>
+                        <option>(ft) feet</option>
+                        <option>(yd) yard</option>
+                        <option>(mi) mile</option>
+                        <option>-----------</option>
+                        <option>(nm) nautical mile</option>
+                        <option>(au) astronomical unit</option>
+                        <option>light-year</option>
                     </select>
+                    <br>
                     =
+                    <br>
                     <input type="number">
                     <select>
                         <option>cm</option>
@@ -77,13 +82,25 @@
                     </select>
                 </div>
             </div>
-            <div class="accordion">
-                <div>Weight</div>
-                <div>
+            <div class="accordion" onclick="weight()">
+                <div class="title">Weight</div>
+                <div class="weight">
                     <input type="number">
                     <select>
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>(ng) nanogram</option>
+                        <option>(µg) microgram</option>
+                        <option>(mg) milligram</option>
+                        <option>(g) gram</option>
+                        <option>(kg) kilogram</option>
+                        <option>(t) ton</option>
+                        <option>(Mt) megaton</option>
+                        <option>(Gt) Gigaton</option>
+                        <option>-----------</option>
+                        <option>(oz) ounce</option>
+                        <option>(lb) pound</option>
+                        <option>(st) stone</option>
+                        <option>US ton</option>
+                        <option>UK ton</option>
                     </select>
                     =
                     <input type="number">
@@ -94,33 +111,81 @@
 
                 </div>
             </div>
-            <div class="accordion">
-                <div>Area</div>
-                <div>
+            <div class="accordion" onclick="area()">
+                <div class="title">Area</div>
+                <div class="area">
                     <input type="number">
                     <select>
+                        <option>square nanometer</option>
+                        <option>square micrometer</option>
+                        <option>square millimeter</option>
+                        <option>square centimeter</option>
+                        <option>square meter</option>
+                        <option>square kilometer</option>
+                        <option>hectare</option>
+                        <option>-----------</option>
+                        <option>square inch</option>
+                        <option>square feet</option>
+                        <option>square yard</option>
+                        <option>acre</option>
+                        <option>square mile</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="accordion" onclick="volume()">
+                <div class="title">Volume</div>
+                <div class="volume">
+                    <input type="number">
+                    <select>
+                        <option>nanoliter</option>
+                        <option>microliter</option>
+                        <option>milliliter</option>
+                        <option>liter</option>
+                        <option>cm</option>
+                        <option>-----------</option>
+                        <option>cm</option>
+                        <option>cubic inch</option>
+                        <option>(fl oz) fluid ounce</option>
+                        <option>(pt) pint</option>
+                        <option>(qt) quart</option>
+                        <option>(gal) gallon</option>
                         <option>cm</option>
                         <option>m</option>
                     </select>
                 </div>
             </div>
-            <div class="accordion">
-                <div>Volume</div>
-                <div>
+            <div class="accordion" onclick="temperature()">
+                <div class="title">Temperature</div>
+                <div class="temperature">
                     <input type="number">
                     <select>
-                        <option>cm</option>
+                        <option>(°C) Celsius</option>
+                        <option>(°F) Fahrenheit</option>
+                        <option>(K) Kelvin</option>
                         <option>m</option>
                     </select>
                 </div>
             </div>
-            <div class="accordion">
-                <div>Temperature</div>
-                <div>
+            <div class="accordion" onclick="bytes()">
+                <div>Bytes</div>
+                <div class="bytes">
                     <input type="number">
                     <select>
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>byte</option>
+                        <option>kilobyte</option>
+                        <option>megabyte</option>
+                    </select>
+                </div>
+            </div>
+            <div class="accordion" onclick="pressure()">
+                <div class="title">Pressure</div>
+                <div class="pressure">
+                    <input type="number">
+                    <select>
+                        <option>byte</option>
+                        <option>kilobyte</option>
+                        <option>megabyte</option>
                     </select>
                 </div>
             </div>
