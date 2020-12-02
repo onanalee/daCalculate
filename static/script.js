@@ -1,16 +1,40 @@
-// function convert(){
-//     let hello = $('#lengthBefore').val();
-//     let bye = hello * 1.09361;
-//     $('#lengthAfter').val(bye);
-// }
-function convert2(){
+function convertLength(){
     let unit = $('#lengthUnit option:selected').val();
     let unit2 = $('#lengthUnit2 option:selected').val();
-    if (unit === '(m) meter' && unit2 === '(mi) mile') {
+    if (unit === '(km) kilometer' && unit2 === '(mi) mile') {
         let before = $('#lengthBefore').val();
         let after = before * 1.6
         $('#lengthAfter').val(after);
     }
+    if (unit === '(m) meter' && unit2 === '(km) kilometer') {
+        let before = $('#lengthBefore').val();
+        let after = before * (1/1000);
+        $('#lengthAfter').val(after);
+    }
+    if (unit === 'light-year' && unit2 === '(m) meter') {
+        let before = $('#lengthBefore').val();
+        let after = before * 9460730472580800;
+        $('#lengthAfter').val(after);
+    }
+}
+
+function convertWeight(){
+
+}
+function convertArea(){
+
+}
+function convertVolume(){
+
+}
+function convertTemperature(){
+
+}
+function convertByte(){
+
+}
+function convertPressure(){
+
 }
 
 function begin(){

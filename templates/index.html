@@ -51,7 +51,7 @@
 
 
         <section id="accordionAll">
-            <div class="accordion"  onclick="length()" >
+            <div class="accordion" onclick="length()">
                 <div class="title">Length</div>
                 <div class="length">
                     <input type="number" id="lengthBefore">
@@ -72,10 +72,10 @@
                         <option>(au) astronomical unit</option>
                         <option>light-year</option>
                     </select>
-                    <button onclick="convert2()">Convert</button>
-                    <br>
+                    <br><br>
+                    <button onclick="convertLength()">Convert</button>
+                    <br><br>
                     =
-                    <br>
                     <input type="number" id="lengthAfter">
                     <select id="lengthUnit2">
                         <option>(nm) nanometer</option>
@@ -99,8 +99,8 @@
             <div class="accordion" onclick="weight()">
                 <div class="title">Weight</div>
                 <div class="weight">
-                    <input type="number">
-                    <select>
+                    <input type="number" id="weightBefore">
+                    <select id="weightUnit">
                         <option>(ng) nanogram</option>
                         <option>(µg) microgram</option>
                         <option>(mg) milligram</option>
@@ -116,9 +116,12 @@
                         <option>US ton</option>
                         <option>UK ton</option>
                     </select>
+                    <br><br>
+                    <button onclick="convertWeight()">Convert</button>
+                    <br> <br>
                     =
-                    <input type="number">
-                    <select>
+                    <input type="number" id="weightAfter">
+                    <select id="weightUnit2">
                         <option>cm</option>
                         <option>m</option>
                     </select>
@@ -128,8 +131,8 @@
             <div class="accordion" onclick="area()">
                 <div class="title">Area</div>
                 <div class="area">
-                    <input type="number">
-                    <select>
+                    <input type="number" id="areaBefore">
+                    <select id="areaUnit">
                         <option>square nanometer</option>
                         <option>square micrometer</option>
                         <option>square millimeter</option>
@@ -143,15 +146,23 @@
                         <option>square yard</option>
                         <option>acre</option>
                         <option>square mile</option>
-
+                    </select>
+                    <br><br>
+                    <button onclick="convertArea()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="areaAfter">
+                    <select id="areaUnit2">
+                        <option>cm</option>
+                        <option>m</option>
                     </select>
                 </div>
             </div>
             <div class="accordion" onclick="volume()">
                 <div class="title">Volume</div>
                 <div class="volume">
-                    <input type="number">
-                    <select>
+                    <input type="number" id="volumeBefore">
+                    <select id="volumeUnit">
                         <option>nanoliter</option>
                         <option>microliter</option>
                         <option>milliliter</option>
@@ -167,16 +178,34 @@
                         <option>cm</option>
                         <option>m</option>
                     </select>
+                    <br><br>
+                    <button onclick="convertVolume()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="volumeAfter">
+                    <select id="volumeUnit2">
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
                 </div>
             </div>
             <div class="accordion" onclick="temperature()">
                 <div class="title">Temperature</div>
                 <div class="temperature">
-                    <input type="number">
-                    <select>
+                    <input type="number" id="temperatureBefore">
+                    <select id="temperatureUnit">
                         <option>(°C) Celsius</option>
                         <option>(°F) Fahrenheit</option>
                         <option>(K) Kelvin</option>
+                        <option>m</option>
+                    </select>
+                    <br><br>
+                    <button onclick="convertTemperature()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="temperatureAfter">
+                    <select id="temperatureUnit2">
+                        <option>cm</option>
                         <option>m</option>
                     </select>
                 </div>
@@ -184,27 +213,44 @@
             <div class="accordion" onclick="bytes()">
                 <div>Bytes</div>
                 <div class="bytes">
-                    <input type="number">
-                    <select>
+                    <input type="number" id="byteBefore">
+                    <select id="byteUnit">
                         <option>byte</option>
                         <option>kilobyte</option>
                         <option>megabyte</option>
+                    </select>
+                    <br><br>
+                    <button onclick="convertByte()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="byteAfter">
+                    <select id="byteUnit2">
+                        <option>cm</option>
+                        <option>m</option>
                     </select>
                 </div>
             </div>
             <div class="accordion" onclick="pressure()">
                 <div class="title">Pressure</div>
                 <div class="pressure">
-                    <input type="number">
-                    <select>
+                    <input type="number" id="pressureBefore">
+                    <select id="pressureUnit">
                         <option>byte</option>
                         <option>kilobyte</option>
                         <option>megabyte</option>
                     </select>
+                    <br><br>
+                    <button onclick="convertPressure()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="pressureAfter">
+                    <select id="pressureUnit2">
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
                 </div>
             </div>
         </section>
-
 
 
     </body>
