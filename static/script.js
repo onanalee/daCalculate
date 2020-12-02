@@ -1,3 +1,15 @@
+// function convert(){
+//     let hello = $('#lengthBefore').val();
+//     let bye = hello * 1.09361;
+//     $('#lengthAfter').val(bye);
+// }
+function convert2(){
+    let unit = $('#lengthUnit option:selected').val();
+    let unit2 = $('#lengthUnit2 option:selected').val();
+    console.log(unit);
+    console.log(unit2);
+}
+
 function begin(){
     $('.length').hide();
     $('.weight').hide();

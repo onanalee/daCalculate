@@ -57,7 +57,7 @@ body {
 
 .default {
     height: 50vh;
-    width: 10vw;
+    width: 20vw;
     color: rgba(255, 255, 255, 0.5);
     font-size: 12pt;
     overflow: hidden;
