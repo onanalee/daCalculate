@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Calculate</title>
+        <title>Da Calculate</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
               integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
               crossorigin="anonymous">
@@ -49,188 +49,270 @@
             </div>
         </nav>
 
-        <br>
-        <hr class="hr">
-        <hr class="hr">
-        <hr class="hr">
-        <hr class="hr">
-        <hr class="hr">
-        <br> <br>
 
-        <input type="number">
-        <select>
-            <option>mm</option>
-            <option>cm</option>
-            <option>m</option>
-            <option>km</option>
-        </select>
-        =
-        <select>
-            <option>inch</option>
-            <option>feet</option>
-            <option>miles</option>
-            <option>km</option>
-        </select>
-        <div id="collapse">
-            <p>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Length"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Length
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Area"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Area
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Weight"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Weight
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Volume"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Volume
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Temperature"
-                        aria-expanded="false" aria-controls="collapseExample">
-                    Temperature
-                </button>
-            </p>
-            <div class="collapse" id="Length">
-                <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
-                    Nihil
-                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        <section id="accordionAll">
+            <div class="accordion">
+                <div>Length</div>
+                <div>
+                    <input type="number">
+                    <select>
+                        <option>(mm) millimeter</option>
+                        <option>(cm) centimeter</option>
+                        <option>(m) meter</option>
+                        <option>(km) kilometer</option>
+                        <option></option>
+                        <option>light-year</option>
+                        <option>-----------</option>
+                        <option>inch</option>
+                        <option>feet</option>
+                        <option>yard</option>
+                        <option>mile</option>
+                        <option>nautical mile</option>
+                    </select>
+                    =
+                    <input type="number">
+                    <select>
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
                 </div>
             </div>
-            <div class="collapse" id="Area">
-                <div class="card card-body">
-                    Card example 2
+            <div class="accordion">
+                <div>Weight</div>
+                <div>
+                    <input type="number">
+                    <select>
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
+                    =
+                    <input type="number">
+                    <select>
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
+
                 </div>
             </div>
-            <div class="collapse" id="Weight">
-                <div class="card card-body">
-                    this is weight
+            <div class="accordion">
+                <div>Area</div>
+                <div>
+                    <input type="number">
+                    <select>
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
                 </div>
             </div>
-            <div class="collapse" id="Volume">
-                <div class="card card-body">
-                    this ivolume
+            <div class="accordion">
+                <div>Volume</div>
+                <div>
+                    <input type="number">
+                    <select>
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
                 </div>
             </div>
-            <div class="collapse" id="Temperature">
-                <div class="card card-body">
-                    this is temp
+            <div class="accordion">
+                <div>Temperature</div>
+                <div>
+                    <input type="number">
+                    <select>
+                        <option>cm</option>
+                        <option>m</option>
+                    </select>
                 </div>
             </div>
-        </div>
+        </section>
 
 
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Length
-                        </button>
-                    </h2>
-                </div>
+        <br><br>
+        <!--        <input type="number">-->
+        <!--        <select>-->
+        <!--            <option>mm</option>-->
+        <!--            <option>cm</option>-->
+        <!--            <option>m</option>-->
+        <!--            <option>km</option>-->
+        <!--        </select>-->
+        <!--        =-->
+        <!--        <select>-->
+        <!--            <option>inch</option>-->
+        <!--            <option>feet</option>-->
+        <!--            <option>miles</option>-->
+        <!--            <option>km</option>-->
+        <!--        </select>-->
+        <!--        <div id="collapse">-->
+        <!--            <p>-->
+        <!--                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#Length"-->
+        <!--                        aria-expanded="false" aria-controls="collapseExample">-->
+        <!--                    Length-->
+        <!--                </button>-->
+        <!--                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#Area"-->
+        <!--                        aria-expanded="false" aria-controls="collapseExample">-->
+        <!--                    Area-->
+        <!--                </button>-->
+        <!--                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#Weight"-->
+        <!--                        aria-expanded="false" aria-controls="collapseExample">-->
+        <!--                    Weight-->
+        <!--                </button>-->
+        <!--                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#Volume"-->
+        <!--                        aria-expanded="false" aria-controls="collapseExample">-->
+        <!--                    Volume-->
+        <!--                </button>-->
+        <!--                <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#Temperature"-->
+        <!--                        aria-expanded="false" aria-controls="collapseExample">-->
+        <!--                    Temperature-->
+        <!--                </button>-->
+        <!--            </p>-->
+        <!--            <div class="collapse" id="Length">-->
+        <!--                <div class="card-card-body">-->
+        <!--                    <div><input type="number"></div>-->
+        <!--                    <div><select>-->
+        <!--                        <option>mm</option>-->
+        <!--                        <option>cm</option>-->
+        <!--                        <option>m</option>-->
+        <!--                        <option>km</option>-->
+        <!--                    </select></div>-->
+        <!--                    =-->
+        <!--                    <select>-->
+        <!--                        <option>inch</option>-->
+        <!--                        <option>feet</option>-->
+        <!--                        <option>miles</option>-->
+        <!--                        <option>km</option>-->
+        <!--                    </select>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="collapse" id="Area">-->
+        <!--                <div class="card card-body">-->
+        <!--                    Card example 2-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="collapse" id="Weight">-->
+        <!--                <div class="card card-body">-->
+        <!--                    this is weight-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="collapse" id="Volume">-->
+        <!--                <div class="card card-body">-->
+        <!--                    this ivolume-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="collapse" id="Temperature">-->
+        <!--                <div class="card card-body">-->
+        <!--                    this is temp-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                     data-parent="#accordionExample">
-                    <div class="card-body">
 
-                        button<input type="button">
-                        checkbox<input type="checkbox">
-                        color<input type="color">
-                        <input type="date">
-                        <br>
-                        date time local<input type="datetime-local">
-                        file<input type="file">
-                        hidden<input type="hidden">
-                        <br>
-                        image<input type="image">
-                        month<input type="month">
-                        <br>
-                        number<input type="number">
-                        range<input type="range">
-                        <br>
-                        radio<input type="radio">
-                        <br>
-                        reset<input type="reset">
-                        search<input type="search">
-                        submit<input type="submit">
-                        <br>
-                        tel<input type="tel">
-                        url<input type="url">
-                        week<input type="week">
+        <!--        <div class="accordion" id="accordionExample">-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-header" id="headingOne">-->
+        <!--                    <h2 class="mb-0">-->
+        <!--                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"-->
+        <!--                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+        <!--                            Length-->
+        <!--                        </button>-->
+        <!--                    </h2>-->
+        <!--                </div>-->
 
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Weight
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+        <!--                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"-->
+        <!--                     data-parent="#accordionExample">-->
+        <!--                    <div class="card-body">-->
 
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Volume
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+        <!--                        button<input type="button">-->
+        <!--                        checkbox<input type="checkbox">-->
+        <!--                        color<input type="color">-->
+        <!--                        <input type="date">-->
+        <!--                        <br>-->
+        <!--                        date time local<input type="datetime-local">-->
+        <!--                        file<input type="file">-->
+        <!--                        hidden<input type="hidden">-->
+        <!--                        <br>-->
+        <!--                        image<input type="image">-->
+        <!--                        month<input type="month">-->
+        <!--                        <br>-->
+        <!--                        number<input type="number">-->
+        <!--                        range<input type="range">-->
+        <!--                        <br>-->
+        <!--                        radio<input type="radio">-->
+        <!--                        <br>-->
+        <!--                        reset<input type="reset">-->
+        <!--                        search<input type="search">-->
+        <!--                        submit<input type="submit">-->
+        <!--                        <br>-->
+        <!--                        tel<input type="tel">-->
+        <!--                        url<input type="url">-->
+        <!--                        week<input type="week">-->
 
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingFour">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Area
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur nderit, enim eiusmod high life a
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingFive">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Temperature
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-header" id="headingTwo">-->
+        <!--                    <h2 class="mb-0">-->
+        <!--                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"-->
+        <!--                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+        <!--                            Weight-->
+        <!--                        </button>-->
+        <!--                    </h2>-->
+        <!--                </div>-->
+        <!--                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">-->
+        <!--                    <div class="card-body">-->
+        <!--                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.-->
 
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-header" id="headingThree">-->
+        <!--                    <h2 class="mb-0">-->
+        <!--                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"-->
+        <!--                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+        <!--                            Volume-->
+        <!--                        </button>-->
+        <!--                    </h2>-->
+        <!--                </div>-->
+        <!--                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">-->
+        <!--                    <div class="card-body">-->
+        <!--                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.-->
+
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-header" id="headingFour">-->
+        <!--                    <h2 class="mb-0">-->
+        <!--                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"-->
+        <!--                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">-->
+        <!--                            Area-->
+        <!--                        </button>-->
+        <!--                    </h2>-->
+        <!--                </div>-->
+        <!--                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">-->
+        <!--                    <div class="card-body">-->
+        <!--                        Anim pariatur nderit, enim eiusmod high life a-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="card">-->
+        <!--                <div class="card-header" id="headingFive">-->
+        <!--                    <h2 class="mb-0">-->
+        <!--                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"-->
+        <!--                                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">-->
+        <!--                            Temperature-->
+        <!--                        </button>-->
+        <!--                    </h2>-->
+        <!--                </div>-->
+        <!--                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">-->
+        <!--                    <div class="card-body">-->
+        <!--                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.-->
+
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
 
     </body>

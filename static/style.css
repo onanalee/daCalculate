@@ -1,18 +1,74 @@
 #accordionExample {
-    max-width:75%;
-
+    max-width: 75%;
 }
+
 body {
     background-color: #A35E60;
 }
-.hr{
-    border-color:#FCD16B;
-    width:75%;
+
+.hr {
+    border-color: #FCD16B;
+    width: 75%;
 }
 
 #navBar {
     width: 75%;
 }
+
 #collapse {
     width: 75%;
 }
+
+.card cardbody {
+    width: 30%;
+}
+
+
+#accordionAll {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    top: 10vh;
+    left: 3vw;
+    min-height: 5vh;
+    width: 72vw;
+
+    transition: all 200ms ease-in-out 50ms;
+    opacity: 1;
+}
+
+
+
+.accordion {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    background: rgba(220, 220, 220, .5);
+    transition: all 200ms ease-in-out 50ms;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 16pt;
+}
+
+.default {
+    height: 50vh;
+    width: 10vw;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12pt;
+    overflow: hidden;
+
+}
+
+.expand {
+    height: 50vh;
+    width: 100vw;
+    background: #7ab7ff;
+    color: rgba(255, 255, 255, 1);
+    padding: 20px;
+}
+

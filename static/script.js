@@ -14,3 +14,21 @@ function generatePassword(length = 12) {
 
     $('#password').append(password);
 }
+
+$(function() {
+
+	window.setTimeout(function() {
+		$('#accordionAll').css('opacity', '1');
+	}, 500);
+
+	$('.accordion').addClass('default');
+
+		$('.accordion').on('click', function() {
+
+	  	var e = $('#accordionAll > .accordion');
+			if(e.hasClass('expand')){
+				 e.removeClass('expand');
+			 	$(this).addClass('expand');
+			} else { $(this).addClass('expand'); }
+		})
+})
