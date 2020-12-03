@@ -8,7 +8,7 @@ function convertWeight(){
         let after = before * 1;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(ng) nanogram' && unitB === '(μg) microgram') {
+    if (unitA === '(ng) nanogram' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 0.001;
         $('#weightAfter').val(after);
@@ -68,67 +68,67 @@ function convertWeight(){
         let after = before * 0.0000000000000011023;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) micro' && unitB === '(ng) nanogram') {
+    if (unitA === '(mcg) micro' && unitB === '(ng) nanogram') {
         let before = $('#weightBefore').val();
         let after = before * 1000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(μg) microgram') {
+    if (unitA === '(mcg) microgram' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(mg) milligram') {
+    if (unitA === '(mcg) microgram' && unitB === '(mg) milligram') {
         let before = $('#weightBefore').val();
         let after = before * 0.001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(g) gram') {
+    if (unitA === '(mcg) microgram' && unitB === '(g) gram') {
         let before = $('#weightBefore').val();
         let after = before * 0.000001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(kg) kilogram') {
+    if (unitA === '(mcg) microgram' && unitB === '(kg) kilogram') {
         let before = $('#weightBefore').val();
         let after = before * 0.000000001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(t) ton') {
+    if (unitA === '(mcg) microgram' && unitB === '(t) ton') {
         let before = $('#weightBefore').val();
         let after = before * 0.000000000001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(Kt) ton') {
+    if (unitA === '(mcg) microgram' && unitB === '(Kt) ton') {
         let before = $('#weightBefore').val();
         let after = before * 0.000000000000001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(Mt) megaton') {
+    if (unitA === '(mcg) microgram' && unitB === '(Mt) megaton') {
         let before = $('#weightBefore').val();
         let after = before * 0.000000000000000001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(Gt) gigaton') {
+    if (unitA === '(mcg) microgram' && unitB === '(Gt) gigaton') {
         let before = $('#weightBefore').val();
         let after = before * 0.000000000000000000001;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(oz) ounce') {
+    if (unitA === '(mcg) microgram' && unitB === '(oz) ounce') {
         let before = $('#weightBefore').val();
         let after = before * 0.000000035274;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === '(lb) pound') {
+    if (unitA === '(mcg) microgram' && unitB === '(lb) pound') {
         let before = $('#weightBefore').val();
         let after = before * 0.0000000022046;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === 'long ton') {
+    if (unitA === '(mcg) microgram' && unitB === 'long ton') {
         let before = $('#weightBefore').val();
         let after = before * 0.00000000000098421;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(μg) microgram' && unitB === 'short ton') {
+    if (unitA === '(mcg) microgram' && unitB === 'short ton') {
         let before = $('#weightBefore').val();
         let after = before * 0.0000000000011023;
         $('#weightAfter').val(after);
@@ -138,7 +138,7 @@ function convertWeight(){
         let after = before * 1000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(mg) milligram' && unitB === '(μg) microgram') {
+    if (unitA === '(mg) milligram' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000;
         $('#weightAfter').val(after);
@@ -203,7 +203,7 @@ function convertWeight(){
         let after = before * 1000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(g) gram' && unitB === '(μg) microgram') {
+    if (unitA === '(g) gram' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000000;
         $('#weightAfter').val(after);
@@ -268,7 +268,7 @@ function convertWeight(){
         let after = before * 1000000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(kg) kilogram' && unitB === '(μg) microgram') {
+    if (unitA === '(kg) kilogram' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000000000;
         $('#weightAfter').val(after);
@@ -333,7 +333,7 @@ function convertWeight(){
         let after = before * 1000000000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(t) ton' && unitB === '(μg) microgram') {
+    if (unitA === '(t) ton' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000000000000;
         $('#weightAfter').val(after);
@@ -398,7 +398,7 @@ function convertWeight(){
         let after = before * 1000000000000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(Kt) kiloton' && unitB === '(μg) microgram') {
+    if (unitA === '(Kt) kiloton' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000000000000000;
         $('#weightAfter').val(after);
@@ -463,7 +463,7 @@ function convertWeight(){
         let after = before * 1000000000000000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(Mt) megaton' && unitB === '(μg) microgram') {
+    if (unitA === '(Mt) megaton' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000000000000000000;
         $('#weightAfter').val(after);
@@ -528,7 +528,7 @@ function convertWeight(){
         let after = before * 1000000000000000000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(Gt) gigaton' && unitB === '(μg) microgram') {
+    if (unitA === '(Gt) gigaton' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1000000000000000000000;
         $('#weightAfter').val(after);
@@ -593,7 +593,7 @@ function convertWeight(){
         let after = before * 28349500000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(oz) ounce' && unitB === '(μg) microgram') {
+    if (unitA === '(oz) ounce' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 28349500;
         $('#weightAfter').val(after);
@@ -658,7 +658,7 @@ function convertWeight(){
         let after = before * 453592000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === '(lb) pound' && unitB === '(μg) microgram') {
+    if (unitA === '(lb) pound' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 453592000;
         $('#weightAfter').val(after);
@@ -723,7 +723,7 @@ function convertWeight(){
         let after = before * 1016050000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === 'long ton' && unitB === '(μg) microgram') {
+    if (unitA === 'long ton' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 1016050000000;
         $('#weightAfter').val(after);
@@ -788,7 +788,7 @@ function convertWeight(){
         let after = before * 907185000000000;
         $('#weightAfter').val(after);
     }
-    if (unitA === 'short ton' && unitB === '(μg) microgram') {
+    if (unitA === 'short ton' && unitB === '(mcg) microgram') {
         let before = $('#weightBefore').val();
         let after = before * 907185000000;
         $('#weightAfter').val(after);

@@ -4,37 +4,37 @@ function convertLength(){
 
     if (unitA === '(nm) nanometer' && unitB === '(nm) nanometer') {
         let before = $('#lengthBefore').val();
-        let after = before * 1
+        let after = before * 1;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(nm) nanometer' && unitB === '(μm) micrometer') {
+    if (unitA === '(nm) nanometer' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
-        let after = before * 0.001
+        let after = before * 0.001;
         $('#lengthAfter').val(after);
     }
     if (unitA === '(nm) nanometer' && unitB === '(mm) millimeter') {
         let before = $('#lengthBefore').val();
-        let after = before * 0.000001
+        let after = before * 0.000001;
         $('#lengthAfter').val(after);
     }
     if (unitA === '(nm) nanometer' && unitB === '(cm) centimeter') {
         let before = $('#lengthBefore').val();
-        let after = before * 0.0000001
+        let after = before * 0.0000001;
         $('#lengthAfter').val(after);
     }
     if (unitA === '(nm) nanometer' && unitB === '(m) meter') {
         let before = $('#lengthBefore').val();
-        let after = before * 0.000000001
+        let after = before * 0.000000001;
         $('#lengthAfter').val(after);
     }
     if (unitA === '(nm) nanometer' && unitB === '(km) kilometer') {
         let before = $('#lengthBefore').val();
-        let after = before * 0.000000000001
+        let after = before * 0.000000000001;
         $('#lengthAfter').val(after);
     }
     if (unitA === '(nm) nanometer' && unitB === '(in) inch') {
         let before = $('#lengthBefore').val();
-        let after = before * 0.00000003937007874
+        let after = before * 0.00000003937007874;
         $('#lengthAfter').val(after);
     }
     if (unitA === '(nm) nanometer' && unitB === '(ft) feet') {
@@ -67,67 +67,67 @@ function convertLength(){
         let after = before * 0.0000000000000000000000001057008707;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(nm) nanometer') {
+    if (unitA === '(mcm) micrometer' && unitB === '(nm) nanometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(μm) micrometer') {
+    if (unitA === '(mcm) micrometer' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(mm) millimeter') {
+    if (unitA === '(mcm) micrometer' && unitB === '(mm) millimeter') {
         let before = $('#lengthBefore').val();
         let after = before * 0.001;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(cm) centimeter') {
+    if (unitA === '(mcm) micrometer' && unitB === '(cm) centimeter') {
         let before = $('#lengthBefore').val();
         let after = before * 0.0001;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(m) meter') {
+    if (unitA === '(mcm) micrometer' && unitB === '(m) meter') {
         let before = $('#lengthBefore').val();
         let after = before * 0.000001;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(km) kilometer') {
+    if (unitA === '(mcm) micrometer' && unitB === '(km) kilometer') {
         let before = $('#lengthBefore').val();
         let after = before * 0.000000001;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(in) inch') {
+    if (unitA === '(mcm) micrometer' && unitB === '(in) inch') {
         let before = $('#lengthBefore').val();
         let after = before * 0.00003937007874
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(ft) feet') {
+    if (unitA === '(mcm) micrometer' && unitB === '(ft) feet') {
         let before = $('#lengthBefore').val();
         let after = before * 0.000003280839895;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(yd) yard') {
+    if (unitA === '(mcm) micrometer' && unitB === '(yd) yard') {
         let before = $('#lengthBefore').val();
         let after = before * 0.000001093613298;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(mi) mile') {
+    if (unitA === '(mcm) micrometer' && unitB === '(mi) mile') {
         let before = $('#lengthBefore').val();
         let after = before * 0.0000000006213688756;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(nm) nautical mile') {
+    if (unitA === '(mcm) micrometer' && unitB === '(nm) nautical mile') {
         let before = $('#lengthBefore').val();
         let after = before * 0.00000000053996;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === '(au) astronomical unit') {
+    if (unitA === '(mcm) micrometer' && unitB === '(au) astronomical unit') {
         let before = $('#lengthBefore').val();
         let after = before * 0.0000000000000000066846;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(μm) micrometer' && unitB === 'light-year') {
+    if (unitA === '(mcm) micrometer' && unitB === 'light-year') {
         let before = $('#lengthBefore').val();
         let after = before * 0.0000000000000000000001057;
         $('#lengthAfter').val(after);
@@ -137,12 +137,12 @@ function convertLength(){
         let after = before * 1000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(mm) millimeter' && unitB === '(μm) micrometer') {
+    if (unitA === '(mm) millimeter' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(mm) millimeter' && unitB === '(μm) millimeter') {
+    if (unitA === '(mm) millimeter' && unitB === '(mm) millimeter') {
         let before = $('#lengthBefore').val();
         let after = before * 1;
         $('#lengthAfter').val(after);
@@ -202,7 +202,7 @@ function convertLength(){
         let after = before * 10000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(cm) centimeter' && unitB === '(μm) micrometer') {
+    if (unitA === '(cm) centimeter' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 10000;
         $('#lengthAfter').val(after);
@@ -267,7 +267,7 @@ function convertLength(){
         let after = before * 1000000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(m) meter' && unitB === '(μm) micrometer') {
+    if (unitA === '(m) meter' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1000000;
         $('#lengthAfter').val(after);
@@ -332,7 +332,7 @@ function convertLength(){
         let after = before * 1000000000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(km) kilometer' && unitB === '(μm) micrometer') {
+    if (unitA === '(km) kilometer' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1000000000;
         $('#lengthAfter').val(after);
@@ -397,7 +397,7 @@ function convertLength(){
         let after = before * 25400000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(in) inch' && unitB === '(μm) micrometer') {
+    if (unitA === '(in) inch' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 25400;
         $('#lengthAfter').val(after);
@@ -462,7 +462,7 @@ function convertLength(){
         let after = before * 304800000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(ft) feet' && unitB === '(μm) micrometer') {
+    if (unitA === '(ft) feet' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 304800;
         $('#lengthAfter').val(after);
@@ -527,7 +527,7 @@ function convertLength(){
         let after = before * 914400000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(yd) yard' && unitB === '(μm) micrometer') {
+    if (unitA === '(yd) yard' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 914400;
         $('#lengthAfter').val(after);
@@ -592,7 +592,7 @@ function convertLength(){
         let after = before * 1609350000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(mi) mile' && unitB === '(μm) micrometer') {
+    if (unitA === '(mi) mile' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1609350000;
         $('#lengthAfter').val(after);
@@ -657,7 +657,7 @@ function convertLength(){
         let after = before * 1852000000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(nm) nautical mile' && unitB === '(μm) micrometer') {
+    if (unitA === '(nm) nautical mile' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 1852000000;
         $('#lengthAfter').val(after);
@@ -722,7 +722,7 @@ function convertLength(){
         let after = before * 149600000000000000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === '(au) astronomical unit' && unitB === '(μm) micrometer') {
+    if (unitA === '(au) astronomical unit' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 149600000000000000;
         $('#lengthAfter').val(after);
@@ -787,7 +787,7 @@ function convertLength(){
         let after = before * 9461000000000000000000000;
         $('#lengthAfter').val(after);
     }
-    if (unitA === 'light-year' && unitB === '(μm) micrometer') {
+    if (unitA === 'light-year' && unitB === '(mcm) micrometer') {
         let before = $('#lengthBefore').val();
         let after = before * 9461000000000000000000;
         $('#lengthAfter').val(after);
