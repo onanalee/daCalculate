@@ -14,6 +14,13 @@
                 crossorigin="anonymous"></script>
         <link rel="stylesheet" href="../static/style.css">
         <script src="../static/script.js"></script>
+        <script src="../static/length.js"></script>
+        <script src="../static/weight.js"></script>
+        <script src="../static/area.js"></script>
+        <script src="../static/volume.js"></script>
+        <script src="../static/temperature.js"></script>
+        <script src="../static/byte.js"></script>
+        <script src="../static/pressure.js"></script>
     </head>
 
 
@@ -106,14 +113,15 @@
                         <option>(g) gram</option>
                         <option>(kg) kilogram</option>
                         <option>(t) ton</option>
+                        <option>(Kt) kiloton</option>
                         <option>(Mt) megaton</option>
-                        <option>(Gt) Gigaton</option>
+                        <option>(Gt) gigaton</option>
                         <option>-----------</option>
                         <option>(oz) ounce</option>
                         <option>(lb) pound</option>
-                        <option>(st) stone</option>
-                        <option>US ton</option>
-                        <option>UK ton</option>
+                        <option>long ton</option>
+                        <option>short ton</option>
+
                     </select>
                     <br><br>
                     <button onclick="convertWeight()">Convert</button>
@@ -121,8 +129,20 @@
                     =
                     <input type="number" id="weightAfter">
                     <select id="weightUnitB">
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>(ng) nanogram</option>
+                        <option>(µg) microgram</option>
+                        <option>(mg) milligram</option>
+                        <option>(g) gram</option>
+                        <option>(kg) kilogram</option>
+                        <option>(t) ton</option>
+                        <option>(Kt) kiloton</option>
+                        <option>(Mt) megaton</option>
+                        <option>(Gt) gigaton</option>
+                        <option>-----------</option>
+                        <option>(oz) ounce</option>
+                        <option>(lb) pound</option>
+                        <option>long ton</option>
+                        <option>short ton</option>
                     </select>
 
                 </div>
@@ -152,8 +172,19 @@
                     =
                     <input type="number" id="areaAfter">
                     <select id="areaUnitB">
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>square nanometer</option>
+                        <option>square micrometer</option>
+                        <option>square millimeter</option>
+                        <option>square centimeter</option>
+                        <option>square meter</option>
+                        <option>square kilometer</option>
+                        <option>hectare</option>
+                        <option>-----------</option>
+                        <option>square inch</option>
+                        <option>square feet</option>
+                        <option>square yard</option>
+                        <option>acre</option>
+                        <option>square mile</option>
                     </select>
                 </div>
             </div>
@@ -162,20 +193,24 @@
                 <div class="volume">
                     <input type="number" id="volumeBefore">
                     <select id="volumeUnitA">
-                        <option>nanoliter</option>
-                        <option>microliter</option>
-                        <option>milliliter</option>
-                        <option>liter</option>
-                        <option>cm</option>
+                        <option>(nL) nanoliter</option>
+                        <option>(µL) microliter</option>
+                        <option>(mL) milliliter</option>
+                        <option>(L) liter</option>
+                        <option>(kL) kiloliter</option>
+                        <option>(mL) megaliter</option>
                         <option>-----------</option>
-                        <option>cm</option>
                         <option>cubic inch</option>
+                        <option>cubic feet</option>
+                        <option>cubic yard</option>
                         <option>(fl oz) fluid ounce</option>
                         <option>(pt) pint</option>
                         <option>(qt) quart</option>
                         <option>(gal) gallon</option>
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>cup</option>
+                        <option>tablespoon</option>
+                        <option>teaspoon</option>
+
                     </select>
                     <br><br>
                     <button onclick="convertVolume()">Convert</button>
@@ -196,7 +231,6 @@
                         <option>(°C) Celsius</option>
                         <option>(°F) Fahrenheit</option>
                         <option>(K) Kelvin</option>
-                        <option>m</option>
                     </select>
                     <br><br>
                     <button onclick="convertTemperature()">Convert</button>
@@ -204,8 +238,9 @@
                     =
                     <input type="number" id="temperatureAfter">
                     <select id="temperatureUnitB">
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>(°C) Celsius</option>
+                        <option>(°F) Fahrenheit</option>
+                        <option>(K) Kelvin</option>
                     </select>
                 </div>
             </div>
@@ -214,9 +249,15 @@
                 <div class="bytes">
                     <input type="number" id="byteBefore">
                     <select id="byteUnitA">
-                        <option>byte</option>
-                        <option>kilobyte</option>
-                        <option>megabyte</option>
+                        <option>(B) byte</option>
+                        <option>(KB) kilobyte</option>
+                        <option>(MB) megabyte</option>
+                        <option>(GB) gigabyte</option>
+                        <option>(TB) terabyte</option>
+                        <option>(TB) petabyte</option>
+                        <option>(TB) exabyte</option>
+                        <option>(TB) zettabyte</option>
+                        <option>(TB) yottabyte</option>
                     </select>
                     <br><br>
                     <button onclick="convertByte()">Convert</button>
@@ -224,8 +265,15 @@
                     =
                     <input type="number" id="byteAfter">
                     <select id="byteUnitB">
-                        <option>cm</option>
-                        <option>m</option>
+                        <option>(B) byte</option>
+                        <option>(KB) kilobyte</option>
+                        <option>(MB) megabyte</option>
+                        <option>(GB) gigabyte</option>
+                        <option>(TB) terabyte</option>
+                        <option>(TB) petabyte</option>
+                        <option>(TB) exabyte</option>
+                        <option>(TB) zettabyte</option>
+                        <option>(TB) yottabyte</option>
                     </select>
                 </div>
             </div>
