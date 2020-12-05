@@ -21,6 +21,7 @@
         <script src="../static/temperature.js"></script>
         <script src="../static/byte.js"></script>
         <script src="../static/pressure.js"></script>
+        <script src="../static/energy.js"></script>
     </head>
 
 
@@ -261,39 +262,7 @@
                     </select>
                 </div>
             </div>
-            <div class="accordion" onclick="bytes()">
-                <div>Bytes</div>
-                <div class="bytes">
-                    <input type="number" id="byteBefore">
-                    <select id="byteUnitA">
-                        <option>(B) byte</option>
-                        <option>(KB) kilobyte</option>
-                        <option>(MB) megabyte</option>
-                        <option>(GB) gigabyte</option>
-                        <option>(TB) terabyte</option>
-                        <option>(TB) petabyte</option>
-                        <option>(TB) exabyte</option>
-                        <option>(TB) zettabyte</option>
-                        <option>(TB) yottabyte</option>
-                    </select>
-                    <br><br>
-                    <button onclick="convertByte()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="byteAfter">
-                    <select id="byteUnitB">
-                        <option>(B) byte</option>
-                        <option>(KB) kilobyte</option>
-                        <option>(MB) megabyte</option>
-                        <option>(GB) gigabyte</option>
-                        <option>(TB) terabyte</option>
-                        <option>(TB) petabyte</option>
-                        <option>(TB) exabyte</option>
-                        <option>(TB) zettabyte</option>
-                        <option>(TB) yottabyte</option>
-                    </select>
-                </div>
-            </div>
+
             <div class="accordion" onclick="pressure()">
                 <div class="title">Pressure</div>
                 <div class="pressure">
@@ -322,6 +291,7 @@
                         <option>Joules</option>
                         <option>TNT</option>
                         <option>calories</option>
+                        <option> no kilo joules or kilo TNT...</option>
                     </select>
                     <br><br>
                     <button onclick="convertEnergy()">Convert</button>
@@ -332,6 +302,55 @@
                         <option>Joules</option>
                         <option>TNT</option>
                         <option>calories</option>
+                    </select>
+                </div>
+            </div>
+            <div class="accordion" onclick="bytes()">
+                <div>Bytes</div>
+                <div class="bytes">
+                    <input type="number" id="byteBefore">
+                    <select id="byteUnitA">
+                        <option>(b) bit</option>
+                        <option>(B) byte</option>
+                        <option>(KB) kilobyte</option>
+                        <option>(MB) megabyte</option>
+                        <option>(GB) gigabyte</option>
+                        <option>(TB) terabyte</option>
+                        <option>(PB) petabyte</option>
+                        <option>(EB) exabyte</option>
+                        <option>(ZB) zettabyte</option>
+                        <option>-----------</option>
+                        <option>(KiB) kibibyte</option>
+                        <option>(MiB) mebibyte</option>
+                        <option>(GiB) gibibyte</option>
+                        <option>(TiB) tebibyte</option>
+                        <option>(PiB) pebibyte</option>
+                        <option>(EiB) exbibyte</option>
+                        <option>(ZiB) zebibyte</option>
+                    </select>
+                    <br><br>
+                    <button onclick="convertByte()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="byteAfter">
+                    <select id="byteUnitB">
+                        <option>(b) bit</option>
+                        <option>(B) byte</option>
+                        <option>(KB) kilobyte</option>
+                        <option>(MB) megabyte</option>
+                        <option>(GB) gigabyte</option>
+                        <option>(TB) terabyte</option>
+                        <option>(PB) petabyte</option>
+                        <option>(EB) exabyte</option>
+                        <option>(ZB) zettabyte</option>
+                        <option>-----------</option>
+                        <option>(KiB) kibibyte</option>
+                        <option>(MiB) mebibyte</option>
+                        <option>(GiB) gibibyte</option>
+                        <option>(TiB) tebibyte</option>
+                        <option>(PiB) pebibyte</option>
+                        <option>(EiB) exbibyte</option>
+                        <option>(ZiB) zebibyte</option>
                     </select>
                 </div>
             </div>
