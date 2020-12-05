@@ -56,7 +56,7 @@
         </nav>
 
 
-        <section id="accordionAll">
+        <section class="accordionAll">
             <div class="accordion" onclick="length()">
                 <div class="title">Length</div>
                 <div class="length">
@@ -237,6 +237,9 @@
                     </select>
                 </div>
             </div>
+        </section>
+<br><br>
+        <section class="accordionAll">
             <div class="accordion" onclick="temperature()">
                 <div class="title">Temperature</div>
                 <div class="temperature">
@@ -308,6 +311,27 @@
                     <select id="pressureUnitB">
                         <option>cm</option>
                         <option>m</option>
+                    </select>
+                </div>
+            </div>
+            <div class="accordion" onclick="energy()">
+                <div class="title">Energy</div>
+                <div class="energy">
+                    <input type="number" id="energyBefore">
+                    <select id="energyUnitA">
+                        <option>Joules</option>
+                        <option>TNT</option>
+                        <option>calories</option>
+                    </select>
+                    <br><br>
+                    <button onclick="convertEnergy()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="energyAfter">
+                    <select id="energyUnitB">
+                        <option>Joules</option>
+                        <option>TNT</option>
+                        <option>calories</option>
                     </select>
                 </div>
             </div>

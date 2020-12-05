@@ -24,7 +24,7 @@ body {
 }
 
 
-#accordionAll {
+.accordionAll {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -56,7 +56,7 @@ body {
 }
 
 .default {
-    height: 50vh;
+    height: 30vh;
     width: 20vw;
     color: rgba(255, 255, 255, 0.5);
     font-size: 12pt;
@@ -65,7 +65,7 @@ body {
 }
 
 .expand {
-    height: 50vh;
+    height: 30vh;
     width: 100vw;
     background: #7ab7ff;
     color: rgba(255, 255, 255, 1);

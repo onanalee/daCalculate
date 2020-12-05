@@ -1,24 +1,18 @@
 function begin(){
-    $('.length').hide();
-    $('.weight').hide();
-    $('.area').hide();
-    $('.volume').hide();
-    $('.temperature').hide();
-    $('.bytes').hide();
-    $('.pressure').hide();
+    $('.length, .weight, .area, .volume, .temperature, .bytes, .pressure, .energy').hide();
 }
 
 
 $(function() {
 	window.setTimeout(function() {
-		$('#accordionAll').css('opacity', '1');
+		$('.accordionAll').css('opacity', '1');
 	}, 500);
 
 	$('.accordion').addClass('default');
 
 		$('.accordion').on('click', function() {
 
-	  	var e = $('#accordionAll > .accordion');
+	  	var e = $('.accordionAll > .accordion');
 			if(e.hasClass('expand')){
 				 e.removeClass('expand');
 			 	$(this).addClass('expand');
@@ -28,67 +22,37 @@ $(function() {
 
 function length() {
     $('.length').show();
-    $('.weight').hide();
-    $('.area').hide();
-    $('.volume').hide();
-    $('.temperature').hide();
-    $('.bytes').hide();
-    $('.pressure').hide();
+    $('.weight, .area, .volume, .temperature, .bytes, .pressure, .energy').hide();
+
 
 }
 function weight() {
     $('.weight').show();
-    $('.length').hide();
-    $('.area').hide();
-    $('.volume').hide();
-    $('.temperature').hide();
-    $('.bytes').hide();
-    $('.pressure').hide();
+    $('.length, .area, .volume, .temperature, .bytes, .pressure, .energy').hide();
 }
 function area() {
     $('.area').show();
-    $('.length').hide();
-    $('.weight').hide();
-    $('.volume').hide();
-    $('.temperature').hide();
-    $('.bytes').hide();
-    $('.pressure').hide();
+    $('.weight, .length, .volume, .temperature, .bytes, .pressure, .energy').hide();
 }
 function volume() {
     $('.volume').show();
-    $('.length').hide();
-    $('.weight').hide();
-    $('.area').hide();
-    $('.temperature').hide();
-    $('.bytes').hide();
-    $('.pressure').hide();
+    $('.weight, .area, .length, .temperature, .bytes, .pressure, .energy').hide();
 }
 function temperature() {
     $('.temperature').show();
-    $('.length').hide();
-    $('.weight').hide();
-    $('.area').hide();
-    $('.volume').hide();
-    $('.bytes').hide();
-    $('.pressure').hide();
+    $('.weight, .area, .volume, .length, .bytes, .pressure, .energy').hide();
 }
 function bytes() {
     $('.bytes').show();
-    $('.length').hide();
-    $('.weight').hide();
-    $('.area').hide();
-    $('.volume').hide();
-    $('.temperature').hide();
-    $('.pressure').hide();
+    $('.weight, .area, .volume, .temperature, .length, .pressure, .energy').hide();
 }
 function pressure() {
     $('.pressure').show();
-    $('.length').hide();
-    $('.weight').hide();
-    $('.area').hide();
-    $('.volume').hide();
-    $('.temperature').hide();
-    $('.bytes').hide();
+    $('.weight, .area, .volume, .temperature, .bytes, .length, .energy').hide();
+}
+function energy() {
+    $('.energy').show();
+    $('.weight, .area, .volume, .temperature, .bytes, .pressure, .length').hide();
 }
 
 function generatePassword(length = 12) {
