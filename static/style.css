@@ -3,16 +3,12 @@
 }
 
 body {
-    background-color: #A35E60;
-}
-
-.hr {
-    border-color: #FCD16B;
-    width: 75%;
+    background-color: #D9B08C;
 }
 
 #navBar {
     width: 75%;
+    background-color: #f2cc99;
 }
 
 #collapse {
@@ -22,7 +18,10 @@ body {
 .card cardbody {
     width: 30%;
 }
-
+button{
+    background-color:#FFDB58;
+    border-radius: 12px;
+}
 
 .accordionAll {
     box-sizing: border-box;
@@ -47,7 +46,8 @@ body {
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 3px;
-    background: rgba(220, 220, 220, .5);
+    background-color: #D1E8E2;
+    color: #116466;
     transition: all 200ms ease-in-out 50ms;
     font-family: Helvetica, Arial, Sans-Serif;
     font-weight: 500;
@@ -58,7 +58,8 @@ body {
 .default {
     height: 30vh;
     width: 20vw;
-    color: rgba(255, 255, 255, 0.5);
+    background-color: #D1E8E2;
+    color: #116466;
     font-size: 12pt;
     overflow: hidden;
 
@@ -67,8 +68,8 @@ body {
 .expand {
     height: 30vh;
     width: 100vw;
-    background: #7ab7ff;
-    color: rgba(255, 255, 255, 1);
+    background-color: #116466;
+    color: ghostwhite;
     padding: 20px;
 }
 
