@@ -9,6 +9,9 @@ db = client.dbdacalculate
 @app.route('/index')
 def home():
     return render_template('index.html')
+@app.route('/index/kr')
+def home_kr():
+    return render_template('indexKR.html')
 @app.route('/randomGenerator')
 def random():
     return render_template('randomGenerator.html')

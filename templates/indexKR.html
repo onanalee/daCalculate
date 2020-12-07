@@ -12,16 +12,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
                 crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./static/style.css">
-        <script src="./static/script.js"></script>
-        <script src="./static/length.js"></script>
-        <script src="./static/weight.js"></script>
-        <script src="./static/area.js"></script>
-        <script src="./static/volume.js"></script>
-        <script src="./static/temperature.js"></script>
-        <script src="./static/byte.js"></script>
-        <script src="./static/pressure.js"></script>
-        <script src="./static/energy.js"></script>
+        <link rel="stylesheet" href="../static/style.css">
+        <script src="../static/script.js"></script>
+        <script src="../static/length.js"></script>
+        <script src="../static/weight.js"></script>
+        <script src="../static/area.js"></script>
+        <script src="../static/volume.js"></script>
+        <script src="../static/temperature.js"></script>
+        <script src="../static/byte.js"></script>
+        <script src="../static/pressure.js"></script>
+        <script src="../static/energy.js"></script>
     </head>
 
 
@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="indexKR">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="time">Time</a>
@@ -59,7 +59,7 @@
 
         <section class="accordionAll">
             <div class="accordion" onclick="length()">
-                <div class="title">Length</div>
+                <div class="unitType">길이</div>
                 <div class="length">
                     <input type="number" id="lengthBefore">
                     <select id="lengthUnitA">
@@ -80,7 +80,7 @@
                         <option>light-year</option>
                     </select>
                     <br><br>
-                    <button onclick="convertLength()">Convert</button>
+                    <button class="convert" onclick="convertLength()">Convert</button>
                     <br><br>
                     =
                     <input type="number" id="lengthAfter">
@@ -104,7 +104,7 @@
                 </div>
             </div>
             <div class="accordion" onclick="weight()">
-                <div class="title">Weight</div>
+                <div class="unitType">무게</div>
                 <div class="weight">
                     <input type="number" id="weightBefore">
                     <select id="weightUnitA">
@@ -125,7 +125,7 @@
 
                     </select>
                     <br><br>
-                    <button onclick="convertWeight()">Convert</button>
+                    <button class="convert" onclick="convertWeight()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="weightAfter">
@@ -149,7 +149,7 @@
                 </div>
             </div>
             <div class="accordion" onclick="area()">
-                <div class="title">Area</div>
+                <div class="unitType">넓이</div>
                 <div class="area">
                     <input type="number" id="areaBefore">
                     <select id="areaUnitA">
@@ -168,7 +168,7 @@
                         <option>acre</option>
                     </select>
                     <br><br>
-                    <button onclick="convertArea()">Convert</button>
+                    <button class="convert" onclick="convertArea()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="areaAfter">
@@ -190,7 +190,7 @@
                 </div>
             </div>
             <div class="accordion" onclick="volume()">
-                <div class="title">Volume</div>
+                <div class="unitType">부피</div>
                 <div class="volume">
                     <input type="number" id="volumeBefore">
                     <select id="volumeUnitA">
@@ -213,7 +213,7 @@
                         <option>(gal) gallon</option>
                     </select>
                     <br><br>
-                    <button onclick="convertVolume()">Convert</button>
+                    <button class="convert" onclick="convertVolume()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="volumeAfter">
@@ -242,7 +242,7 @@
 <br><br>
         <section class="accordionAll">
             <div class="accordion" onclick="temperature()">
-                <div class="title">Temperature</div>
+                <div class="unitType">온도</div>
                 <div class="temperature">
                     <input type="number" id="temperatureBefore">
                     <select id="temperatureUnitA">
@@ -251,7 +251,7 @@
                         <option>(K) Kelvin</option>
                     </select>
                     <br><br>
-                    <button onclick="convertTemperature()">Convert</button>
+                    <button class="convert" onclick="convertTemperature()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="temperatureAfter">
@@ -264,7 +264,7 @@
             </div>
 
             <div class="accordion" onclick="pressure()">
-                <div class="title">Pressure</div>
+                <div class="unitType">압력</div>
                 <div class="pressure">
                     <input type="number" id="pressureBefore">
                     <select id="pressureUnitA">
@@ -274,7 +274,7 @@
                         <option>Torr</option>
                     </select>
                     <br><br>
-                    <button onclick="convertPressure()">Convert</button>
+                    <button class="convert" onclick="convertPressure()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="pressureAfter">
@@ -287,7 +287,7 @@
                 </div>
             </div>
             <div class="accordion" onclick="energy()">
-                <div class="title">Energy</div>
+                <div class="unitType">에너지</div>
                 <div class="energy">
                     <input type="number" id="energyBefore">
                     <select id="energyUnitA">
@@ -301,7 +301,7 @@
                         <option>(BTU) British thermal unit</option>
                     </select>
                     <br><br>
-                    <button onclick="convertEnergy()">Convert</button>
+                    <button class="convert" onclick="convertEnergy()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="energyAfter">
@@ -318,7 +318,7 @@
                 </div>
             </div>
             <div class="accordion" onclick="bytes()">
-                <div>Bytes</div>
+                <div class="unitType">바이트</div>
                 <div class="bytes">
                     <input type="number" id="byteBefore">
                     <select id="byteUnitA">
@@ -341,7 +341,7 @@
                         <option>(ZiB) zebibyte</option>
                     </select>
                     <br><br>
-                    <button onclick="convertByte()">Convert</button>
+                    <button class="convert" onclick="convertByte()">Convert</button>
                     <br> <br>
                     =
                     <input type="number" id="byteAfter">

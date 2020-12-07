@@ -18,7 +18,7 @@
 
 
 
-    <body>
+    <body onLoad="initClock()" >
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FCD16B;" id="navBar">
             <a class="navbar-brand">다 CALCULATE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -42,14 +42,21 @@
                 </ul>
             </div>
         </nav>
-
+<div id="timedate">
+    <a id="mon">January</a>
+    <a id="d">1</a>,
+    <a id="y">0</a><br />
+    <a id="h">12</a> :
+    <a id="m">00</a>:
+    <a id="s">00</a>
+  </div>
         <br>
         <hr class="hr">
         <hr class="hr">
         <br>
 
 
-        <div>display current time</div>
+        <div id="currentTime">display current time</div>
         time<input type="time">
         <input type="date">
 
