@@ -10,6 +10,8 @@ let	diffBooks = dueBooks - today;
 
 let remBooks = diffBooks / days;
 
+
+
 function convertTime() {
     let unitA = $('#timeUnitA option:selected').val();
     let unitB = $('#timeUnitB option:selected').val();
@@ -514,15 +516,4 @@ function convertTime() {
         let after = before * 52.143;
         $('#timeAfter').val(after);
     }
-
-
-
-
-
-
-
-
-
-
-    
 }

@@ -12,13 +12,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
                 crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../static/randomGenerator.css">
         <script src="../static/script.js"></script>
         <script src="../static/randomGenerator.js"></script>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/randomGenerator.css">
     </head>
 
 
-    <body onload="generatePassword()">
+    <body onload="generatePassword(); initClock()">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FCD16B;" id="navBar">
             <a class="navbar-brand">다 CALCULATE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -42,7 +43,20 @@
                 </ul>
             </div>
         </nav>
-        <h1>Lotto Generator</h1>
+        <div id="timeDate">
+            Current Time:
+            <a id="mon">January</a>
+            <a id="d">1</a>,
+            <a id="y">0</a><br/>
+            <a id="h">12</a> :
+            <a id="m">00</a>:
+            <a id="s">00</a>
+        </div>
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone">Tab One</label>
+            <div class="tab">
+                <h1>Lotto Generator</h1>
 
         <div class="position floatfix">
 
@@ -99,6 +113,27 @@
         </div>
 
         <button type="button" id="generate" class="clearfix" onclick="generateLotto()">Generate</button>
+            </div>
+
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo">Tab Two</label>
+            <div class="tab">
+                <h1>Tab Two Content</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <input type="radio" name="tabs" id="tabthree">
+            <label for="tabthree">Tab Three</label>
+            <div class="tab">
+                <h1>Tab Three Content</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
         <br>
 
         <br> <br>

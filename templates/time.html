@@ -12,7 +12,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
                 crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/time.css">
+
         <script src="../static/script.js"></script>
         <script src="../static/time.js"></script>
     </head>
@@ -52,39 +55,60 @@
             <a id="s">00</a>
         </div>
         <br><br>
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tabone" checked="checked">
+            <label for="tabone">Time Unit Converter</label>
+            <div class="tab">
+                <div class="unitType">Time Unit Converter</div>
+                <div class="time">
+                    <input type="number" id="timeBefore">
+                    <select id="timeUnitA">
+                        <option>nanoseconds</option>
+                        <option>microseconds</option>
+                        <option>milliseconds</option>
+                        <option>seconds</option>
+                        <option>minutes</option>
+                        <option>hours</option>
+                        <option>days</option>
+                        <option>weeks</option>
+                        <option>months</option>
+                        <option>years</option>
+                    </select>
+                    <br><br>
+                    <button class="convert" onclick="convertTime()">Convert</button>
+                    <br> <br>
+                    =
+                    <input type="number" id="timeAfter">
+                    <select id="timeUnitB">
+                        <option>nanoseconds</option>
+                        <option>microseconds</option>
+                        <option>milliseconds</option>
+                        <option>seconds</option>
+                        <option>minutes</option>
+                        <option>hours</option>
+                        <option>days</option>
+                        <option>weeks</option>
+                        <option>months</option>
+                        <option>years</option>
+                    </select>
+                </div>
+            </div>
 
-        <div class="unitType">Time</div>
-        <div class="time">
-            <input type="number" id="timeBefore">
-            <select id="timeUnitA">
-                <option>nanoseconds</option>
-                <option>microseconds</option>
-                <option>milliseconds</option>
-                <option>seconds</option>
-                <option>minutes</option>
-                <option>hours</option>
-                <option>days</option>
-                <option>weeks</option>
-                <option>months</option>
-                <option>years</option>
-            </select>
-            <br><br>
-            <button class="convert" onclick="convertTime()">Convert</button>
-            <br> <br>
-            =
-            <input type="number" id="timeAfter">
-            <select id="timeUnitB">
-                <option>nanoseconds</option>
-                <option>microseconds</option>
-                <option>milliseconds</option>
-                <option>seconds</option>
-                <option>minutes</option>
-                <option>hours</option>
-                <option>days</option>
-                <option>weeks</option>
-                <option>months</option>
-                <option>years</option>
-            </select>
+            <input type="radio" name="tabs" id="tabtwo">
+            <label for="tabtwo">Tab Two</label>
+            <div class="tab">
+                <h1>Tab Two Content</h1>
+                <input type="date">
+            </div>
+
+            <input type="radio" name="tabs" id="tabthree">
+            <label for="tabthree">Tab Three</label>
+            <div class="tab">
+                <h1>Tab Three Content</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
         </div>
+
+
     </body>
 </html>

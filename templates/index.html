@@ -25,14 +25,14 @@
     </head>
 
 
-    <body onload="begin()">
+    <body onload="begin(); initClock()">
         <select>
             <option value="en">English</option>
             <option value="kr">한국어</option>
         </select>
 
 
-        <nav class="navbar navbar-expand-lg navbar-light"  id="navBar">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navBar">
             <a class="navbar-brand">다 CALCULATE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,15 @@
                 </ul>
             </div>
         </nav>
-
+        <div id="timeDate">
+            Current Time:
+            <a id="mon">January</a>
+            <a id="d">1</a>,
+            <a id="y">0</a><br/>
+            <a id="h">12</a> :
+            <a id="m">00</a>:
+            <a id="s">00</a>
+        </div>
 
         <section class="accordionAll">
             <div class="accordion" onclick="length()">
@@ -239,7 +247,7 @@
                 </div>
             </div>
         </section>
-<br><br>
+        <br><br>
         <section class="accordionAll">
             <div class="accordion" onclick="temperature()">
                 <div class="unitType">Temperature</div>
