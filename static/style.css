@@ -18,8 +18,9 @@ body {
 .card cardbody {
     width: 30%;
 }
-.convert{
-    background-color:#FFDB58;
+
+.convert {
+    background-color: #FFDB58;
     border-radius: 12px;
 }
 
@@ -40,7 +41,6 @@ body {
 }
 
 
-
 .accordion {
     margin-left: 5px;
     margin-right: 5px;
@@ -53,7 +53,8 @@ body {
     cursor: pointer;
     font-size: 16pt;
 }
-.unitType{
+
+.unitType {
     font-size: 1.5em;
     text-align: center;
 }
@@ -76,12 +77,13 @@ body {
 }
 
 
-#timedate {
-  font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  text-align:left;
-  width: 50%;
-  margin: 40px auto;
-  color:#fff;
-  border-left: 3px solid #ed1f24;
-  padding: 20px;
+#timeDate {
+    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    float: right;
+    text-align: left;
+    width: 25%;
+    /*margin: 0px auto;*/
+    color: #fff;
+    border-left: 3px solid #ed1f24;
+    padding: 20px;
 }

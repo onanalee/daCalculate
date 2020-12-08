@@ -25,8 +25,6 @@ $(function () {
 function length() {
     $('.length').show();
     $('.weight, .area, .volume, .temperature, .bytes, .pressure, .energy').hide();
-
-
 }
 
 function weight() {
@@ -64,20 +62,7 @@ function energy() {
     $('.weight, .area, .volume, .temperature, .bytes, .pressure, .length').hide();
 }
 
-function generatePassword(length = 12) {
-    $('#password').empty();
-    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    var numbers = '0123456789';
-    var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
-    var all = uppercase + lowercase + numbers + symbols;
-    var password = '';
-    for (var index = 0; index < length; index++) {
-        var character = Math.floor(Math.random() * all.length);
-        password += all.substring(character, character + 1);
-    }
-    $('#password').append(password);
-}
+
 
 
 
@@ -89,18 +74,18 @@ Number.prototype.pad = function(n) {
 };
 
 function updateClock() {
-  var now = new Date();
-  var
+  let now = new Date();
+  let
     sec = now.getSeconds(),
     min = now.getMinutes(),
     hou = now.getHours(),
     mo = now.getMonth(),
     dy = now.getDate(),
     yr = now.getFullYear();
-  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  var tags = ["mon", "d", "y", "h", "m", "s"],
+  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let tags = ["mon", "d", "y", "h", "m", "s"],
     corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2)];
-  for (var i = 0; i < tags.length; i++)
+  for (let i = 0; i < tags.length; i++)
     document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
 }
 
@@ -110,3 +95,4 @@ function initClock() {
 }
 
 // END CLOCK SCRIPT
+
