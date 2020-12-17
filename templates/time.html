@@ -95,15 +95,36 @@
             </div>
 
             <input type="radio" name="tabs" id="tabtwo">
-            <label for="tabtwo">Tab Two</label>
+            <label for="tabtwo">Calendar Calculate</label>
             <div class="tab">
-                <input id="dateInput" type="date">
-                <button id="dateSubmit" onclick="dateCalculate()">submit</button>
-                <div>How many days left from today?</div>
-                <div><input type="number"> days after the above date</div>
-                <div><input type="number"> days before the above date</div>
-                <div>How many days left from today?</div>
+                <h3>Days between two dates </h3>
+                <div>start date: <input type="date" class="startDate"></div>
+                <div>end date:<input type="date" class="endDate">
+                    <button id="dateSubmit" onclick="dateCalculate()">Calculate</button>
+                </div>
+                <div>Result: <input type="number"></div>
+
+
+                <br><br>
+
+
+                <h3> Add or subtract from a date: </h3>
+                <div>start date: <input type="date"></div>
+                <div>
+                    <select>
+                        <option>+ (Add)</option>
+                        <option>- (subtract)</option>
+                    </select>
+                </div>
+                <input type="number"> days
+                <input type="number"> weeks
+                <input type="number"> months
+                <input type="number"> years
+                <div>Result: <input type="number"></div>
             </div>
+
+
+
 
             <input type="radio" name="tabs" id="tabthree">
             <label for="tabthree">Time Zones</label>

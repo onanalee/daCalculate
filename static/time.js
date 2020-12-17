@@ -1,22 +1,34 @@
+//CALENDAR CALCULATE
 function dateCalculate() {
-    var date = new Date($('#dateInput').val());
+    let date = new Date($('.startDate').val());
     day = date.getDate();
     month = date.getMonth() + 1;
     year = date.getFullYear();
     console.log([day, month, year].join('/'));
 }
 
+function day() {
+    let today = new Date();
+    let days = 1000 * 68 * 60 * 24;
+    let set = new Date(date);
+    let diff = (today - set) / days;
+    console.log(diff);
+}
+
 let today = new Date();
 let days = 1000 * 60 * 60 * 24;
 
 
-// read all the books in the room
-
 let dueBooks = new Date("December 31, 2021");
-let	diffBooks = dueBooks - today;
+let diffBooks = dueBooks - today;
 
 let remBooks = diffBooks / days;
 
+
+//TIME ZONES
+
+
+//TIME UNIT CONVERTER
 
 function convertTime() {
     let unitA = $('#timeUnitA option:selected').val();
