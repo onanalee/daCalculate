@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="time">Time</a>
@@ -97,15 +97,24 @@
             <input type="radio" name="tabs" id="tabtwo">
             <label for="tabtwo">Tab Two</label>
             <div class="tab">
-                <h1>Tab Two Content</h1>
-                <input type="date">
+                <input id="dateInput" type="date">
+                <button id="dateSubmit" onclick="dateCalculate()">submit</button>
+                <div>How many days left from today?</div>
+                <div><input type="number"> days after the above date</div>
+                <div><input type="number"> days before the above date</div>
+                <div>How many days left from today?</div>
             </div>
 
             <input type="radio" name="tabs" id="tabthree">
-            <label for="tabthree">Tab Three</label>
+            <label for="tabthree">Time Zones</label>
             <div class="tab">
-                <h1>Tab Three Content</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div>Current time in ...</div>
+                <div>Time zone calculator</div>
+                <div>
+                    <select>
+                        <option></option>
+                    </select>
+                </div>
             </div>
         </div>
 

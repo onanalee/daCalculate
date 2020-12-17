@@ -6,10 +6,10 @@ app = Flask(__name__)
 client = MongoClient('localhost', 27017)
 db = client.dbdacalculate
 
-@app.route('/index')
+@app.route('/')
 def home():
     return render_template('index.html')
-@app.route('/index/kr')
+@app.route('/kr')
 def home_kr():
     return render_template('indexKR.html')
 @app.route('/randomGenerator')

@@ -1,3 +1,10 @@
+function dateCalculate() {
+    var date = new Date($('#dateInput').val());
+    day = date.getDate();
+    month = date.getMonth() + 1;
+    year = date.getFullYear();
+    console.log([day, month, year].join('/'));
+}
 
 let today = new Date();
 let days = 1000 * 60 * 60 * 24;
@@ -9,7 +16,6 @@ let dueBooks = new Date("December 31, 2021");
 let	diffBooks = dueBooks - today;
 
 let remBooks = diffBooks / days;
-
 
 
 function convertTime() {
@@ -38,27 +44,27 @@ function convertTime() {
     }
     if (unitA === 'nanoseconds' && unitB === 'minutes') {
         let before = $('#timeBefore').val();
-        let after = before * (1/60000000000);
+        let after = before * (1 / 60000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'nanoseconds' && unitB === 'hours') {
         let before = $('#timeBefore').val();
-        let after = before * (1/3600000000000);
+        let after = before * (1 / 3600000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'nanoseconds' && unitB === 'days') {
         let before = $('#timeBefore').val();
-        let after = before * (1/ 86400000000000);
+        let after = before * (1 / 86400000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'nanoseconds' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/2628000000000000);
+        let after = before * (1 / 2628000000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'nanoseconds' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/31540000000000000);
+        let after = before * (1 / 31540000000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'microseconds' && unitB === 'nanoseconds') {
@@ -83,27 +89,27 @@ function convertTime() {
     }
     if (unitA === 'microseconds' && unitB === 'minutes') {
         let before = $('#timeBefore').val();
-        let after = before * (1/60000000);
+        let after = before * (1 / 60000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'microseconds' && unitB === 'hours') {
         let before = $('#timeBefore').val();
-        let after = before * (1/3600000000);
+        let after = before * (1 / 3600000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'microseconds' && unitB === 'days') {
         let before = $('#timeBefore').val();
-        let after = before * (1/ 86400000000);
+        let after = before * (1 / 86400000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'microseconds' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/2628000000000);
+        let after = before * (1 / 2628000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'microseconds' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/31540000000000);
+        let after = before * (1 / 31540000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'milliseconds' && unitB === 'nanoseconds') {
@@ -128,27 +134,27 @@ function convertTime() {
     }
     if (unitA === 'milliseconds' && unitB === 'minutes') {
         let before = $('#timeBefore').val();
-        let after = before * (1/60000);
+        let after = before * (1 / 60000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'milliseconds' && unitB === 'hours') {
         let before = $('#timeBefore').val();
-        let after = before * (1/3600000);
+        let after = before * (1 / 3600000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'milliseconds' && unitB === 'days') {
         let before = $('#timeBefore').val();
-        let after = before * (1/ 86400000);
+        let after = before * (1 / 86400000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'milliseconds' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/2628000000);
+        let after = before * (1 / 2628000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'milliseconds' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/31540000000);
+        let after = before * (1 / 31540000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'seconds' && unitB === 'nanoseconds') {
@@ -173,27 +179,27 @@ function convertTime() {
     }
     if (unitA === 'seconds' && unitB === 'minutes') {
         let before = $('#timeBefore').val();
-        let after = before * (1/60);
+        let after = before * (1 / 60);
         $('#timeAfter').val(after);
     }
     if (unitA === 'seconds' && unitB === 'hours') {
         let before = $('#timeBefore').val();
-        let after = before * (1/3600);
+        let after = before * (1 / 3600);
         $('#timeAfter').val(after);
     }
     if (unitA === 'seconds' && unitB === 'days') {
         let before = $('#timeBefore').val();
-        let after = before * (1/ 86400);
+        let after = before * (1 / 86400);
         $('#timeAfter').val(after);
     }
     if (unitA === 'seconds' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/2628000);
+        let after = before * (1 / 2628000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'seconds' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/31540000);
+        let after = before * (1 / 31540000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'minutes' && unitB === 'nanoseconds') {
@@ -223,22 +229,22 @@ function convertTime() {
     }
     if (unitA === 'minutes' && unitB === 'hours') {
         let before = $('#timeBefore').val();
-        let after = before * (1/60);
+        let after = before * (1 / 60);
         $('#timeAfter').val(after);
     }
     if (unitA === 'minutes' && unitB === 'days') {
         let before = $('#timeBefore').val();
-        let after = before * (1/1440);
+        let after = before * (1 / 1440);
         $('#timeAfter').val(after);
     }
     if (unitA === 'minutes' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/43800);
+        let after = before * (1 / 43800);
         $('#timeAfter').val(after);
     }
     if (unitA === 'minutes' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/525600);
+        let after = before * (1 / 525600);
         $('#timeAfter').val(after);
     }
     if (unitA === 'hours' && unitB === 'nanoseconds') {
@@ -273,17 +279,17 @@ function convertTime() {
     }
     if (unitA === 'hours' && unitB === 'days') {
         let before = $('#timeBefore').val();
-        let after = before * (1/24);
+        let after = before * (1 / 24);
         $('#timeAfter').val(after);
     }
     if (unitA === 'hours' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/730);
+        let after = before * (1 / 730);
         $('#timeAfter').val(after);
     }
     if (unitA === 'hours' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/8760);
+        let after = before * (1 / 8760);
         $('#timeAfter').val(after);
     }
     if (unitA === 'days' && unitB === 'nanoseconds') {
@@ -323,12 +329,12 @@ function convertTime() {
     }
     if (unitA === 'days' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/30);
+        let after = before * (1 / 30);
         $('#timeAfter').val(after);
     }
     if (unitA === 'days' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/365);
+        let after = before * (1 / 365);
         $('#timeAfter').val(after);
     }
     if (unitA === 'months' && unitB === 'nanoseconds') {
@@ -373,7 +379,7 @@ function convertTime() {
     }
     if (unitA === 'months' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/12);
+        let after = before * (1 / 12);
         $('#timeAfter').val(after);
     }
     if (unitA === 'years' && unitB === 'nanoseconds') {
@@ -463,52 +469,52 @@ function convertTime() {
     }
     if (unitA === 'weeks' && unitB === 'months') {
         let before = $('#timeBefore').val();
-        let after = before * (1/4.345);
+        let after = before * (1 / 4.345);
         $('#timeAfter').val(after);
     }
     if (unitA === 'weeks' && unitB === 'years') {
         let before = $('#timeBefore').val();
-        let after = before * (1/52.143);
+        let after = before * (1 / 52.143);
         $('#timeAfter').val(after);
     }
     if (unitA === 'nanoseconds' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/604800000000000);
+        let after = before * (1 / 604800000000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'microseconds' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/604800000000);
+        let after = before * (1 / 604800000000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'milliseconds' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/604800000);
+        let after = before * (1 / 604800000);
         $('#timeAfter').val(after);
     }
     if (unitA === 'seconds' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/604800);
+        let after = before * (1 / 604800);
         $('#timeAfter').val(after);
     }
     if (unitA === 'minutes' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/10080);
+        let after = before * (1 / 10080);
         $('#timeAfter').val(after);
     }
     if (unitA === 'hours' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/168);
+        let after = before * (1 / 168);
         $('#timeAfter').val(after);
     }
     if (unitA === 'days' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before * (1/7);
+        let after = before * (1 / 7);
         $('#timeAfter').val(after);
     }
     if (unitA === 'months' && unitB === 'weeks') {
         let before = $('#timeBefore').val();
-        let after = before *  4.345;
+        let after = before * 4.345;
         $('#timeAfter').val(after);
     }
     if (unitA === 'years' && unitB === 'weeks') {
