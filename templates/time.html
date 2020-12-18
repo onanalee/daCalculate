@@ -98,29 +98,29 @@
             <label for="tabtwo">Calendar Calculate</label>
             <div class="tab">
                 <h3>Days between two dates </h3>
-                <div>start date: <input type="date" class="startDate"></div>
-                <div>end date:<input type="date" class="endDate">
+                <div>start date:<input type="date" id="startDate"></div>
+                <div>end date:<input type="date" id="endDate">
                     <button id="dateSubmit" onclick="dateCalculate()">Calculate</button>
                 </div>
-                <div>Result: <input type="number"></div>
+                <div>Result: <input id="result1" type="number"> days</div>
 
 
                 <br><br>
 
 
                 <h3> Add or subtract from a date: </h3>
-                <div>start date: <input type="date"></div>
+                <div>start date: <input id="startDate2" type="date"></div>
                 <div>
-                    <select>
+                    <select id="plusMinus">
                         <option>+ (Add)</option>
                         <option>- (subtract)</option>
                     </select>
                 </div>
-                <input type="number"> days
-                <input type="number"> weeks
-                <input type="number"> months
-                <input type="number"> years
+                <input type="number" id="days"> days
+                <input type="number" id="weeks"> weeks
+                <button onclick="addDate()">Calculate</button>
                 <div>Result: <input type="number"></div>
+
             </div>
 
 

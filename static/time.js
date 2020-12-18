@@ -1,28 +1,72 @@
 //CALENDAR CALCULATE
+
+const today = new Date();
+const unix = 1000 * 60 * 60 * 24;
+// ($('#startDate').val(today.toDateInputValue()));
+// $(document).ready( function() {
+//     $('#startDate').val(today.toDateInputValue());
+// });
+// Date.prototype.toDateInputValue = (function() {
+//     var local = new Date(this);
+//     local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+//     return local.toJSON().slice(0,10);
+// });
+$(document).ready(function () {
+    document.getElementById('startDate').valueAsDate = today;
+});
+
+
 function dateCalculate() {
-    let date = new Date($('.startDate').val());
-    day = date.getDate();
-    month = date.getMonth() + 1;
-    year = date.getFullYear();
-    console.log([day, month, year].join('/'));
+    let startDate = new Date($('#startDate').val());
+    let endDate = new Date($('#endDate').val());
+    let difference = endDate - startDate;
+    console.log(difference);
+    let result = difference / unix;
+    console.log(result);
+    ($('#result1').val(result));
 }
 
-function day() {
-    let today = new Date();
-    let days = 1000 * 68 * 60 * 24;
-    let set = new Date(date);
-    let diff = (today - set) / days;
-    console.log(diff);
+function addDate() {
+    let startDate = new Date($('#startDate2').val());
+    let unixTime = (startDate.getTime()) / 1000;
+    let days = $('#days').val();
+    let weeks = $('#weeks').val();
+    let total = Number(weeks * 7) + Number(days);
+    let final = Number(unixTime) + Number((total * 60 * 60 * 24));
+
+
+    // if ($('#plusMinus').val() === '+ (Add)') {
+    //     let result = Number(startDate) + Number(total);
+    //     console.log(startDate);
+    //     console.log(total);
+    //     console.log(result);
+    //
+    // } else {
+    //     console.log("minus");
+    //
+    // }
 }
 
-let today = new Date();
-let days = 1000 * 60 * 60 * 24;
+
+// function () {
+//     let today = new Date();
+//     let unix = 1000 * 68 * 60 * 24;
+//     let set = new Date(date);
+//     let diff = (today - set) / unix;
+//     console.log(diff);
+// }
+
+// let day = startDate.getDate();
+// let month = startDate.getMonth() + 1;
+// let year = startDate.getFullYear();
+// console.log([day, month, year].join('/'));
 
 
-let dueBooks = new Date("December 31, 2021");
-let diffBooks = dueBooks - today;
-
-let remBooks = diffBooks / days;
+// let dueBooks = new Date("December 31, 2021");
+// let diffBooks = dueBooks - today;
+//
+// let remBooks = diffBooks / unix
+// ;
 
 
 //TIME ZONES
