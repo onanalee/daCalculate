@@ -32,12 +32,10 @@ function addDate() {
     let days = $('#days').val();
     let weeks = $('#weeks').val();
     let total = Number(weeks * 7) + Number(days);
+    let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     if ($('#plusMinus').val() === '+ (Add)') {
         let final = Number(unixTime) + Number((total * 60 * 60 * 24));
-
-        // Months array
-        let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
         // Convert timestamp to milliseconds
         let date = new Date(final * 1000);
@@ -49,13 +47,8 @@ function addDate() {
         // Display date time in MM-dd-yyyy format
         let result = month + '-' + day + '-' + year;
         ($('#result').val(result));
-
     } else {
-        console.log("minus");
         let final = Number(unixTime) - Number((total * 60 * 60 * 24));
-
-        // Months array
-        let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
         // Convert timestamp to milliseconds
         let date = new Date(final * 1000);
@@ -71,29 +64,30 @@ function addDate() {
 }
 
 
-// function () {
-//     let today = new Date();
-//     let unix = 1000 * 68 * 60 * 24;
-//     let set = new Date(date);
-//     let diff = (today - set) / unix;
-//     console.log(diff);
-// }
-
-// let day = startDate.getDate();
-// let month = startDate.getMonth() + 1;
-// let year = startDate.getFullYear();
-// console.log([day, month, year].join('/'));
-
-
-// let dueBooks = new Date("December 31, 2021");
-// let diffBooks = dueBooks - today;
-//
-// let remBooks = diffBooks / unix
-// ;
-
-
 //TIME ZONES
 
+//if country has one time zone, then select only country.
+//if country has multiple time zones, then specify city.
+
+
+
+
+
+
+// Date.prototype.stdTimezoneOffset = function () {
+//     var jan = new Date(this.getFullYear(), 0, 1);
+//     var jul = new Date(this.getFullYear(), 6, 1);
+//     return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+// }
+//
+// Date.prototype.isDstObserved = function () {
+//     return this.getTimezoneOffset() < this.stdTimezoneOffset();
+// }
+//
+// var today = new Date();
+// if (today.isDstObserved()) {
+//     alert("Daylight saving time!");
+// }
 
 //TIME UNIT CONVERTER
 

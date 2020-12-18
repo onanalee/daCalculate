@@ -44,6 +44,9 @@
     margin-top: 0.2rem;
   }
 }
+.timeZone{
+    display: block;
+}
 
 /**
  * Generic Styling
