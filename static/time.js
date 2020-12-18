@@ -32,19 +32,42 @@ function addDate() {
     let days = $('#days').val();
     let weeks = $('#weeks').val();
     let total = Number(weeks * 7) + Number(days);
-    let final = Number(unixTime) + Number((total * 60 * 60 * 24));
 
+    if ($('#plusMinus').val() === '+ (Add)') {
+        let final = Number(unixTime) + Number((total * 60 * 60 * 24));
 
-    // if ($('#plusMinus').val() === '+ (Add)') {
-    //     let result = Number(startDate) + Number(total);
-    //     console.log(startDate);
-    //     console.log(total);
-    //     console.log(result);
-    //
-    // } else {
-    //     console.log("minus");
-    //
-    // }
+        // Months array
+        let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        // Convert timestamp to milliseconds
+        let date = new Date(final * 1000);
+
+        let year = date.getFullYear();
+        let month = monthsArray[date.getMonth()];
+        let day = date.getDate();
+
+        // Display date time in MM-dd-yyyy format
+        let result = month + '-' + day + '-' + year;
+        ($('#result').val(result));
+
+    } else {
+        console.log("minus");
+        let final = Number(unixTime) - Number((total * 60 * 60 * 24));
+
+        // Months array
+        let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        // Convert timestamp to milliseconds
+        let date = new Date(final * 1000);
+
+        let year = date.getFullYear();
+        let month = monthsArray[date.getMonth()];
+        let day = date.getDate();
+
+        // Display date time in MM-dd-yyyy format
+        let result = month + '-' + day + '-' + year;
+        ($('#result').val(result));
+    }
 }
 
 
