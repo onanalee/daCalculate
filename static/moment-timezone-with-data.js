@@ -3,6 +3,20 @@
 //! Copyright (c) JS Foundation and other contributors
 //! license : MIT
 //! github.com/moment/moment-timezone
+//
+// $( document ).ready(function() {
+//     let now = moment().format('MMMM Do YYYY, h:mm:ss a');
+// 	let target = moment.tz.guess(Boolean);
+//
+// 	console.log(now);
+// 	$('#timezoneA').append(now);
+// 	$('#timezoneB').append(target);
+// });
+
+
+
+
+
 
 
 

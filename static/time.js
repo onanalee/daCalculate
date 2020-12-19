@@ -70,8 +70,100 @@ function addDate() {
 //if country has multiple time zones, then specify city.
 
 
-//https://codepen.io/Sinnemanie/pen/qNEXXX
 
+const d = new Date()
+console.log("d",d);
+
+// convert to msec since Jan 1 1970
+const localTime = d.getTime()
+console.log("localTime",localTime);
+
+// obtain local UTC offset and convert to msec
+const localOffset = d.getTimezoneOffset() * 60 * 1000
+console.log("localOffset",localOffset);
+
+// obtain UTC time in msec
+const utcTime = localTime + localOffset
+console.log("utcTime", utcTime);
+
+
+// Date.prototype.stdTimezoneOffset = function () {
+//     var jan = new Date(this.getFullYear(), 0, 1);
+//     var jul = new Date(this.getFullYear(), 6, 1);
+//     return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+// }
+//
+// Date.prototype.isDstObserved = function () {
+//     return this.getTimezoneOffset() < this.stdTimezoneOffset();
+// }
+//
+// var today2 = new Date();
+// if (today2.isDstObserved()) {
+//     alert ("Daylight saving time!");
+// } else {
+//     alert("no daylight saving")
+// }
+
+
+
+// Get time zone offset for NY, USA
+const getEstOffset = () => {
+    const stdTimezoneOffset = () => {
+        var jan = new Date(today.getFullYear(),0, 1)
+        var jul = new Date(today.getFullYear(),6, 1)
+        return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset())
+    }
+
+    var today = new Date()
+
+    const isDstObserved = (today, Date) => {
+        return today.getTimezoneOffset() < stdTimezoneOffset()
+    }
+
+    if (isDstObserved(today)) {
+        return -4
+    } else {
+        return -5
+    }
+}
+
+const getPstOffset = () => {
+    const stdTimezoneOffset = () => {
+        var jan = new Date(today.getFullYear(),0, 1)
+        var jul = new Date(today.getFullYear(),6, 1)
+        return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset())
+    }
+
+    var today = new Date()
+
+    const isDstObserved = (today, Date) => {
+        return today.getTimezoneOffset() < stdTimezoneOffset()
+    }
+
+    if (isDstObserved(today)) {
+        return -7
+    } else {
+        return -8
+    }
+}
+
+// obtain and add destination's UTC time offset
+const estOffset = getEstOffset()
+console.log("estOffset", estOffset)
+const usa = utcTime + (60 * 60 * 1000 * estOffset)
+console.log("usa", usa)
+const pstOffset = getPstOffset()
+console.log("pstOffset",pstOffset);
+const la = utcTime + (60*60*1000*pstOffset);
+console.log("la", la);
+const laTime = new Date(la);
+console.log("laTime", laTime);
+
+// convert msec value to date string
+const nd = new Date(usa)
+console.log("nd",nd)
+
+//https://codepen.io/Sinnemanie/pen/qNEXXX
 
 
 // Date.prototype.stdTimezoneOffset = function () {
