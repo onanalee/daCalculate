@@ -260,7 +260,7 @@ var users = [
     "Asia/Harbin",
     "Asia/Hebron",
     "Asia/Ho_Chi_Minh",
-    "Asia/Hong_Kong",
+    "Asia/Hong_Kong", "Hongkong", "Hong Kong", "Macau", "Mongolia", "Taiwan", "Brunei", "Central Indonesia", "Malaysia", "Philippines",
     "Asia/Hovd",
     "Asia/Irkutsk",
     "Asia/Istanbul",
@@ -373,12 +373,9 @@ var users = [
     "Chile/EasterIsland",
     "Cuba",
     "Egypt",
-    "Eire",
     "Etc/GMT",
-    "Etc/GMT+0",
     "Etc/UCT",
     "Etc/Universal",
-    "Etc/UTC",
     "Etc/Zulu",
     "Europe/Amsterdam",
     "Europe/Andorra",
@@ -439,15 +436,9 @@ var users = [
     "Europe/Zagreb",
     "Europe/Zaporozhye",
     "Europe/Zurich",
-    "GB",
-    "GB-Eire",
     "GMT",
-    "GMT+0",
     "GMT0",
-    "GMT-0",
     "Greenwich",
-    "Hongkong",
-    "Iceland",
     "Indian/Antananarivo",
     "Indian/Chagos",
     "Indian/Christmas",
@@ -461,7 +452,6 @@ var users = [
     "Indian/Reunion",
     "Iran",
     "Israel",
-    "Jamaica",
     "Japan",
     "Kwajalein",
     "Libya",
@@ -469,8 +459,6 @@ var users = [
     "Mexico/BajaSur",
     "Mexico/General",
     "Navajo",
-    "NZ",
-    "NZ-CHAT",
     "Pacific/Apia",
     "Pacific/Auckland",
     "Pacific/Chatham",
@@ -515,13 +503,8 @@ var users = [
     "Pacific/Yap",
     "Poland",
     "Portugal",
-    "PRC",
-    "ROC",
-    "ROK",
     "Singapore",
-    "Turkey",
-    "UCT",
-    "Universal",
+    "Turkey", "Saudi Arabia", "Iraq", "Yemen", "Qatar", "Bahrain", "Kuwait",
     "US/Alaska",
     "US/Aleutian",
     "US/Arizona",
@@ -535,10 +518,25 @@ var users = [
     "US/Pacific",
     "US/Samoa",
     "UTC",
-    "W-SU",
     "Zulu",
+    "Austria",
+    "Belgium", "Croatia", "Czech Republic", "Denmark", "France", "Germany", "Hungary", "Italy", "Netherlands", "Norway", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland",
+    "Albania", "Andorra", "Bosnia", "Kosovo", "Luxembourg", "Monaco",
+    "Botswana", "Burundi", "Malawi", "Mozambique", "Namibia", "Rwanda", "Sudan", "Zambia", "Zimbabwe", "Democratic Republic of the Congo (east)",
+    "China",
+    "Comoros", "Djibouti", "Eritrea", "Ethiopia", "Kenya", "Madagascar", "Somalia", "South Sudan", "Tanzania", "Uganda",
+    "Algeria", "Angola", "Benin", "Cameroon", "Central African Republic", "Chad", "Democratic Republic of the Congo (west)", "Equatorial Guinea", "Gabon", "Morocco", "Niger", "Nigeria", "Republic of the Congo", "Tunisia", "Western Sahara",
+    "Burkina Faso", "Gambia", "Ghana", "Guinea", "Guinea - Bissau", "Iceland", "Ivory Coast", "Liberia", "Mali", "Mauritania", "Saint Helena", "Ascension", "Tristan da Cunha", "Senegal", "Sierra Leone", "Togo",
+    "Great Britain", "Britain", "United Kingdom", "Portugal", "UK", "England", "Wales", "Scotland", "Northern Ireland",
+    "South Korea",
+    "North Korea",
+    "Armenia", "Azerbaijan", "Georgia", "Oman", "United Arab Emirates (UAE)", "Mauritius", "Seychelles",
+    "Maldives", "Pakistan", "Uzbekistan", "Turkmenistan", "Tajikistan",
+    "Kazakhstan", "Kyrgyzstan", "Bhutan", "Bangladesh",
+    "Cambodia", "Western Indonesia", "Laos", "Thailand", "Vietnam",
+    "Eastern Indonesia", "East Timor", "Palau",
+    "Ireland", "Nepal"
 ];
-
 
 //searchable select-option
 
@@ -570,19 +568,139 @@ var filterUsersA = function (event) {
 inputA.addEventListener('keyup', filterUsersA);
 
 
-
-
-
 function timezoneA() {
     let now = spacetime(new Date());
     let timezone = $("#users-listA option:selected").text();
-    let time = now.goto(timezone);
-    let final = time.unixFmt('yyyy.MM.dd h:mm a');
-    $('#timezoneA').text(final);
+    if (timezone === "Japan") {
+        let time = now.goto("Asia/Tokyo");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "South Korea" || timezone === "Eastern Indonesia" || timezone === "East Timor" || timezone === "Palau") {
+        let time = now.goto("Asia/Seoul");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "North Korea") {
+        let time = now.goto("Asia/Pyongyang");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "China") {
+        let time = now.goto("Asia/Shanghai");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Cuba") {
+        let time = now.goto("America/Havana");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Iran") {
+        let time = now.goto("Asia/Tehran");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Greece") {
+        let time = now.goto("Europe/Athens");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Nepal") {
+        let time = now.goto("Asia/Kathmandu");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Austria" || timezone === "Belgium" || timezone === "Croatia" || timezone === "Czech Republic" || timezone === "Denmark" || timezone === "France" || timezone === "Germany" || timezone === "Hungary" || timezone === "Italy" || timezone === "Netherlands" || timezone === "Norway" || timezone === "Poland" || timezone === "Serbia" || timezone === "Slovakia" || timezone === "Slovenia" || timezone === "Spain" || timezone === "Sweden" || timezone === "Switzerland" || timezone === "Albania" || timezone === "Andorra" || timezone === "Bosnia" || timezone === "Kosovo" || timezone === "Luxembourg" || timezone === "Monaco") {
+        let time = now.goto("Europe/Paris");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Comoros" || timezone === "Djibouti" || timezone === "Eritrea" || timezone === "Ethiopia" || timezone === "Kenya" || timezone === "Madagascar" || timezone === "South Sudan" || timezone === "Tanzania" || timezone === "Somalia" || timezone === "Uganda") {
+        let time = now.goto("Europe/Moscow");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Algeria" || timezone === "Angola" || timezone === "Benin" || timezone === "Cameroon" || timezone === "Central African Republic" || timezone === "Chad" || timezone === "Democratic Republic of the Congo (west)" || timezone === "Equatorial Guinea" || timezone === "Gabon" || timezone === "Morocco" || timezone === "Niger" || timezone === "Nigeria" || timezone === "Republic of the Congo" || timezone === "Tunisia" || timezone === "Western Sahara") {
+        let time = now.goto("Europe/Moscow");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Egypt" || timezone === "Libya") {
+        let time = now.goto("Europe/Kaliningrad");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Botswana" || timezone === "Democratic Republic of the Congo (eest)" || timezone === "Burundi" || timezone === "Malawi" || timezone === "Mozambique" || timezone === "Namibia" || timezone === "Rwanda" || timezone === "Sudan" || timezone === "Zambia" || timezone === "Zimbabwe") {
+        let time = now.goto("Africa/Gaborone");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Burkina Faso" || timezone === "Gambia" || timezone === "Ghana" || timezone === "Guinea - Bissau" || timezone === "Iceland" || timezone === "Ivory Coast" || timezone === "Liberia" || timezone === "Mali" || timezone === "Mauritania" || timezone === "Saint Helena" || timezone === "Ascension" || timezone === "Tristan da Cunha" || timezone === "Senegal" || timezone === "Togo" || timezone === "Sierra Leone") {
+        let time = now.goto("Etc/GMT");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Great Britain" || timezone === "Britain" || timezone === "United Kingdom" || timezone === "UK" || timezone === "Portugal" || timezone === "England" || timezone === "Scotland" || timezone === "Wales" || timezone === "Northern Ireland") {
+        let time = now.goto("Europe/London");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Turkey") {
+        let time = now.goto("Asia/Istanbul");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Ireland") {
+        let time = now.goto("Europe/Belfast");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Israel") {
+        let time = now.goto("Asia/Jerusalem");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "Armenia" || timezone === "Azerbaijan" || timezone === "Georgia" || timezone === "Oman" || timezone === "United Arab Emirates (UAE)" || timezone === "Mauritius" || timezone === "Seychelles") {
+        let time = now.goto("Asia/Tbilisi");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Saudi Arabia" || timezone === "Iraq" || timezone === "Yemen" || timezone === "Qatar" || timezone === "Bahrain" || timezone === "Kuwait") {
+        let time = now.goto("Asia/Riyadh");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Maldives" || timezone === "Pakistan" || timezone === "Uzbekistan" || timezone === "Turkmenistan" || timezone === "Tajikistan") {
+        let time = now.goto("Asia/Yekaterinburg");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Kazakhstan" || timezone === "Kyrgyzstan" || timezone === "Bhutan" || timezone === "Bangladesh") {
+        let time = now.goto("Asia/Omsk");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Cambodia" || timezone === "Western Indonesia" || timezone === "Laos" || timezone === "Thailand" || timezone === "Vietnam") {
+        let time = now.goto("Asia/Bangkok");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else if (timezone === "Hongkong" || timezone === "Hong Kong" || timezone === "Macau" || timezone === "Mongolia" || timezone === "Taiwan" || timezone === "Brunei" || timezone === "Central Indonesia" || timezone === "Malaysia" || timezone === "Philippines") {
+        let time = now.goto("Asia/Singapore");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
+    } else {
+        let time = now.goto(timezone);
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    }
 }
 
 
-//////////////////////////////////
+//////////////////////////
 
 
 let B = document.getElementById("users-listB");
@@ -615,7 +733,132 @@ inputB.addEventListener('keyup', filterUsersB);
 function timezoneB() {
     let now = spacetime(new Date());
     let timezone = $("#users-listB option:selected").text();
-    let time = now.goto(timezone);
-    let final = time.unixFmt('yyyy.MM.dd h:mm a');
-    $('#timezoneB').text(final);
+    if (timezone === "Japan") {
+        let time = now.goto("Asia/Tokyo");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "South Korea" || timezone === "Eastern Indonesia" || timezone === "East Timor" || timezone === "Palau") {
+        let time = now.goto("Asia/Seoul");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "North Korea") {
+        let time = now.goto("Asia/Pyongyang");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "China") {
+        let time = now.goto("Asia/Shanghai");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Cuba") {
+        let time = now.goto("America/Havana");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Iran") {
+        let time = now.goto("Asia/Tehran");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Greece") {
+        let time = now.goto("Europe/Athens");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Nepal") {
+        let time = now.goto("Asia/Kathmandu");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Austria" || timezone === "Belgium" || timezone === "Croatia" || timezone === "Czech Republic" || timezone === "Denmark" || timezone === "France" || timezone === "Germany" || timezone === "Hungary" || timezone === "Italy" || timezone === "Netherlands" || timezone === "Norway" || timezone === "Poland" || timezone === "Serbia" || timezone === "Slovakia" || timezone === "Slovenia" || timezone === "Spain" || timezone === "Sweden" || timezone === "Switzerland" || timezone === "Albania" || timezone === "Andorra" || timezone === "Bosnia" || timezone === "Kosovo" || timezone === "Luxembourg" || timezone === "Monaco") {
+        let time = now.goto("Europe/Paris");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Comoros" || timezone === "Djibouti" || timezone === "Eritrea" || timezone === "Ethiopia" || timezone === "Kenya" || timezone === "Madagascar" || timezone === "South Sudan" || timezone === "Tanzania" || timezone === "Somalia" || timezone === "Uganda") {
+        let time = now.goto("Europe/Moscow");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Algeria" || timezone === "Angola" || timezone === "Benin" || timezone === "Cameroon" || timezone === "Central African Republic" || timezone === "Chad" || timezone === "Democratic Republic of the Congo (west)" || timezone === "Equatorial Guinea" || timezone === "Gabon" || timezone === "Morocco" || timezone === "Niger" || timezone === "Nigeria" || timezone === "Republic of the Congo" || timezone === "Tunisia" || timezone === "Western Sahara") {
+        let time = now.goto("Europe/Moscow");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Egypt" || timezone === "Libya") {
+        let time = now.goto("Europe/Kaliningrad");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Botswana" || timezone === "Democratic Republic of the Congo (eest)" || timezone === "Burundi" || timezone === "Malawi" || timezone === "Mozambique" || timezone === "Namibia" || timezone === "Rwanda" || timezone === "Sudan" || timezone === "Zambia" || timezone === "Zimbabwe") {
+        let time = now.goto("Africa/Gaborone");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Burkina Faso" || timezone === "Gambia" || timezone === "Ghana" || timezone === "Guinea - Bissau" || timezone === "Iceland" || timezone === "Ivory Coast" || timezone === "Liberia" || timezone === "Mali" || timezone === "Mauritania" || timezone === "Saint Helena" || timezone === "Ascension" || timezone === "Tristan da Cunha" || timezone === "Senegal" || timezone === "Togo" || timezone === "Sierra Leone") {
+        let time = now.goto("Etc/GMT");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Great Britain" || timezone === "Britain" || timezone === "United Kingdom" || timezone === "UK" || timezone === "Portugal" || timezone === "England" || timezone === "Scotland" || timezone === "Wales" || timezone === "Northern Ireland") {
+        let time = now.goto("Europe/London");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Turkey") {
+        let time = now.goto("Asia/Istanbul");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Ireland") {
+        let time = now.goto("Europe/Belfast");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Israel") {
+        let time = now.goto("Asia/Jerusalem");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "Armenia" || timezone === "Azerbaijan" || timezone === "Georgia" || timezone === "Oman" || timezone === "United Arab Emirates (UAE)" || timezone === "Mauritius" || timezone === "Seychelles") {
+        let time = now.goto("Asia/Tbilisi");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Saudi Arabia" || timezone === "Iraq" || timezone === "Yemen" || timezone === "Qatar" || timezone === "Bahrain" || timezone === "Kuwait") {
+        let time = now.goto("Asia/Riyadh");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Maldives" || timezone === "Pakistan" || timezone === "Uzbekistan" || timezone === "Turkmenistan" || timezone === "Tajikistan") {
+        let time = now.goto("Asia/Yekaterinburg");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Kazakhstan" || timezone === "Kyrgyzstan" || timezone === "Bhutan" || timezone === "Bangladesh") {
+        let time = now.goto("Asia/Omsk");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Cambodia" || timezone === "Western Indonesia" || timezone === "Laos" || timezone === "Thailand" || timezone === "Vietnam") {
+        let time = now.goto("Asia/Bangkok");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else if (timezone === "Hongkong" || timezone === "Hong Kong" || timezone === "Macau" || timezone === "Mongolia" || timezone === "Taiwan" || timezone === "Brunei" || timezone === "Central Indonesia" || timezone === "Malaysia" || timezone === "Philippines") {
+        let time = now.goto("Asia/Singapore");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return
+    } else {
+        let time = now.goto(timezone);
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    }
 }
+
+//// get time difference
