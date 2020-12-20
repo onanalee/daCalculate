@@ -71,60 +71,7 @@ function addDate() {
 toggle between hiding and showing the dropdown content */
 
 
-var daa = spacetime('March 1 2012', 'America/New_York')
-//set the time
-daa = daa.time('4:20pm')
 
-daa = daa.goto('America/Los_Angeles')
-daa.time()
-console.log('daa', daa);
-//'1:20pm'
-
-let local = spacetime(new Date());
-console.log("local", local);
-let shanghai = local.goto('Asia/Shanghai')
-console.log("shanghai", shanghai);
-let final = shanghai.unixFmt('yyyy.MM.dd h:mm a')
-console.log('final', final);
-
-//
-// let users = [
-//     'Goku',
-//     'Naruto',
-//     'Ichigo',
-//     'Flash',
-//     'Batman',
-//     'Sherlock Holmes',
-//     'Khaleesi',
-//     'Steve Fox'
-// ];
-//
-// ul = document.getElementById("users-list");
-//
-// let render_lists = function (lists) {
-//     let li = "";
-//     for (index in lists) {
-//         li += "<option>" + lists[index] + "</option>";
-//     }
-//     ul.innerHTML = li;
-// }
-//
-// render_lists(users);
-//
-// // lets filters it
-// input = document.getElementById('filter_users');
-//
-// let filterUsers = function (event) {
-//     keyword = input.value.toLowerCase();
-//     filtered_users = users.filter(function (user) {
-//         user = user.toLowerCase();
-//         return user.indexOf(keyword) > -1;
-//     });
-//
-//     render_lists(filtered_users);
-// }
-//
-// input.addEventListener('keyup', filterUsers);
 
 
 //if country has one time zone, then select only country.
