@@ -542,60 +542,80 @@ var users = [
 
 //searchable select-option
 
-let ul = document.getElementById("users-list");
+let A = document.getElementById("users-listA");
 
-var render_lists = function (lists) {
+var render_listsA = function (lists) {
     var li = "";
     for (index in lists) {
         li += "<option>" + lists[index] + "</option>";
     }
-    ul.innerHTML = li;
+    A.innerHTML = li;
 }
 
-render_lists(users);
+render_listsA(users);
 
 // lets filters it
-let input = document.getElementById('filter_users');
+let inputA = document.getElementById('timezoneInputA');
 
-var filterUsers = function (event) {
-    keyword = input.value.toLowerCase();
-    filtered_users = users.filter(function (user) {
+var filterUsersA = function (event) {
+    keyword = inputA.value.toLowerCase();
+    filtered_usersA = users.filter(function (user) {
         user = user.toLowerCase();
         return user.indexOf(keyword) > -1;
     });
 
-    render_lists(filtered_users);
+    render_listsA(filtered_usersA);
 }
 
-input.addEventListener('keyup', filterUsers);
-
-//////////////////////////
-
-var daa = spacetime('March 1 2012', 'America/New_York')
-//set the time
-daa = daa.time('4:20pm')
-
-daa = daa.goto('America/Los_Angeles')
-daa.time()
-console.log('daa', daa);
-
-//'1:20pm'
+inputA.addEventListener('keyup', filterUsersA);
 
 
-function timezone() {
-    // let now = spacetime(new Date());
-    // console.log("now", now);
-    // let shanghai = now.goto("los angeles")
-    // console.log("shanghai", shanghai);
-    // let final = shanghai.unixFmt('yyyy.MM.dd h:mm a')
-    // console.log('final', final);
-    //
-    // let timezoneA = $("#users-list option:selected").text();
-    // $('#timezoneA').append(now.goto(timezoneA));
+
+
+
+function timezoneA() {
     let now = spacetime(new Date());
-    let timezoneA = $("#users-list option:selected").text();
-    let time = now.goto(timezoneA);
+    let timezone = $("#users-listA option:selected").text();
+    let time = now.goto(timezone);
     let final = time.unixFmt('yyyy.MM.dd h:mm a');
     $('#timezoneA').text(final);
+}
 
+
+//////////////////////////////////
+
+
+let B = document.getElementById("users-listB");
+
+var render_listsB = function (lists) {
+    var li = "";
+    for (index in lists) {
+        li += "<option>" + lists[index] + "</option>";
+    }
+    B.innerHTML = li;
+}
+
+render_listsB(users);
+
+// lets filters it
+let inputB = document.getElementById('timezoneInputB');
+
+var filterUsersB = function (event) {
+    keyword = inputB.value.toLowerCase();
+    filtered_usersB = users.filter(function (user) {
+        user = user.toLowerCase();
+        return user.indexOf(keyword) > -1;
+    });
+
+    render_listsB(filtered_usersB);
+}
+
+inputB.addEventListener('keyup', filterUsersB);
+
+function timezoneB() {
+    let now = spacetime(new Date());
+    let timezone = $("#users-listB option:selected").text();
+    let time = now.goto(timezone);
+    let final = time.unixFmt('yyyy.MM.dd h:mm a');
+    $('#timezoneB').text(final);
 }

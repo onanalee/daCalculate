@@ -135,11 +135,13 @@
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">
-                                    <select>
-                                        <option>Seoul (UTC+4)</option>
-                                        <option>Beijing</option>
-                                        <option>Astana</option>
-                                    </select></h6>
+                                    <input onsearch="timezoneA()" type="search" placeholder="Search Users"
+                                           id="timezoneInputA"/>
+
+                                    <select onchange="timezoneA()" id="users-listA">
+
+                                    </select>
+                                </h6>
                                 <h2 id="timezoneA">
 
                                 </h2>
@@ -162,10 +164,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <h6 class="card-title">
-                                    <select>
-                                        <option>Seoul (UTC+4)</option>
-                                        <option>Beijing</option>
-                                        <option>Astana</option>
+                                    <input onsearch="timezoneB()" type="search" placeholder="Search Users"
+                                           id="timezoneInputB"/>
+
+                                    <select onchange="timezoneB()" id="users-listB">
+
                                     </select>
                                 </h6>
 
@@ -183,12 +186,7 @@
         </div>
         </div>
 
-        <input onsearch="timezone()" type="search" placeholder="Search Users" id="filter_users"/>
 
-        <select onchange="timezone()" id="users-list">
-
-        </select>
-
-<script src="../static/zoneSearch.js"></script>
+        <script src="../static/zoneSearch.js"></script>
     </body>
 </html>
