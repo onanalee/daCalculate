@@ -7,7 +7,7 @@ body {
 }
 
 #navBar {
-    width: 75%;
+    width: 80%;
     background-color: #f2cc99;
 }
 
@@ -35,7 +35,7 @@ body {
     top: 10vh;
     left: 3vw;
     min-height: 5vh;
-    width: 72vw;
+    width: 77vw;
     transition: all 200ms ease-in-out 50ms;
     opacity: 1;
 }
@@ -79,11 +79,15 @@ body {
 
 #timeDate {
     font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size:1.5em;
     float: right;
     text-align: left;
-    width: 25%;
+    width: 20%;
     /*margin: 0px auto;*/
     color: #fff;
     border-left: 3px solid #ed1f24;
-    padding: 20px;
+    padding: 10px;
+}
+#localTime {
+    color: black;
 }

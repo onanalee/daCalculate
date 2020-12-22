@@ -65,7 +65,6 @@ function energy() {
 
 
 
-
 // START CLOCK SCRIPT
 
 Number.prototype.pad = function(n) {

@@ -12,15 +12,27 @@ def home():
 @app.route('/kr')
 def home_kr():
     return render_template('indexKR.html')
-@app.route('/randomGenerator')
+@app.route('/random_generator')
 def random():
     return render_template('randomGenerator.html')
+@app.route('/lotto')
+def lotto():
+    return render_template('lotto.html')
 @app.route('/time')
 def time():
     return render_template('time.html')
+@app.route('/timezone')
+def timezone():
+    return render_template('timezone.html')
 @app.route('/exchange_rates')
 def exchangeRates():
     return render_template('exchangeRates.html')
+@app.route('/inflation')
+def inflation():
+    return render_template('inflation.html')
+@app.route('/loan')
+def loan():
+    return render_template('loan.html')
 
 
 if __name__ == '__main__':

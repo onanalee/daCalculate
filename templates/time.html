@@ -2,15 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Calculate Days and Calendar Dates</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
               integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
               crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
                 integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
                 crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
                 crossorigin="anonymous"></script>
 
 
@@ -26,31 +26,57 @@
 
 
     <body onLoad="initClock()">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FCD16B;" id="navBar">
-            <a class="navbar-brand">다 CALCULATE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="time">Time</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="exchange_rates">$ Exchange Rates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="randomGenerator">Random Generator</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">da Calculate</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Time
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/timezone">Time Zones</a></li>
+                                <li><a class="dropdown-item" href="/time">Calculate Dates / Calendar</a></li>
+                                <li><a class="dropdown-item" href="/time">Convert Time Units</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Money
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/exchange_rates">Exchange Rates</a></li>
+                                <li><a class="dropdown-item" href="/loan">Calculate Loans</a></li>
+                                <li><a class="dropdown-item" href="/inflation">Calculate Inflation / Deflation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Random Generator
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a></li>
+                                <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div id="timeDate">
-            Current Time:
+            <span id="localTime">Current Local Time:</span>
             <a id="mon">January</a>
             <a id="d">1</a>,
             <a id="y">0</a><br/>
@@ -59,126 +85,65 @@
             <a id="s">00</a>
         </div>
         <br><br>
-        <div class="tabs">
-            <input type="radio" name="tabs" id="tabone" checked="checked">
-            <label for="tabone">Time Unit Converter</label>
-            <div class="tab">
-                <div class="unitType">Time Unit Converter</div>
-                <div class="time">
-                    <input type="number" id="timeBefore">
-                    <select id="timeUnitA">
-                        <option>nanoseconds</option>
-                        <option>microseconds</option>
-                        <option>milliseconds</option>
-                        <option>seconds</option>
-                        <option>minutes</option>
-                        <option>hours</option>
-                        <option>days</option>
-                        <option>weeks</option>
-                        <option>months</option>
-                        <option>years</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertTime()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="timeAfter">
-                    <select id="timeUnitB">
-                        <option>nanoseconds</option>
-                        <option>microseconds</option>
-                        <option>milliseconds</option>
-                        <option>seconds</option>
-                        <option>minutes</option>
-                        <option>hours</option>
-                        <option>days</option>
-                        <option>weeks</option>
-                        <option>months</option>
-                        <option>years</option>
-                    </select>
-                </div>
-            </div>
 
-            <input type="radio" name="tabs" id="tabtwo">
-            <label for="tabtwo">Calendar Calculate</label>
-            <div class="tab">
-                <h3>Days between two dates </h3>
-                <div>start date:<input type="date" id="startDate"></div>
-                <div>end date:<input type="date" id="endDate">
-                    <button id="dateSubmit" onclick="dateCalculate()">Calculate</button>
-                </div>
-                <div>Result: <input id="result1" type="number"> days</div>
-
-
-                <br><br>
-
-
-                <h3> Add or subtract from a date: </h3>
-                <div>start date: <input id="startDate2" type="date"></div>
-                <div>
-                    <select id="plusMinus">
-                        <option>+ (Add)</option>
-                        <option>- (subtract)</option>
-                    </select>
-                </div>
-                <input type="number" id="days"> days
-                <input type="number" id="weeks"> weeks
-                <button onclick="addDate()">Calculate</button>
-                <div>Result: <input type="text" id="result"></div>
-            </div>
-
-
-            <input type="radio" name="tabs" id="tabthree">
-            <label for="tabthree">Time Zones</label>
-            <div class="tab">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-title">
-                                    <input onsearch="timezoneA()" type="search" placeholder="Enter country or city name"
-                                           id="timezoneInputA"/>
-
-                                    <select onchange="timezoneA()" id="users-listA">
-
-                                    </select>
-                                </h6>
-                                <h2 id="timezoneA">
-
-                                </h2>
-                                <h3>
-
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h6 class="card-title">
-                                    <input onsearch="timezoneB()" type="search" placeholder="Enter country or city name"
-                                           id="timezoneInputB"/>
-
-                                    <select onchange="timezoneB()" id="users-listB">
-
-                                    </select>
-                                </h6>
-
-                                <h2 id="timezoneB">
-
-                                </h2>
-                                <h3>
-
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="unitType">Time Unit Converter</div>
+        <div class="time">
+            <input type="number" id="timeBefore">
+            <select id="timeUnitA">
+                <option>nanoseconds</option>
+                <option>microseconds</option>
+                <option>milliseconds</option>
+                <option>seconds</option>
+                <option>minutes</option>
+                <option>hours</option>
+                <option>days</option>
+                <option>weeks</option>
+                <option>months</option>
+                <option>years</option>
+            </select>
+            <br><br>
+            <button class="convert" onclick="convertTime()">Convert</button>
+            <br> <br>
+            =
+            <input type="number" id="timeAfter">
+            <select id="timeUnitB">
+                <option>nanoseconds</option>
+                <option>microseconds</option>
+                <option>milliseconds</option>
+                <option>seconds</option>
+                <option>minutes</option>
+                <option>hours</option>
+                <option>days</option>
+                <option>weeks</option>
+                <option>months</option>
+                <option>years</option>
+            </select>
         </div>
 
 
-        <script src="../static/zoneSearch.js"></script>
+        <h3>Days between two dates </h3>
+        <div>start date:<input type="date" id="startDate"></div>
+        <div>end date:<input type="date" id="endDate">
+            <button id="dateSubmit" onclick="dateCalculate()">Calculate</button>
+        </div>
+        <div>Result: <input id="result1" type="number"> days</div>
+
+
+        <br><br>
+
+
+        <h3> Add or subtract from a date: </h3>
+        <div>start date: <input id="startDate2" type="date"></div>
+        <div>
+            <select id="plusMinus">
+                <option>+ (Add)</option>
+                <option>- (subtract)</option>
+            </select>
+        </div>
+        <input type="number" id="days"> days
+        <input type="number" id="weeks"> weeks
+        <button onclick="addDate()">Calculate</button>
+        <div>Result: <input type="text" id="result"></div>
+
     </body>
 </html>
