@@ -9,9 +9,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
                 crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <link rel="stylesheet" href="../static/style.css">
         <script src="../static/script.js"></script>
@@ -46,7 +45,8 @@
                             <a class="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink"
+                               role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Time
                             </a>
@@ -57,23 +57,27 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink"
+                               role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Money
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="/exchange_rates">Exchange Rates</a></li>
                                 <li><a class="dropdown-item" href="/loan">Calculate Loans</a></li>
-                                <li><a class="dropdown-item" href="/inflation">Calculate Inflation / Deflation</a></li>
+                                <li><a class="dropdown-item" href="/inflation">Calculate Inflation / Deflation</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" class="navbarDropdownMenuLink"
+                               role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Random Generator
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a></li>
+                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and
+                                    Passwords</a></li>
                                 <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
                             </ul>
                         </li>
@@ -90,9 +94,9 @@
             <a id="m">00</a>:
             <a id="s">00</a>
         </div>
-<div>
-    Click to expand boxes
-</div>
+        <div>
+            Click to expand boxes
+        </div>
         <section class="accordionAll">
             <div class="accordion" onclick="length()">
                 <div class="unitType">Length</div>
@@ -403,7 +407,5 @@
                 </div>
             </div>
         </section>
-
-
     </body>
 </html>

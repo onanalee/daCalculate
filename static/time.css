@@ -1,81 +1,96 @@
 /**
  * Tabs
  */
-#filter_users{
-  width:100%;
-  padding:10px;
-}
-
-#users-list{
-  margin:0;
-  padding:0;
-}
-
-#users-list li{
-  list-style:none;
-  padding:10px;
-  margin:5px 0;
-  border: 1px solid #e4e4e4;
-}
-.tabs {
-	display: flex;
-	flex-wrap: wrap; // make sure it wraps
-}
-.tabs label {
-	order: 1; // Put the labels first
-	display: block;
-	padding: 1rem 2rem;
-	margin-right: 0.2rem;
-	cursor: pointer;
-  background: #90CAF9;
-  font-weight: bold;
-  transition: background ease 0.2s;
-}
-.tabs .tab {
-  order: 99; // Put the tabs last
-  flex-grow: 1;
-	width: 100%;
-	display: none;
-  padding: 1rem;
-  background: #fff;
-}
-.tabs input[type="radio"] {
-	display: none;
-}
-.tabs input[type="radio"]:checked + label {
-	background: #fff;
-}
-.tabs input[type="radio"]:checked + label + .tab {
-	display: block;
-}
-
-@media (max-width: 45em) {
-  .tabs .tab,
-  .tabs label {
-    order: initial;
-  }
-  .tabs label {
+#filter_users {
     width: 100%;
-    margin-right: 0;
-    margin-top: 0.2rem;
-  }
+    padding: 10px;
 }
-.timeZone{
+
+#users-list {
+    margin: 0;
+    padding: 0;
+}
+
+#users-list li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #e4e4e4;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+/ / make sure it wraps
+}
+
+.tabs label {
+    order: 1;
+/ / Put the labels first display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #90CAF9;
+    font-weight: bold;
+    transition: background ease 0.2s;
+}
+
+.tabs .tab {
+    order: 99;
+/ / Put the tabs last flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+    background: #fff;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
     display: block;
 }
 
-/**
- * Generic Styling
-*/
-/*body {*/
-/*  background: #eee;*/
-/*  min-height: 100vh;*/
-/*	box-sizing: border-box;*/
-/*	padding-top: 10vh;*/
-/*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
-/*  font-weight: 300;*/
-/*  line-height: 1.5;*/
-/*  max-width: 60rem;*/
-/*  margin: 0 auto;*/
-/*  font-size: 112%;*/
-/*}*/
+@media (max-width: 45em) {
+    .tabs .tab,
+    .tabs label {
+        order: initial;
+    }
+
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+.timeZone {
+    display: block;
+}
+
+#timezoneInputA, #timezoneInputB {
+    width: 400px;
+    height: 50px;
+    font-size: 2em;
+}
+
+#timeDifference {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 31.67%;
+    width: auto;
+    opacity: 80%;
+}
+
+#users-listA, #users-listB {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
