@@ -57,7 +57,8 @@
                                 Random Generator
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a></li>
+                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a>
+                                </li>
                                 <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
                             </ul>
                         </li>
@@ -74,8 +75,85 @@
             <a id="m">00</a>:
             <a id="s">00</a>
         </div>
+        make currency select-option a certain limited height and make it scrollable instead.
         <div>
-<button onclick="exchange()">exchange</button>
+            <input type="number" id="inputA">
+            <select id="currencyA">
+                <option>(USD) US Dollar</option>
+                <option>(EUR) Euro</option>
+                <option>(JPY) Japan Yen</option>
+                <option>(CNY) China Yuan (RMB)</option>
+                <option>(GBP) British Pound</option>
+                <option>(KRW) Korean Won</option>
+                <option>(AUD) Australia Dollar</option>
+                <option>(BGN) Bulgaria Lev</option>
+                <option>(BRL) Brazil Real</option>
+                <option>(CAD) Canadian Dollar</option>
+                <option>(CHF) Swiss Franc</option>
+                <option>(CZK) Czech Koruna</option>
+                <option>(DKK) Denmark Krone</option>
+                <option>(HKD) Hong Kong Dollar</option>
+                <option>(HRK) Croatia Kuna</option>
+                <option>(HUF) Hungary Forint</option>
+                <option>(IDR) Indonesia Rupiah</option>
+                <option>(ILS) Israel Shekel</option>
+                <option>(INR) India Rupee</option>
+                <option>(ISK) Iceland Krona</option>
+                <option>(MXN) Mexico Peso</option>
+                <option>(MYR) Malaysia Ringgit</option>
+                <option>(NOK) Norway Krone</option>
+                <option>(NZD) New Zealand Dollar</option>
+                <option>(PHP) Philippine Peso</option>
+                <option>(PLN) Poland Zloty</option>
+                <option>(RON) Romania Leu</option>
+                <option>(RUB) Russia Ruble</option>
+                <option>(SEK) Sweden Krona</option>
+                <option>(THB) Thai Baht</option>
+                <option>(TRY) Turkish Lira</option>
+                <option>(SGD) Singapore Dollar</option>
+                <option>(ZAR) South Africa Rand</option>
+            </select>
+            <button onclick="exchange()">exchange</button>
+            <input type="number" id="inputB">
+            <select id="currencyB">
+                <option>(USD) US Dollar</option>
+                <option>(EUR) Euro</option>
+                <option>(JPY) Japan Yen</option>
+                <option>(CNY) China Yuan (RMB)</option>
+                <option>(GBP) British Pound</option>
+                <option>(KRW) Korean Won</option>
+                <option>(AUD) Australia Dollar</option>
+                <option>(BGN) Bulgaria Lev</option>
+                <option>(BRL) Brazil Real</option>
+                <option>(CAD) Canadian Dollar</option>
+                <option>(CHF) Swiss Franc</option>
+                <option>(CZK) Czech Koruna</option>
+                <option>(DKK) Denmark Krone</option>
+                <option>(HKD) Hong Kong Dollar</option>
+                <option>(HRK) Croatia Kuna</option>
+                <option>(HUF) Hungary Forint</option>
+                <option>(IDR) Indonesia Rupiah</option>
+                <option>(ILS) Israel Shekel</option>
+                <option>(INR) India Rupee</option>
+                <option>(ISK) Iceland Krona</option>
+                <option>(MXN) Mexico Peso</option>
+                <option>(MYR) Malaysia Ringgit</option>
+                <option>(NOK) Norway Krone</option>
+                <option>(NZD) New Zealand Dollar</option>
+                <option>(PHP) Philippine Peso</option>
+                <option>(PLN) Poland Zloty</option>
+                <option>(RON) Romania Leu</option>
+                <option>(RUB) Russia Ruble</option>
+                <option>(SEK) Sweden Krona</option>
+                <option>(THB) Thai Baht</option>
+                <option>(TRY) Turkish Lira</option>
+                <option>(SGD) Singapore Dollar</option>
+                <option>(ZAR) South Africa Rand</option>
+            </select>
+        </div>
+
+        <div>
+            Calculate Exchange Rates in the Past
         </div>
 
     </body>
