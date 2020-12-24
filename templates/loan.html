@@ -116,6 +116,9 @@
                 </div>
             </div>
             <button onclick="saving()">Calculate</button>
+            <div id="savingFinal">
+                Final Amount:
+            </div>
 
             <br><br><br>
 
@@ -123,19 +126,33 @@
                 Certificate of Deposit Calculator
             </div>
             <div>
-                Initial Deposit: <input type="number">
+                Initial Deposit: <input id="cdInitial" type="number">
             </div>
             <div>
-                Duration: <input type="number"> <select>
-                <option>months</option>
-                <option>years</option>
-            </select>
+                Duration: <input type="number" id="cdDuration">
+                <select id="cdDurationSelect">
+                    <option>months</option>
+                    <option>years</option>
+                </select>
             </div>
 
             <div>
-                Annual Percentage Yield (APY): <input type="number">
+                Interest Rate: <input type="number" id="cdRate">
+            </div>
+            <div>
+                Compounding:
+                <select type="number" id="cdCompound">
+                    <option>Annually</option>
+                    <option>Semi-Annually</option>
+                    <option>Quarterly</option>
+                    <option>Monthly</option>
+                    <option>Simple Interest</option>
+                </select>
             </div>
             <button onclick="cd()">Calculate</button>
+            <div id="cdFinal">
+                Final Amount:
+            </div>
         </div>
         </div>
 

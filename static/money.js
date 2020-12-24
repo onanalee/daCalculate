@@ -1,30 +1,56 @@
-function saving(){
-    let initial = $('#savingInitial').val();
-    let monthly = $('#savingMonthly').val();
-    let duration = $('#savingDuration').val();
-    let select = $('#savingSelect option:selected').val();
-    let compound = $('#compoundSelect option:selected').val();
-    let apy = $('#savingApy').val();
-
-    if (select==='years'){
-        duration = duration * 12;
-    }
-    console.log(duration);
-
-
-
-
-}
+// function saving() {
+//     let initial = $('#savingInitial').val();
+//     let monthly = $('#savingMonthly').val();
+//     let duration = $('#savingDuration').val();
+//     let select = $('#savingSelect option:selected').val();
+//     let compound = $('#compoundSelect option:selected').val();
+//     let apy = $('#savingApy').val();
+//
+//     //set default duration by months for calculation purposes.
+//     if (select === 'years') {
+//         duration = duration * 12;
+//     }
+//     console.log(duration);
+//
+//
+//     let final = ;
+//     $('#savingFinal').append(final);
+//
+//
+// }
 
 function cd() {
-// Final = (initial) * (1 + (apy/n))^(n*t);
+    let initial = $('#cdInitial').val();
+    let duration = $('#cdDuration').val();
+    let select = $('#cdDurationSelect option:selected').val();
+    let compound = $('#cdCompound option:selected').val();
+    let rate = $('#cdRate').val();
+    if (select === 'years') {
+        duration = duration * 12;
+    }
+    if (compound === 'Annually') {
+        let final = (initial) * (1 + (rate / n)) ^ (n * t);
+        $('#cdFinal').append(final);
+
+    } else if (compound === 'Semi-Annually') {
+
+    } else if (compound === 'Quarterly') {
+
+    } else if (compound === 'Monthly') {
+
+    } else if (compound === 'Simple Interest') {
+
+    }
+
+
+
 }
 
 function exchange() {
     let currencyA = $('#currencyA option:selected').val();
     let currencyB = $('#currencyB option:selected').val();
     let input = $('#inputA').val();
-    let url = currencyA.substring(1,4);
+    let url = currencyA.substring(1, 4);
     $.ajax({
         type: 'GET',
         url: 'https://api.exchangeratesapi.io/latest?base=' + url,
@@ -138,7 +164,7 @@ function exchangePast() {
     let currencyA = $('#currencyPastA option:selected').val();
     let currencyB = $('#currencyPastB option:selected').val();
     let input = $('#pastA').val();
-    let url = currencyA.substring(1,4);
+    let url = currencyA.substring(1, 4);
     let date = $('#date').val();
     $.ajax({
         type: 'GET',
