@@ -1,3 +1,25 @@
+function saving(){
+    let initial = $('#savingInitial').val();
+    let monthly = $('#savingMonthly').val();
+    let duration = $('#savingDuration').val();
+    let select = $('#savingSelect option:selected').val();
+    let compound = $('#compoundSelect option:selected').val();
+    let apy = $('#savingApy').val();
+
+    if (select==='years'){
+        duration = duration * 12;
+    }
+    console.log(duration);
+
+
+
+
+}
+
+function cd() {
+// Final = (initial) * (1 + (apy/n))^(n*t);
+}
+
 function exchange() {
     let currencyA = $('#currencyA option:selected').val();
     let currencyB = $('#currencyB option:selected').val();
@@ -118,7 +140,6 @@ function exchangePast() {
     let input = $('#pastA').val();
     let url = currencyA.substring(1,4);
     let date = $('#date').val();
-    console.log(date);
     $.ajax({
         type: 'GET',
         url: 'https://api.exchangeratesapi.io/' + date + '?base=' + url,

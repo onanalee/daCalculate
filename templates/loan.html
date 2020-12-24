@@ -62,6 +62,10 @@
                                 <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
                             </ul>
                         </li>
+                        <li><label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +80,76 @@
             <a id="s">00</a>
         </div>
         <div>
+            Savings Calculator
+            <p>Certificate of Deposit ::: Simple / Compound Interest</p>
+            <p>Savings ::: Initial deposit, monthly contribution, over a period of x months/years. monthly compound?
+                yearly compound iterest?</p>
+        </div>
+        <br><br>
+        <div>
+            <div>
+                Simple Savings Calculator
+            </div>
+            <div>
+                Initial Deposit: <input id="savingInitial" type="number">
+            </div>
+            <div>
+                Monthly Contribution: <input id="savingMonthly" type="number">
+            </div>
+            <div>
+                Duration: <input id="savingDuration" type="number"> <select id="savingSelect">
+                <option>months</option>
+                <option>years</option>
+            </select>
+            </div>
+            <div>
+                Interest Rate: <input id="savingApy" type="number">
+                <div>
+                    Compounding:
+                    <select id="compoundSelect">
+                        <option>Annually</option>
+                        <option>Semi-Annually</option>
+                        <option>Quarterly</option>
+                        <option>Monthly</option>
+                        <option>Simple Interest</option>
+                    </select>
+                </div>
+            </div>
+            <button onclick="saving()">Calculate</button>
 
+            <br><br><br>
+
+            <div>
+                Certificate of Deposit Calculator
+            </div>
+            <div>
+                Initial Deposit: <input type="number">
+            </div>
+            <div>
+                Duration: <input type="number"> <select>
+                <option>months</option>
+                <option>years</option>
+            </select>
+            </div>
+
+            <div>
+                Annual Percentage Yield (APY): <input type="number">
+            </div>
+            <button onclick="cd()">Calculate</button>
+        </div>
+        </div>
+
+
+        <br><br><br><br><br><br>
+
+
+        <div>
+            Loan Calculator
+            <p>amortized loan</p>
+            <p>deferred payment loan</p>
+        </div>
+        <div>
+            Certificate of Deposit
         </div>
 
     </body>
