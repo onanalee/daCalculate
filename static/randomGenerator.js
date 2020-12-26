@@ -6,21 +6,24 @@ function randomNumber() {
     let result = Math.floor(Math.random() * Number(valueMax - valueMin + 1)) + Number(valueMin);
     $('#randomNum').append(result);
 }
-
+// function hello() {
+//   generatePassword();
+//   window.setInterval("generatePassword()", 500);
+// }
 function generatePassword() {
     $('#password').empty();
     let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let lowercase = 'abcdefghijklmnopqrstuvwxyz';
     let numbers = '0123456789';
-    let symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
+    let symbols = '!"#$%&\'()*+,-./:;=?@^[\\]^_`{|}~';
     let length = $('#length').val();
 
     let onlyUpper = lowercase + uppercase;
     let onlyNumber = lowercase + numbers;
     let onlySymbols = lowercase + symbols;
     let numberUpper = lowercase + uppercase + numbers;
-    let numberSymbol = lowercase + symbols + numbers;
-    let upperSymbol = lowercase + uppercase + symbols;
+    let numberSymbols = lowercase + symbols + numbers;
+    let upperSymbols = lowercase + uppercase + symbols;
     let all = uppercase + lowercase + numbers + symbols;
     let password = '';
 
@@ -28,21 +31,45 @@ function generatePassword() {
     let isUpper = document.getElementById("upper");
     let isSpecial = document.getElementById("special");
 
+
     if (isNumber.checked === true && isUpper.checked === true && isSpecial.checked === true) {
         for (let index = 0; index < length; index++) {
             let character = Math.floor(Math.random() * all.length);
             password += all.substring(character, character + 1);
         }
+    } else if (isNumber.checked === false && isUpper.checked === true && isSpecial.checked === false) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * onlyUpper.length);
+            password += onlyUpper.substring(character, character + 1);
+        }
+    } else if (isNumber.checked === true && isUpper.checked === false && isSpecial.checked === false) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * onlyNumber.length);
+            password += onlyNumber.substring(character, character + 1);
+        }
+    } else if (isNumber.checked === false && isUpper.checked === false && isSpecial.checked === true) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * onlySymbols.length);
+            password += onlySymbols.substring(character, character + 1);
+        }
+    } else if (isNumber.checked === true && isUpper.checked === true && isSpecial.checked === false) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * numberUpper.length);
+            password += numberUpper.substring(character, character + 1);
+        }
+    } else if (isNumber.checked === true && isUpper.checked === false && isSpecial.checked === true) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * numberSymbols.length);
+            password += numberSymbols.substring(character, character + 1);
+        }
+    } else if (isNumber.checked === false && isUpper.checked === true && isSpecial.checked === true) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * upperSymbols.length);
+            password += upperSymbols.substring(character, character + 1);
+        }
     }
-
-
-    // for (let index = 0; index < length; index++) {
-    //     let character = Math.floor(Math.random() * all.length);
-    //     password += all.substring(character, character + 1);
-    // }
-
-
-    $('#password').append(password);
+    console.log(password);
+    $('#password').html(password);
 }
 
 
