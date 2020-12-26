@@ -1,7 +1,7 @@
 var users = [
     "Africa/Abidjan",
     "Africa/Accra",
-    "Africa/Addis_Ababa","Addis Ababa",
+    "Africa/Addis_Ababa", "Addis Ababa",
     "Africa/Algiers",
     "Africa/Asmara",
     "Africa/Asmera",
@@ -107,7 +107,7 @@ var users = [
     "America/Dominica",
     "America/Edmonton",
     "America/Eirunepe",
-    "America/El_Salvador","El Salvador",
+    "America/El_Salvador", "El Salvador",
     "America/Ensenada",
     "America/Fort_Wayne", "Fort Wayne",
     "America/Fortaleza",
@@ -144,7 +144,7 @@ var users = [
     "America/Kralendijk",
     "America/La_Paz", "La Paz",
     "America/Lima",
-    "America/Los_Angeles","Los Angeles",
+    "America/Los_Angeles", "Los Angeles",
     "America/Louisville",
     "America/Lower_Princes", "Lower Princes",
     "America/Maceio",
@@ -868,3 +868,49 @@ function timezoneB() {
 }
 
 //// get time difference
+//
+// $(document).ready(function () {
+//     difference();
+//     window.setInterval("difference()", 1000);
+// })
+//
+// function difference() {
+//     let a = $('#timezoneA').text();
+//     let b = $('#timezoneB').text();
+//
+//     let yearA = a.substring(0,4);
+//     let monthA = a.substring(5,7);
+//     let dayA = a.substring(8,10);
+//     let hourA = a.slice(-8, -6);
+//     let minuteA = a.slice(-5,-3);
+//     let ampmA = a.includes('PM');
+//     if(ampmA===false){
+//         hourA = Number(hourA) + 12;
+//     }
+//
+//     let yearB = b.substring(0,4);
+//     let monthB = b.substring(5,7);
+//     let dayB = b.substring(8,10);
+//     let hourB = b.slice(-8, -6);
+//     let minuteB = b.slice(-5,-3);
+//     let ampmB = b.includes('PM');
+//     if(ampmB===false){
+//         hourB = Number(hourB) + 12;
+//     }
+//
+//     let before = spacetime([yearA, monthA, dayA, hourA, minuteA])
+//     let now = spacetime([yearB, monthB, dayB, hourB, minuteB])
+//     let difference = now.since(before);
+//     let diffDay = difference['diff']['days'];
+//     let diffHour = difference['diff']['hours'];
+//     let diffMinutes = difference['diff']['minutes'];
+//
+//     console.log(diffDay, diffHour, diffMinutes);
+//     // console.log(difference);
+//
+//     // if (ampm === True){
+//     // }
+//
+//     // let difference = ;
+//     // $('#difference').text(difference);
+// }

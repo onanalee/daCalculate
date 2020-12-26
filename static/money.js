@@ -15,35 +15,49 @@
 //
 //     let final = ;
 //     $('#savingFinal').append(final);
-//
-//
 // }
 
-function cd() {
-    let initial = $('#cdInitial').val();
-    let duration = $('#cdDuration').val();
-    let select = $('#cdDurationSelect option:selected').val();
-    let compound = $('#cdCompound option:selected').val();
-    let rate = $('#cdRate').val();
-    if (select === 'years') {
-        duration = duration * 12;
-    }
-    if (compound === 'Annually') {
-        let final = (initial) * (1 + (rate / n)) ^ (n * t);
-        $('#cdFinal').append(final);
+// function cd() {
+//     let initial = $('#cdInitial').val();
+//     let duration = $('#cdDuration').val();
+//     let select = $('#cdDurationSelect option:selected').val();
+//     let compound = $('#cdCompound option:selected').val();
+//     let rate1 = $('#cdRate').val();
+//     let rate = (rate1) / 100;
+//     if (select === 'years') {
+//         duration = duration * 12;
+//     }
+//     if (compound === 'Annually') {
+//         let final = (initial) * ((1 + (rate / n)) ** (n * t));
+//         $('#cdFinal').append(final);
+//     } else if (compound === 'Semi-Annually') {
+//
+//     } else if (compound === 'Quarterly') {
+//
+//     } else if (compound === 'Monthly') {
+//         let final = (initial) * ((1 + (rate / n)) ** (n * t));
+//         $('#cdFinal').append(final);
+//     } else if (compound === 'Simple Interest') {
+//         let final = (initial) * (1 + (rate * duration));
+//         $('#cdFinal').append(final);
+//     }
+// }
 
-    } else if (compound === 'Semi-Annually') {
+for(i = 0; i <currentYear.length; i++){
+    let option = `<option>${}</option>`;
+    $('#year').append(option);
+}
+function inflation(){
+    let input = $('#').val();
+    let year = $('#').val();
 
-    } else if (compound === 'Quarterly') {
-
-    } else if (compound === 'Monthly') {
-
-    } else if (compound === 'Simple Interest') {
-
-    }
-
-
-
+    $.ajax({
+        type: 'GET',
+        url: 'http://inflation-api.herokuapp.com/api/?value=' + input + '&year=' + year,
+        data: {},
+        success: function (response) {
+            let cad = response['response']['adjustedValue'];
+        }})
 }
 
 function exchange() {
