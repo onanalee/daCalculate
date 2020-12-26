@@ -43,20 +43,25 @@
 //     }
 // }
 
-for(i = 0; i <currentYear.length; i++){
-    let option = `<option>${}</option>`;
+$( document ).ready(function ready (){
+    for(i = 1913; i <2016; i++){
+    let option = `<option>${i}</option>`;
     $('#year').append(option);
-}
+}})
+
+
 function inflation(){
-    let input = $('#').val();
-    let year = $('#').val();
+    $('#result').empty();
+    let input = $('#input').val();
+    let year = $('#year option:selected').val();
 
     $.ajax({
         type: 'GET',
-        url: 'http://inflation-api.herokuapp.com/api/?value=' + input + '&year=' + year,
+        url: 'https://cors-anywhere.herokuapp.com/http://inflation-api.herokuapp.com/api/?value=' + input + '&year=' + year,
         data: {},
         success: function (response) {
-            let cad = response['response']['adjustedValue'];
+            let result = response['response']['adjustedValue'];
+            $('#result').append(result);
         }})
 }
 
