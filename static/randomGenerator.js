@@ -3,22 +3,45 @@ function randomNumber() {
     let valueMax = $('#valueMax').val();
     let valueMin = $('#valueMin').val();
 
-    let result =  Math.floor(Math.random() * Number(valueMax - valueMin + 1)) + Number(valueMin);
+    let result = Math.floor(Math.random() * Number(valueMax - valueMin + 1)) + Number(valueMin);
     $('#randomNum').append(result);
 }
 
-function generatePassword(length = 12) {
+function generatePassword() {
     $('#password').empty();
-    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    var numbers = '0123456789';
-    var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
-    var all = uppercase + lowercase + numbers + symbols;
-    var password = '';
-    for (var index = 0; index < length; index++) {
-        var character = Math.floor(Math.random() * all.length);
-        password += all.substring(character, character + 1);
+    let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    let numbers = '0123456789';
+    let symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
+    let length = $('#length').val();
+
+    let onlyUpper = lowercase + uppercase;
+    let onlyNumber = lowercase + numbers;
+    let onlySymbols = lowercase + symbols;
+    let numberUpper = lowercase + uppercase + numbers;
+    let numberSymbol = lowercase + symbols + numbers;
+    let upperSymbol = lowercase + uppercase + symbols;
+    let all = uppercase + lowercase + numbers + symbols;
+    let password = '';
+
+    let isNumber = document.getElementById("number");
+    let isUpper = document.getElementById("upper");
+    let isSpecial = document.getElementById("special");
+
+    if (isNumber.checked === true && isUpper.checked === true && isSpecial.checked === true) {
+        for (let index = 0; index < length; index++) {
+            let character = Math.floor(Math.random() * all.length);
+            password += all.substring(character, character + 1);
+        }
     }
+
+
+    // for (let index = 0; index < length; index++) {
+    //     let character = Math.floor(Math.random() * all.length);
+    //     password += all.substring(character, character + 1);
+    // }
+
+
     $('#password').append(password);
 }
 
