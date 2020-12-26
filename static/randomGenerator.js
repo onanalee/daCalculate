@@ -1,3 +1,12 @@
+function randomNumber() {
+    $('#randomNum').empty();
+    let valueMax = $('#valueMax').val();
+    let valueMin = $('#valueMin').val();
+
+    let result =  Math.floor(Math.random() * Number(valueMax - valueMin + 1)) + Number(valueMin);
+    $('#randomNum').append(result);
+}
+
 function generatePassword(length = 12) {
     $('#password').empty();
     var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

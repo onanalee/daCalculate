@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="../static/randomGenerator.css">
     </head>
 
-    <body onload="generatePassword(); initClock()">
+    <body onload="generatePassword(); initClock();">
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">da Calculate</a>
@@ -58,7 +58,8 @@
                                 Random Generator
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a></li>
+                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a>
+                                </li>
                                 <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
                             </ul>
                         </li>
@@ -75,6 +76,17 @@
             <a id="m">00</a>:
             <a id="s">00</a>
         </div>
+<div>
+    <button onclick="randomNumber()">get random number</button>
+    <input type="number" id="valueMin">
+    <input type="number" id="valueMax">
+    <div id="randomNum">
+
+    </div>
+</div>
+
+
+
         <div class="tabs">
             <input type="radio" name="tabs" id="tabone" checked="checked">
             <label for="tabone">Tab One</label>
