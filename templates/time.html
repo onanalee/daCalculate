@@ -16,7 +16,6 @@
         <link rel="stylesheet" href="../static/time.css">
 
         <script src="https://unpkg.com/spacetime"></script>
-        <script src="../static/script.js"></script>
         <script src="../static/time.js"></script>
 
 
@@ -65,7 +64,8 @@
                                 Random Generator
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a></li>
+                                <li><a class="dropdown-item" href="/random_generator">Generate Numbers and Passwords</a>
+                                </li>
                                 <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
                             </ul>
                         </li>
@@ -142,6 +142,42 @@
         <input type="number" id="weeks"> weeks
         <button onclick="addDate()">Calculate</button>
         <div>Result: <input type="text" id="result"></div>
+
+        <div class="calculator">
+            <div class="input" id="input"></div>
+            <div class="buttons">
+                <div class="operators">
+                    <div>+</div>
+                    <div>-</div>
+                    <div>&times;</div>
+                    <div>&divide;</div>
+                </div>
+                <div class="leftPanel">
+                    <div class="numbers">
+                        <div>7</div>
+                        <div>8</div>
+                        <div>9</div>
+                    </div>
+                    <div class="numbers">
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                    </div>
+                    <div class="numbers">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                    </div>
+                    <div class="numbers">
+                        <div>0</div>
+                        <div>.</div>
+                        <div id="clear">C</div>
+                    </div>
+                </div>
+                <div class="equal" id="calc">=</div>
+            </div>
+        </div>
+        <script src="../static/script.js"></script>
 
     </body>
 </html>

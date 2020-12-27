@@ -84,365 +84,366 @@
                 </div>
             </div>
         </nav>
-        <div id="timeDate">
-            <span id="localTime">Current Local Time:</span>
-            <a id="mon">January</a>
-            <a id="d">1</a>,
-            <a id="y">0</a><br/>
-            <a id="h">12</a> :
-            <a id="m">00</a>:
-            <a id="s">00</a>
-        </div>
-
-        <div>
-            Click to expand boxes
-        </div>
-        <section class="accordionAll">
-            <div class="accordion" onclick="length()">
-                <div class="unitType">Length</div>
-                <div class="length">
-                    <input type="number" id="lengthBefore">
-                    <select id="lengthUnitA">
-                        <option>(nm) nanometer</option>
-                        <option>(mcm) micrometer</option>
-                        <option>(mm) millimeter</option>
-                        <option>(cm) centimeter</option>
-                        <option>(m) meter</option>
-                        <option>(km) kilometer</option>
-                        <option>-----------</option>
-                        <option>(in) inch</option>
-                        <option>(ft) feet</option>
-                        <option>(yd) yard</option>
-                        <option>(mi) mile</option>
-                        <option>-----------</option>
-                        <option>(nm) nautical mile</option>
-                        <option>(au) astronomical unit</option>
-                        <option>light-year</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertLength()">Convert</button>
-                    <br><br>
-                    =
-                    <input type="number" id="lengthAfter">
-                    <select id="lengthUnitB">
-                        <option>(nm) nanometer</option>
-                        <option>(mcm) micrometer</option>
-                        <option>(mm) millimeter</option>
-                        <option>(cm) centimeter</option>
-                        <option>(m) meter</option>
-                        <option>(km) kilometer</option>
-                        <option>-----------</option>
-                        <option>(in) inch</option>
-                        <option>(ft) feet</option>
-                        <option>(yd) yard</option>
-                        <option>(mi) mile</option>
-                        <option>-----------</option>
-                        <option>(nm) nautical mile</option>
-                        <option>(au) astronomical unit</option>
-                        <option>light-year</option>
-                    </select>
-                </div>
-            </div>
-            <div class="accordion" onclick="weight()">
-                <div class="unitType">Weight</div>
-                <div class="weight">
-                    <input type="number" id="weightBefore">
-                    <select id="weightUnitA">
-                        <option>(ng) nanogram</option>
-                        <option>(mcg) microgram</option>
-                        <option>(mg) milligram</option>
-                        <option>(g) gram</option>
-                        <option>(kg) kilogram</option>
-                        <option>(t) ton</option>
-                        <option>(Kt) kiloton</option>
-                        <option>(Mt) megaton</option>
-                        <option>(Gt) gigaton</option>
-                        <option>-----------</option>
-                        <option>(oz) ounce</option>
-                        <option>(lb) pound</option>
-                        <option>long ton</option>
-                        <option>short ton</option>
-
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertWeight()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="weightAfter">
-                    <select id="weightUnitB">
-                        <option>(ng) nanogram</option>
-                        <option>(mcg) microgram</option>
-                        <option>(mg) milligram</option>
-                        <option>(g) gram</option>
-                        <option>(kg) kilogram</option>
-                        <option>(t) ton</option>
-                        <option>(Kt) kiloton</option>
-                        <option>(Mt) megaton</option>
-                        <option>(Gt) gigaton</option>
-                        <option>-----------</option>
-                        <option>(oz) ounce</option>
-                        <option>(lb) pound</option>
-                        <option>long ton</option>
-                        <option>short ton</option>
-                    </select>
-
-                </div>
-            </div>
-            <div class="accordion" onclick="area()">
-                <div class="unitType">Area</div>
-                <div class="area">
-                    <input type="number" id="areaBefore">
-                    <select id="areaUnitA">
-                        <option>square nanometer</option>
-                        <option>square micrometer</option>
-                        <option>square millimeter</option>
-                        <option>square centimeter</option>
-                        <option>square meter</option>
-                        <option>square kilometer</option>
-                        <option>hectare</option>
-                        <option>-----------</option>
-                        <option>square inch</option>
-                        <option>square feet</option>
-                        <option>square yard</option>
-                        <option>square mile</option>
-                        <option>acre</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertArea()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="areaAfter">
-                    <select id="areaUnitB">
-                        <option>square nanometer</option>
-                        <option>square micrometer</option>
-                        <option>square millimeter</option>
-                        <option>square centimeter</option>
-                        <option>square meter</option>
-                        <option>square kilometer</option>
-                        <option>hectare</option>
-                        <option>-----------</option>
-                        <option>square inch</option>
-                        <option>square feet</option>
-                        <option>square yard</option>
-                        <option>square mile</option>
-                        <option>acre</option>
-                    </select>
-                </div>
-            </div>
-            <div class="accordion" onclick="volume()">
-                <div class="unitType">Volume</div>
-                <div class="volume">
-                    <input type="number" id="volumeBefore">
-                    <select id="volumeUnitA">
-                        <option>(mcL) microliter</option>
-                        <option>(mL) milliliter</option>
-                        <option>(L) liter</option>
-                        <option>-----------</option>
-                        <option>cubic millimeter</option>
-                        <option>cubic centimeter</option>
-                        <option>cubic meter</option>
-                        <option>cubic kilometer</option>
-                        <option>-----------</option>
-                        <option>cubic inch</option>
-                        <option>cubic feet</option>
-                        <option>cubic yard</option>
-                        <option>-----------</option>
-                        <option>(oz) ounce</option>
-                        <option>(pt) pint</option>
-                        <option>(qt) quart</option>
-                        <option>(gal) gallon</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertVolume()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="volumeAfter">
-                    <select id="volumeUnitB">
-                        <option>(mcL) microliter</option>
-                        <option>(mL) milliliter</option>
-                        <option>(L) liter</option>
-                        <option>-----------</option>
-                        <option>cubic millimeter</option>
-                        <option>cubic centimeter</option>
-                        <option>cubic meter</option>
-                        <option>cubic kilometer</option>
-                        <option>-----------</option>
-                        <option>cubic inch</option>
-                        <option>cubic feet</option>
-                        <option>cubic yard</option>
-                        <option>-----------</option>
-                        <option>(oz) ounce</option>
-                        <option>(pt) pint</option>
-                        <option>(qt) quart</option>
-                        <option>(gal) gallon</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-        <br><br>
-        <section class="accordionAll">
-            <div class="accordion" onclick="temperature()">
-                <div class="unitType">Temperature</div>
-                <div class="temperature">
-                    <input type="number" id="temperatureBefore">
-                    <select id="temperatureUnitA">
-                        <option>(°C) Celsius</option>
-                        <option>(°F) Fahrenheit</option>
-                        <option>(K) Kelvin</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertTemperature()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="temperatureAfter">
-                    <select id="temperatureUnitB">
-                        <option>(°C) Celsius</option>
-                        <option>(°F) Fahrenheit</option>
-                        <option>(K) Kelvin</option>
-                    </select>
-                </div>
+        <div id="wrap">
+            <div id="timeDate">
+                <span id="localTime">Current Local Time:</span>
+                <a id="mon">January</a>
+                <a id="d">1</a>,
+                <a id="y">0</a><br/>
+                <a id="h">12</a> :
+                <a id="m">00</a>:
+                <a id="s">00</a>
             </div>
 
-            <div class="accordion" onclick="pressure()">
-                <div class="unitType">Pressure</div>
-                <div class="pressure">
-                    <input type="number" id="pressureBefore">
-                    <select id="pressureUnitA">
-                        <option>Bar</option>
-                        <option>Pascal</option>
-                        <option>pound per square inch</option>
-                        <option>Torr</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertPressure()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="pressureAfter">
-                    <select id="pressureUnitB">
-                        <option>Bar</option>
-                        <option>Pascal</option>
-                        <option>pound per square inch</option>
-                        <option>Torr</option>
-                    </select>
-                </div>
+            <div>
+                Click to expand boxes
             </div>
-            <div class="accordion" onclick="energy()">
-                <div class="unitType">Energy</div>
-                <div class="energy">
-                    <input type="number" id="energyBefore">
-                    <select id="energyUnitA">
-                        <option>(J) Joule</option>
-                        <option>(Wh) watt hour</option>
-                        <option>(kWh) kilowatt hour</option>
-                        <option>electronvolt</option>
-                        <option>ton of TNT</option>
-                        <option>calories</option>
-                        <option>Calories (food)</option>
-                        <option>(BTU) British thermal unit</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertEnergy()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="energyAfter">
-                    <select id="energyUnitB">
-                        <option>(J) Joule</option>
-                        <option>(Wh) watt hour</option>
-                        <option>(kWh) kilowatt hour</option>
-                        <option>electronvolt</option>
-                        <option>ton of TNT</option>
-                        <option>calories</option>
-                        <option>Calories (food)</option>
-                        <option>(BTU) British thermal unit</option>
-                    </select>
-                </div>
-            </div>
-            <div class="accordion" onclick="bytes()">
-                <div class="unitType">Bytes</div>
-                <div class="bytes">
-                    <input type="number" id="byteBefore">
-                    <select id="byteUnitA">
-                        <option>(b) bit</option>
-                        <option>(B) byte</option>
-                        <option>(KB) kilobyte</option>
-                        <option>(MB) megabyte</option>
-                        <option>(GB) gigabyte</option>
-                        <option>(TB) terabyte</option>
-                        <option>(PB) petabyte</option>
-                        <option>(EB) exabyte</option>
-                        <option>(ZB) zettabyte</option>
-                        <option>-----------</option>
-                        <option>(KiB) kibibyte</option>
-                        <option>(MiB) mebibyte</option>
-                        <option>(GiB) gibibyte</option>
-                        <option>(TiB) tebibyte</option>
-                        <option>(PiB) pebibyte</option>
-                        <option>(EiB) exbibyte</option>
-                        <option>(ZiB) zebibyte</option>
-                    </select>
-                    <br><br>
-                    <button class="convert" onclick="convertByte()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="byteAfter">
-                    <select id="byteUnitB">
-                        <option>(b) bit</option>
-                        <option>(B) byte</option>
-                        <option>(KB) kilobyte</option>
-                        <option>(MB) megabyte</option>
-                        <option>(GB) gigabyte</option>
-                        <option>(TB) terabyte</option>
-                        <option>(PB) petabyte</option>
-                        <option>(EB) exabyte</option>
-                        <option>(ZB) zettabyte</option>
-                        <option>-----------</option>
-                        <option>(KiB) kibibyte</option>
-                        <option>(MiB) mebibyte</option>
-                        <option>(GiB) gibibyte</option>
-                        <option>(TiB) tebibyte</option>
-                        <option>(PiB) pebibyte</option>
-                        <option>(EiB) exbibyte</option>
-                        <option>(ZiB) zebibyte</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-        <div class="calculator">
-            <div class="input" id="input"></div>
-            <div class="buttons">
-                <div class="operators">
-                    <div>+</div>
-                    <div>-</div>
-                    <div>&times;</div>
-                    <div>&divide;</div>
-                </div>
-                <div class="leftPanel">
-                    <div class="numbers">
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-                    </div>
-                    <div class="numbers">
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                    </div>
-                    <div class="numbers">
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                    </div>
-                    <div class="numbers">
-                        <div>0</div>
-                        <div>.</div>
-                        <div id="clear">C</div>
+            <section class="accordionAll">
+                <div class="accordion" onclick="length()">
+                    <div class="unitType">Length</div>
+                    <div class="length">
+                        <input type="number" id="lengthBefore">
+                        <select id="lengthUnitA">
+                            <option>(nm) nanometer</option>
+                            <option>(mcm) micrometer</option>
+                            <option>(mm) millimeter</option>
+                            <option>(cm) centimeter</option>
+                            <option>(m) meter</option>
+                            <option>(km) kilometer</option>
+                            <option>-----------</option>
+                            <option>(in) inch</option>
+                            <option>(ft) feet</option>
+                            <option>(yd) yard</option>
+                            <option>(mi) mile</option>
+                            <option>-----------</option>
+                            <option>(nm) nautical mile</option>
+                            <option>(au) astronomical unit</option>
+                            <option>light-year</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertLength()">Convert</button>
+                        <br><br>
+                        =
+                        <input type="number" id="lengthAfter">
+                        <select id="lengthUnitB">
+                            <option>(nm) nanometer</option>
+                            <option>(mcm) micrometer</option>
+                            <option>(mm) millimeter</option>
+                            <option>(cm) centimeter</option>
+                            <option>(m) meter</option>
+                            <option>(km) kilometer</option>
+                            <option>-----------</option>
+                            <option>(in) inch</option>
+                            <option>(ft) feet</option>
+                            <option>(yd) yard</option>
+                            <option>(mi) mile</option>
+                            <option>-----------</option>
+                            <option>(nm) nautical mile</option>
+                            <option>(au) astronomical unit</option>
+                            <option>light-year</option>
+                        </select>
                     </div>
                 </div>
-                <div class="equal" id="result">=</div>
+                <div class="accordion" onclick="weight()">
+                    <div class="unitType">Weight</div>
+                    <div class="weight">
+                        <input type="number" id="weightBefore">
+                        <select id="weightUnitA">
+                            <option>(ng) nanogram</option>
+                            <option>(mcg) microgram</option>
+                            <option>(mg) milligram</option>
+                            <option>(g) gram</option>
+                            <option>(kg) kilogram</option>
+                            <option>(t) ton</option>
+                            <option>(Kt) kiloton</option>
+                            <option>(Mt) megaton</option>
+                            <option>(Gt) gigaton</option>
+                            <option>-----------</option>
+                            <option>(oz) ounce</option>
+                            <option>(lb) pound</option>
+                            <option>long ton</option>
+                            <option>short ton</option>
+
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertWeight()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="weightAfter">
+                        <select id="weightUnitB">
+                            <option>(ng) nanogram</option>
+                            <option>(mcg) microgram</option>
+                            <option>(mg) milligram</option>
+                            <option>(g) gram</option>
+                            <option>(kg) kilogram</option>
+                            <option>(t) ton</option>
+                            <option>(Kt) kiloton</option>
+                            <option>(Mt) megaton</option>
+                            <option>(Gt) gigaton</option>
+                            <option>-----------</option>
+                            <option>(oz) ounce</option>
+                            <option>(lb) pound</option>
+                            <option>long ton</option>
+                            <option>short ton</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="accordion" onclick="area()">
+                    <div class="unitType">Area</div>
+                    <div class="area">
+                        <input type="number" id="areaBefore">
+                        <select id="areaUnitA">
+                            <option>square nanometer</option>
+                            <option>square micrometer</option>
+                            <option>square millimeter</option>
+                            <option>square centimeter</option>
+                            <option>square meter</option>
+                            <option>square kilometer</option>
+                            <option>hectare</option>
+                            <option>-----------</option>
+                            <option>square inch</option>
+                            <option>square feet</option>
+                            <option>square yard</option>
+                            <option>square mile</option>
+                            <option>acre</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertArea()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="areaAfter">
+                        <select id="areaUnitB">
+                            <option>square nanometer</option>
+                            <option>square micrometer</option>
+                            <option>square millimeter</option>
+                            <option>square centimeter</option>
+                            <option>square meter</option>
+                            <option>square kilometer</option>
+                            <option>hectare</option>
+                            <option>-----------</option>
+                            <option>square inch</option>
+                            <option>square feet</option>
+                            <option>square yard</option>
+                            <option>square mile</option>
+                            <option>acre</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="accordion" onclick="volume()">
+                    <div class="unitType">Volume</div>
+                    <div class="volume">
+                        <input type="number" id="volumeBefore">
+                        <select id="volumeUnitA">
+                            <option>(mcL) microliter</option>
+                            <option>(mL) milliliter</option>
+                            <option>(L) liter</option>
+                            <option>-----------</option>
+                            <option>cubic millimeter</option>
+                            <option>cubic centimeter</option>
+                            <option>cubic meter</option>
+                            <option>cubic kilometer</option>
+                            <option>-----------</option>
+                            <option>cubic inch</option>
+                            <option>cubic feet</option>
+                            <option>cubic yard</option>
+                            <option>-----------</option>
+                            <option>(oz) ounce</option>
+                            <option>(pt) pint</option>
+                            <option>(qt) quart</option>
+                            <option>(gal) gallon</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertVolume()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="volumeAfter">
+                        <select id="volumeUnitB">
+                            <option>(mcL) microliter</option>
+                            <option>(mL) milliliter</option>
+                            <option>(L) liter</option>
+                            <option>-----------</option>
+                            <option>cubic millimeter</option>
+                            <option>cubic centimeter</option>
+                            <option>cubic meter</option>
+                            <option>cubic kilometer</option>
+                            <option>-----------</option>
+                            <option>cubic inch</option>
+                            <option>cubic feet</option>
+                            <option>cubic yard</option>
+                            <option>-----------</option>
+                            <option>(oz) ounce</option>
+                            <option>(pt) pint</option>
+                            <option>(qt) quart</option>
+                            <option>(gal) gallon</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <section class="accordionAll">
+                <div class="accordion" onclick="temperature()">
+                    <div class="unitType">Temperature</div>
+                    <div class="temperature">
+                        <input type="number" id="temperatureBefore">
+                        <select id="temperatureUnitA">
+                            <option>(°C) Celsius</option>
+                            <option>(°F) Fahrenheit</option>
+                            <option>(K) Kelvin</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertTemperature()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="temperatureAfter">
+                        <select id="temperatureUnitB">
+                            <option>(°C) Celsius</option>
+                            <option>(°F) Fahrenheit</option>
+                            <option>(K) Kelvin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="pressure()">
+                    <div class="unitType">Pressure</div>
+                    <div class="pressure">
+                        <input type="number" id="pressureBefore">
+                        <select id="pressureUnitA">
+                            <option>Bar</option>
+                            <option>Pascal</option>
+                            <option>pound per square inch</option>
+                            <option>Torr</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertPressure()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="pressureAfter">
+                        <select id="pressureUnitB">
+                            <option>Bar</option>
+                            <option>Pascal</option>
+                            <option>pound per square inch</option>
+                            <option>Torr</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="accordion" onclick="energy()">
+                    <div class="unitType">Energy</div>
+                    <div class="energy">
+                        <input type="number" id="energyBefore">
+                        <select id="energyUnitA">
+                            <option>(J) Joule</option>
+                            <option>(Wh) watt hour</option>
+                            <option>(kWh) kilowatt hour</option>
+                            <option>electronvolt</option>
+                            <option>ton of TNT</option>
+                            <option>calories</option>
+                            <option>Calories (food)</option>
+                            <option>(BTU) British thermal unit</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertEnergy()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="energyAfter">
+                        <select id="energyUnitB">
+                            <option>(J) Joule</option>
+                            <option>(Wh) watt hour</option>
+                            <option>(kWh) kilowatt hour</option>
+                            <option>electronvolt</option>
+                            <option>ton of TNT</option>
+                            <option>calories</option>
+                            <option>Calories (food)</option>
+                            <option>(BTU) British thermal unit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="accordion" onclick="bytes()">
+                    <div class="unitType">Bytes</div>
+                    <div class="bytes">
+                        <input type="number" id="byteBefore">
+                        <select id="byteUnitA">
+                            <option>(b) bit</option>
+                            <option>(B) byte</option>
+                            <option>(KB) kilobyte</option>
+                            <option>(MB) megabyte</option>
+                            <option>(GB) gigabyte</option>
+                            <option>(TB) terabyte</option>
+                            <option>(PB) petabyte</option>
+                            <option>(EB) exabyte</option>
+                            <option>(ZB) zettabyte</option>
+                            <option>-----------</option>
+                            <option>(KiB) kibibyte</option>
+                            <option>(MiB) mebibyte</option>
+                            <option>(GiB) gibibyte</option>
+                            <option>(TiB) tebibyte</option>
+                            <option>(PiB) pebibyte</option>
+                            <option>(EiB) exbibyte</option>
+                            <option>(ZiB) zebibyte</option>
+                        </select>
+                        <br><br>
+                        <button class="convert" onclick="convertByte()">Convert</button>
+                        <br> <br>
+                        =
+                        <input type="number" id="byteAfter">
+                        <select id="byteUnitB">
+                            <option>(b) bit</option>
+                            <option>(B) byte</option>
+                            <option>(KB) kilobyte</option>
+                            <option>(MB) megabyte</option>
+                            <option>(GB) gigabyte</option>
+                            <option>(TB) terabyte</option>
+                            <option>(PB) petabyte</option>
+                            <option>(EB) exabyte</option>
+                            <option>(ZB) zettabyte</option>
+                            <option>-----------</option>
+                            <option>(KiB) kibibyte</option>
+                            <option>(MiB) mebibyte</option>
+                            <option>(GiB) gibibyte</option>
+                            <option>(TiB) tebibyte</option>
+                            <option>(PiB) pebibyte</option>
+                            <option>(EiB) exbibyte</option>
+                            <option>(ZiB) zebibyte</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <div class="calculator">
+                <div class="input" id="input"></div>
+                <div class="buttons">
+                    <div class="operators">
+                        <div>+</div>
+                        <div>-</div>
+                        <div>&times;</div>
+                        <div>&divide;</div>
+                    </div>
+                    <div class="leftPanel">
+                        <div class="numbers">
+                            <div>7</div>
+                            <div>8</div>
+                            <div>9</div>
+                        </div>
+                        <div class="numbers">
+                            <div>4</div>
+                            <div>5</div>
+                            <div>6</div>
+                        </div>
+                        <div class="numbers">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                        <div class="numbers">
+                            <div>0</div>
+                            <div>.</div>
+                            <div id="clear">C</div>
+                        </div>
+                    </div>
+                    <div class="equal" id="calc">=</div>
+                </div>
             </div>
-        </div>
 
 
-        <script src="../static/script.js"></script>
+            <script src="../static/script.js"></script>
     </body>
 </html>

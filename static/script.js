@@ -96,7 +96,7 @@ function initClock() {
 var input = document.getElementById('input'); // input/output button
 let number = document.querySelectorAll('.numbers div'); // number buttons
 let operator = document.querySelectorAll('.operators div'); // operator buttons
-let result = document.getElementById('result'); // equal button
+let result = document.getElementById('calc'); // equal button
 let clear = document.getElementById('clear'); // clear button
 let resultDisplayed = false; // flag to keep an eye on what output is displayed
 
