@@ -1,54 +1,8 @@
-// function saving() {
-//     let initial = $('#savingInitial').val();
-//     let monthly = $('#savingMonthly').val();
-//     let duration = $('#savingDuration').val();
-//     let select = $('#savingSelect option:selected').val();
-//     let compound = $('#compoundSelect option:selected').val();
-//     let apy = $('#savingApy').val();
-//
-//     //set default duration by months for calculation purposes.
-//     if (select === 'years') {
-//         duration = duration * 12;
-//     }
-//     console.log(duration);
-//
-//
-//     let final = ;
-//     $('#savingFinal').append(final);
-// }
-
-// function cd() {
-//     let initial = $('#cdInitial').val();
-//     let duration = $('#cdDuration').val();
-//     let select = $('#cdDurationSelect option:selected').val();
-//     let compound = $('#cdCompound option:selected').val();
-//     let rate1 = $('#cdRate').val();
-//     let rate = (rate1) / 100;
-//     if (select === 'years') {
-//         duration = duration * 12;
-//     }
-//     if (compound === 'Annually') {
-//         let final = (initial) * ((1 + (rate / n)) ** (n * t));
-//         $('#cdFinal').append(final);
-//     } else if (compound === 'Semi-Annually') {
-//
-//     } else if (compound === 'Quarterly') {
-//
-//     } else if (compound === 'Monthly') {
-//         let final = (initial) * ((1 + (rate / n)) ** (n * t));
-//         $('#cdFinal').append(final);
-//     } else if (compound === 'Simple Interest') {
-//         let final = (initial) * (1 + (rate * duration));
-//         $('#cdFinal').append(final);
-//     }
-// }
-
 $( document ).ready(function ready (){
     for(i = 1913; i <2016; i++){
     let option = `<option>${i}</option>`;
     $('#year').append(option);
 }})
-
 
 function inflation(){
     $('#result').empty();

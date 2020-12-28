@@ -17,12 +17,23 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+
+}
+.navbar-brand{
+    font-family: 'Audiowide';
+    font-size:48px;
+}
+
+.navbar-nav{
+    align-content: end;
+}
+.navContent{
+    font-size:1.5em;
 }
 
 
 #navBar {
-    width: 50%;
-    background-color: #f2cc99;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -137,14 +148,6 @@ input:checked + .slider:before {
 }
 
 
-/*body {*/
-/*  width: 500px;*/
-/*  margin: 4% auto;*/
-/*  font-family: 'Source Sans Pro', sans-serif;*/
-/*  letter-spacing: 5px;*/
-/*  font-size: 1.8rem;*/
-
-/*}*/
 
 #timeDate {
     font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -170,7 +173,7 @@ input:checked + .slider:before {
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 1px;
-    display:block;
+    display: block;
 }
 
 .input {
@@ -275,4 +278,3 @@ div.equal:hover {
 div.equal:active {
     font-weight: bold;
 }
-

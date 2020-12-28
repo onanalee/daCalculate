@@ -1,3 +1,7 @@
+function reset(){
+    $('#history').empty();
+}
+
 function randomNumber() {
     $('#randomNum').empty();
     let valueMax = $('#valueMax').val();
@@ -69,10 +73,10 @@ function generatePassword() {
 
 function generateLotto() {
     //get random numbers
-    var numbers = [];
-    var ball = document.getElementsByClassName("ball");
+    let numbers = [];
+    let ball = document.getElementsByClassName("ball");
     while (numbers.length < 6) {
-        var random = Math.floor(Math.random() * 45) + 1;
+        let random = Math.floor(Math.random() * 45) + 1;
         if (numbers.indexOf(random) == -1) {
             numbers.push(random);
         }

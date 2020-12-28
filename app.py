@@ -30,9 +30,6 @@ def exchangeRates():
 @app.route('/inflation')
 def inflation():
     return render_template('inflation.html')
-@app.route('/loan')
-def loan():
-    return render_template('loan.html')
 
 
 if __name__ == '__main__':
