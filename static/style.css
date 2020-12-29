@@ -19,16 +19,18 @@ body {
     -ms-user-select: none;
 
 }
-.navbar-brand{
+
+.navbar-brand {
     font-family: 'Audiowide';
-    font-size:48px;
+    font-size: 48px;
 }
 
-.navbar-nav{
+.navbar-nav {
     align-content: end;
 }
-.navContent{
-    font-size:1.5em;
+
+.navContent {
+    font-size: 1.5em;
 }
 
 
@@ -147,29 +149,41 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+#wrap {
+    display: grid;
+    float: right;
+    grid-template-columns: 200px;
+    /*grid-template-columns: 500px 1fr 2fr;*/
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 50px;
+}
 
+#wrap2 {
+    /*display: grid;*/
+    /*float:left;*/
+}
 
 #timeDate {
     font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5em;
-    float: right;
+    /*float: right;*/
     /*display: inline-block;*/
     text-align: left;
-    width: 20%;
-    /*margin: 0px auto;*/
+    width: 80%;
+    margin-top: 100px;
     color: #fff;
-    border-left: 3px solid #ed1f24;
-    padding: 10px;
+    /*border-left: 3px solid #ed1f24;*/
+    /*padding: 25px;*/
 }
 
 #localTime {
-    color: black;
+    color: darkorange;
 }
 
 .calculator {
-    max-width: 15%;
-    margin-top: 100px;
-    padding: 5px;
+    /*float:right;*/
+    max-width: 100%;
+    /*padding: 15px;*/
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 1px;
@@ -184,7 +198,7 @@ input:checked + .slider:before {
     padding-top: 5px;
     text-align: right;
     margin-right: 3px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     overflow-x: auto;
     transition: all .2s ease-in-out;
 }

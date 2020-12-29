@@ -1,7 +1,12 @@
 /**
  * Tabs
  */
-
+#timezone_map{
+    width:80%;
+    display:block;
+    margin-top:30px;
+    margin-left:20px;
+}
 
 #filter_users {
     width: 100%;
@@ -96,3 +101,4 @@
     border-radius: 4px;
     background-color: #f1f1f1;
 }
+
