@@ -152,7 +152,7 @@ input:checked + .slider:before {
 #wrap {
     display: grid;
     float: right;
-    margin-right:25px;
+    margin-right: 25px;
     grid-template-columns: 200px;
     /*grid-template-columns: 500px 1fr 2fr;*/
     grid-template-rows: 1fr 1fr;
@@ -164,6 +164,8 @@ input:checked + .slider:before {
     /*float:left;*/
 }
 
+
+/*Local Time Clock*/
 #timeDate {
     font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.5em;
@@ -181,27 +183,43 @@ input:checked + .slider:before {
     color: darkorange;
 }
 
+
+/*Calculator*/
+/*body {*/
+/*  !*width: 500px;*!*/
+/*  margin: 4% auto;*/
+/*  font-family: 'Source Sans Pro', sans-serif;*/
+/*  letter-spacing: 5px;*/
+/*  font-size: 1.8rem;*/
+/*  -moz-user-select: none;*/
+/*  -webkit-user-select: none;*/
+/*  -ms-user-select: none;*/
+/*}*/
+
 .calculator {
-    /*float:right;*/
-    max-width: 100%;
-    /*padding: 15px;*/
+    width: 500px;
+    margin: 4% auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 20px;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    display: block;
+    border-radius: 1px;
 }
 
 .input {
     border: 1px solid #ddd;
     border-radius: 1px;
-    height: 40px;
-    padding-right: 7.5px;
-    /*padding-left: 7.5px;*/
-    padding-top: 5px;
+    height: 60px;
+    padding-right: 15px;
+    padding-top: 10px;
     text-align: right;
-    margin-right: 3px;
-    /*margin-left:3px;*/
-    font-size: 1.2rem;
+    margin-right: 6px;
+    font-size: 2.5rem;
     overflow-x: auto;
     transition: all .2s ease-in-out;
 }
@@ -222,10 +240,10 @@ input:checked + .slider:before {
     display: inline-block;
     border: 1px solid #bbb;
     border-radius: 1px;
-    width: 40px;
+    width: 80px;
     text-align: center;
-    padding: 5px;
-    margin: 10px 2px 5px 0;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
     cursor: pointer;
     background-color: #ddd;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
@@ -234,7 +252,7 @@ input:checked + .slider:before {
 .operators div:hover {
     background-color: #ddd;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     border-color: #aaa;
 }
 
@@ -250,10 +268,10 @@ input:checked + .slider:before {
     display: inline-block;
     border: 1px solid #ddd;
     border-radius: 1px;
-    width: 40px;
+    width: 80px;
     text-align: center;
-    padding: 5px;
-    margin: 5px 2px 5px 0;
+    padding: 10px;
+    margin: 10px 4px 10px 0;
     cursor: pointer;
     background-color: #f9f9f9;
     transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
@@ -274,11 +292,10 @@ div.equal {
     display: inline-block;
     border: 1px solid #3079ED;
     border-radius: 1px;
-
-    width: 21%;
+    width: 17%;
     text-align: center;
-    padding: 60px 5px;
-    margin: 5px 3px 5px 0;
+    padding: 127px 10px;
+    margin: 10px 6px 10px 0;
     vertical-align: top;
     cursor: pointer;
     color: #FFF;
