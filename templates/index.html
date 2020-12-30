@@ -11,6 +11,7 @@
                 crossorigin="anonymous"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/1afaab5dda.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
@@ -34,7 +35,7 @@
 
         <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #FF8A33;" id="navBar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">daCalculate</a>
+                <a class="navbar-brand" href="/"><i class="fa fa-calculator" aria-hidden="true"></i> daCalculate</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -52,8 +53,8 @@
                                 <span class="navContent">Time</span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/timezone">Time Zones</a></li>
-                                <li><a class="dropdown-item" href="/time">Calculate Dates /
+                                <li><a class="dropdown-item" href="/timezone"><i class="fa fa-globe" aria-hidden="true"></i> Time Zones</a></li>
+                                <li><a class="dropdown-item" href="/time"><i class="fa fa-calendar" aria-hidden="true"></i> Calculate Dates /
                                     Calendar</a></li>
                             </ul>
                         </li>
@@ -64,9 +65,9 @@
                                 <span class="navContent">Money</span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/exchange_rates">Exchange
+                                <li><a class="dropdown-item" href="/exchange_rates"><i class="fa fa-usd" aria-hidden="true"></i> Exchange
                                     Rates</a></li>
-                                <li><a class="dropdown-item" href="/inflation">Calculate Inflation /
+                                <li><a class="dropdown-item" href="/inflation"><i class="fa fa-line-chart" aria-hidden="true"></i> Calculate Inflation /
                                     Deflation</a>
                                 </li>
                             </ul>
@@ -78,9 +79,9 @@
                                 <span class="navContent">Random Generator</span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="/random_generator">Numbers and
+                                <li><a class="dropdown-item" href="/random_generator"><i class="fa fa-key" aria-hidden="true"></i> Numbers and
                                     Passwords</a></li>
-                                <li><a class="dropdown-item" href="/lotto">Lotto Numbers</a></li>
+                                <li><a class="dropdown-item" href="/lotto"><i class="fa fa-money" aria-hidden="true"></i> Lotto Numbers</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -139,7 +140,7 @@
             </div>
             <section class="accordionAll">
                 <div class="accordion" onclick="length()">
-                    <div class="unitType">Length</div>
+                    <div class="unitType"><i class="fa fa-arrows-alt" aria-hidden="true"></i>  Length</div>
                     <div class="length">
                         <input type="number" id="lengthBefore">
                         <select id="lengthUnitA">
@@ -184,7 +185,7 @@
                     </div>
                 </div>
                 <div class="accordion" onclick="weight()">
-                    <div class="unitType">Weight</div>
+                    <div class="unitType"><i class="fa fa-balance-scale" aria-hidden="true"></i>  Weight</div>
                     <div class="weight">
                         <input type="number" id="weightBefore">
                         <select id="weightUnitA">
@@ -229,7 +230,7 @@
                     </div>
                 </div>
                 <div class="accordion" onclick="area()">
-                    <div class="unitType">Area</div>
+                    <div class="unitType"><i class="fa fa-pie-chart" aria-hidden="true"></i>  Area</div>
                     <div class="area">
                         <input type="number" id="areaBefore">
                         <select id="areaUnitA">
@@ -270,7 +271,7 @@
                     </div>
                 </div>
                 <div class="accordion" onclick="volume()">
-                    <div class="unitType">Volume</div>
+                    <div class="unitType"><i class="fa fa-flask" aria-hidden="true"></i>  Volume</div>
                     <div class="volume">
                         <input type="number" id="volumeBefore">
                         <select id="volumeUnitA">
@@ -322,7 +323,7 @@
             <br><br>
             <section class="accordionAll">
                 <div class="accordion" onclick="temperature()">
-                    <div class="unitType">Temperature</div>
+                    <div class="unitType"><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>  Temperature</div>
                     <div class="temperature">
                         <input type="number" id="temperatureBefore">
                         <select id="temperatureUnitA">
@@ -344,7 +345,7 @@
                 </div>
 
                 <div class="accordion" onclick="pressure()">
-                    <div class="unitType">Pressure</div>
+                    <div class="unitType"><i class="fa fa-compress" aria-hidden="true"></i>  Pressure</div>
                     <div class="pressure">
                         <input type="number" id="pressureBefore">
                         <select id="pressureUnitA">
@@ -367,7 +368,7 @@
                     </div>
                 </div>
                 <div class="accordion" onclick="energy()">
-                    <div class="unitType">Energy</div>
+                    <div class="unitType"><i class="fa fa-bolt" aria-hidden="true"></i>  Energy</div>
                     <div class="energy">
                         <input type="number" id="energyBefore">
                         <select id="energyUnitA">
@@ -398,7 +399,7 @@
                     </div>
                 </div>
                 <div class="accordion" onclick="bytes()">
-                    <div class="unitType">Bytes</div>
+                    <div class="unitType"><i class="fa fa-file" aria-hidden="true"></i>  Bytes</div>
                     <div class="bytes">
                         <input type="number" id="byteBefore">
                         <select id="byteUnitA">
