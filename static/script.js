@@ -5,6 +5,29 @@
 //         document.getElementById('pagestyle').setAttribute('href', "../static/style.css");
 //     }
 // }
+const KEY = 'dark_mode';
+let isInDarkMode = localStorage.getItem(KEY) === 'true';
+
+const toggleDarkMode = () => {
+    if (isInDarkMode) {
+        toggle.classList.add('on');
+        document.body.classList.add('dark');
+        document.getElementById('pagestyle').setAttribute('href', '../static/styleNight.css');
+    } else {
+        toggle.classList.remove('on');
+        document.body.classList.remove('dark');
+        document.getElementById('pagestyle').setAttribute('href', '../static/style.css');
+    }
+
+    localStorage.setItem(KEY, isInDarkMode);
+}
+
+const toggle = document.getElementById('toggleDarkMode');
+toggle.addEventListener('click', function () {
+    isInDarkMode = !isInDarkMode;
+    toggleDarkMode();
+});
+toggleDarkMode();
 
 function nightMode(sheet) {
     if ($(sheet).prop("checked") == true) {

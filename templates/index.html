@@ -25,23 +25,16 @@
         <script src="../static/pressure.js"></script>
         <script src="../static/energy.js"></script>
 
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 
-<!--        <link rel="stylesheet" type="text/css" title="day" href="{{url_for('static', filename='style.css')}}">-->
-<!--        <link rel="alternate stylesheet" type="text/css" title="night"-->
-<!--              href="{{url_for('static', filename='styleNight.css')}}">-->
+
+        <!--        <link rel="stylesheet" type="text/css" title="day" href="{{url_for('static', filename='style.css')}}">-->
+        <!--        <link rel="alternate stylesheet" type="text/css" title="night"-->
+        <!--              href="{{url_for('static', filename='styleNight.css')}}">-->
     </head>
 
     <body onload="begin(); initClock()">
-        <button type="button" onclick="switch_style('chevalierA');return false;" name="theme" value="Blue Theme"
-                class="changeTheme">
-            Chevalier A
-        </button>
-        <button type="button" onclick="switch_style('chevalierB');return false;" name="theme" value="Pink Theme"
-                class="changeTheme">
-            Chevalier B
-        </button>
-
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #FF8A33;" id="navBar">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #223f5e;" id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><i class="fa fa-calculator" aria-hidden="true"></i> daCalculate</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -50,11 +43,29 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <div class="toggle" id="toggleDarkMode">
+                    <div class="toggle-track">
+                        🌙
+                        ☀️
+                    </div>
+                    <div class="toggle-button"></div>
+                </div>
 
-                <label id="switch" class="switch">
-                    <input type="checkbox" onchange="nightMode(this);" id="slider">
-                    <span class="slider round"></span>
-                </label>
+
+                <!--                <label id="switch" class="switch">-->
+                <!--                    <input type="checkbox" onchange="nightMode(this);" id="slider">-->
+                <!--                    <span class="slider round"></span>-->
+                <!--                </label>-->
+
+
+                <!--                <div>-->
+                <!--                    <input type="checkbox" id="checkbox" class="checkbox" onchange="nightMode()">-->
+                <!--                    <label for="checkbox" class="label">-->
+                <!--                        <i class="fas fa-moon"></i>-->
+                <!--                        <i class="fas fa-sun"></i>-->
+                <!--                        <div class="ball"></div>-->
+                <!--                    </label>-->
+                <!--                </div>-->
 
 
                 <div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
@@ -73,7 +84,8 @@
                                                                                  aria-hidden="true"></i> Time Zones</a>
                                 </li>
                                 <li><a class="dropdown-item" href="/time"><i class="fa fa-calendar"
-                                                                             aria-hidden="true"></i> Calculate Dates /
+                                                                             aria-hidden="true"></i> Calculate Dates
+                                    /
                                     Calendar</a></li>
                             </ul>
                         </li>
@@ -85,7 +97,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="/exchange_rates"><i class="fa fa-usd"
-                                                                                       aria-hidden="true"></i> Exchange
+                                                                                       aria-hidden="true"></i>
+                                    Exchange
                                     Rates</a></li>
                                 <li><a class="dropdown-item" href="/inflation"><i class="fa fa-line-chart"
                                                                                   aria-hidden="true"></i> Calculate
@@ -102,7 +115,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="/random_generator"><i class="fa fa-key"
-                                                                                         aria-hidden="true"></i> Numbers
+                                                                                         aria-hidden="true"></i>
+                                    Numbers
                                     and
                                     Passwords</a></li>
                                 <li><a class="dropdown-item" href="/lotto"><i class="fa fa-money"
@@ -114,7 +128,7 @@
                 </div>
             </div>
         </nav>
-        <div>
+        <div id="instruction">
             Click to expand boxes
         </div>
         <section class="accordionAll">
