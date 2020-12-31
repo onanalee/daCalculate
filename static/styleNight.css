@@ -9,8 +9,10 @@ html, body {
 body {
     /*background-color: #D9B08C;*/
     /*background-image: url("lamp.jpeg");*/
-    background-image: url("night_car.jpeg");
-    /*background-image: url("desert.jpeg");*/
+    background-image: url("desert3.jpg");
+    background-color:#120c01;
+    /*background-image: url("spark.jpeg");*/
+    /*background-image: url("zvezda.jpeg");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -65,11 +67,16 @@ body {
     box-shadow: 0 0 6px #d23669;
 }
 
-
-.navbar-brand {
-    font-family: 'Audiowide';
-    font-size: 48px;
+#instruction {
+    margin-top: 100px;
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+    color:#f2ce00;
+    margin-right: 17vw;
+    text-align:center;
+    text-decoration: underline;
 }
+
 
 .navbar-nav {
     align-content: end;
@@ -79,10 +86,20 @@ body {
     font-size: 1.5em;
 }
 
+#top {
+    color: white;
+}
 
 #navBar {
     width: 100%;
     z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'Audiowide';
+    font-size: 48px;
+
+
 }
 
 #collapse {
@@ -93,10 +110,6 @@ body {
     width: 30%;
 }
 
-.convert {
-    background-color: #FFDB58;
-    border-radius: 12px;
-}
 
 .accordionAll {
     box-sizing: border-box;
@@ -106,7 +119,7 @@ body {
     align-items: center;
     align-content: center;
     position: relative;
-    top: 10vh;
+    top: 1vh;
     left: 3vw;
     min-height: 5vh;
     width: 77vw;
@@ -120,7 +133,7 @@ body {
     margin-right: 5px;
     border-radius: 3px;
     background-color: #D1E8E2;
-    color: #116466;
+    color: #D1E8E2;
     transition: all 200ms ease-in-out 50ms;
     font-family: Helvetica, Arial, Sans-Serif;
     font-weight: 500;
@@ -129,15 +142,47 @@ body {
 }
 
 .unitType {
-    font-size: 1.5em;
+    font-size: 1.65em;
     text-align: center;
+}
+
+.unitInput {
+    padding: 0px 0px 0px 0px;
+    font-size: 25px;
+}
+
+.equal {
+    font-size: 30px;
+}
+
+.convert {
+    background-color: #FFDB58;
+    border-radius: 12px;
+    font-size: 20px;
+    margin: auto;
+    display: block;
+}
+
+.select {
+    line-height: 1;
+    padding: 0.7em 1.4em .5em .8em;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+
 }
 
 .default {
     height: 30vh;
     width: 20vw;
-    background-color: #D1E8E2;
-    color: #116466;
+    background-color: #116466;
+    color: #D1E8E2;
     font-size: 12pt;
     overflow: hidden;
 }
@@ -145,8 +190,8 @@ body {
 .expand {
     height: 30vh;
     width: 80vw;
-    background-color: #116466;
-    color: ghostwhite;
+    background-color: #7ec2b0;
+    color: #074142;
     padding: 20px;
 }
 
@@ -195,15 +240,6 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-#wrap {
-    display: grid;
-    float: right;
-    margin-right: 25px;
-    grid-template-columns: 200px;
-    /*grid-template-columns: 500px 1fr 2fr;*/
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 50px;
-}
 
 /*Local Time Clock*/
 #timeDate {
@@ -224,24 +260,11 @@ input:checked + .slider:before {
 }
 
 
-/*Calculator*/
-/*body {*/
-/*  !*width: 500px;*!*/
-/*  margin: 4% auto;*/
-/*  font-family: 'Source Sans Pro', sans-serif;*/
-/*  letter-spacing: 5px;*/
-/*  font-size: 1.8rem;*/
-/*  -moz-user-select: none;*/
-/*  -webkit-user-select: none;*/
-/*  -ms-user-select: none;*/
-/*}*/
-
 .calculator {
-    width: 500px;
+    width: 410px;
     margin: 4% auto;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 5px;
-    font-size: 1.8rem;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -255,25 +278,20 @@ input:checked + .slider:before {
     border: 1px solid #ddd;
     border-radius: 1px;
     height: 60px;
-    padding-right: 15px;
+    padding-right: 1px;
     padding-top: 10px;
     text-align: right;
     margin-right: 6px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     overflow-x: auto;
     transition: all .2s ease-in-out;
+    color: wheat;
 }
 
 .input:hover {
     border: 1px solid #bbb;
     -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-}
-
-.operators {
 }
 
 .operators div {
@@ -332,9 +350,9 @@ div.equal {
     display: inline-block;
     border: 1px solid #3079ED;
     border-radius: 1px;
-    width: 17%;
+    width: 80px;
     text-align: center;
-    padding: 127px 10px;
+    padding: 100px 10px;
     margin: 10px 6px 10px 0;
     vertical-align: top;
     cursor: pointer;
@@ -352,4 +370,4 @@ div.equal:hover {
 
 div.equal:active {
     font-weight: bold;
-}
+}}

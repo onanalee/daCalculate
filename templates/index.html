@@ -14,6 +14,7 @@
         <script src="https://use.fontawesome.com/1afaab5dda.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 
         <link id="pagestyle" type="text/css" rel="stylesheet" href="../static/style.css">
         <script src="../static/length.js"></script>
@@ -34,7 +35,7 @@
     </head>
 
     <body onload="begin(); initClock()">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #223f5e;" id="navBar">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #c5d6d9;" id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><i class="fa fa-calculator" aria-hidden="true"></i> daCalculate</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -50,22 +51,6 @@
                     </div>
                     <div class="toggle-button"></div>
                 </div>
-
-
-                <!--                <label id="switch" class="switch">-->
-                <!--                    <input type="checkbox" onchange="nightMode(this);" id="slider">-->
-                <!--                    <span class="slider round"></span>-->
-                <!--                </label>-->
-
-
-                <!--                <div>-->
-                <!--                    <input type="checkbox" id="checkbox" class="checkbox" onchange="nightMode()">-->
-                <!--                    <label for="checkbox" class="label">-->
-                <!--                        <i class="fas fa-moon"></i>-->
-                <!--                        <i class="fas fa-sun"></i>-->
-                <!--                        <div class="ball"></div>-->
-                <!--                    </label>-->
-                <!--                </div>-->
 
 
                 <div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
@@ -135,8 +120,8 @@
             <div class="accordion" onclick="length()">
                 <div class="unitType"><i class="fa fa-arrows-alt" aria-hidden="true"></i> Length</div>
                 <div class="length">
-                    <input type="number" id="lengthBefore">
-                    <select id="lengthUnitA">
+                    <input type="number" id="lengthBefore" class="unitInput">
+                    <select id="lengthUnitA" class="select">
                         <option>(nm) nanometer</option>
                         <option>(mcm) micrometer</option>
                         <option>(mm) millimeter</option>
@@ -154,11 +139,11 @@
                         <option>light-year</option>
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertLength()">Convert</button>
-                    <br><br>
-                    =
-                    <input type="number" id="lengthAfter">
-                    <select id="lengthUnitB">
+                    <button class="convert" onclick="convertLength()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="lengthAfter" class="unitInput">
+                    <select id="lengthUnitB" class="select">
                         <option>(nm) nanometer</option>
                         <option>(mcm) micrometer</option>
                         <option>(mm) millimeter</option>
@@ -180,8 +165,8 @@
             <div class="accordion" onclick="weight()">
                 <div class="unitType"><i class="fa fa-balance-scale" aria-hidden="true"></i> Weight</div>
                 <div class="weight">
-                    <input type="number" id="weightBefore">
-                    <select id="weightUnitA">
+                    <input type="number" id="weightBefore" class="unitInput">
+                    <select id="weightUnitA" class="select">
                         <option>(ng) nanogram</option>
                         <option>(mcg) microgram</option>
                         <option>(mg) milligram</option>
@@ -199,11 +184,11 @@
 
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertWeight()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="weightAfter">
-                    <select id="weightUnitB">
+                    <button class="convert" onclick="convertWeight()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="weightAfter" class="unitInput">
+                    <select id="weightUnitB" class="select">
                         <option>(ng) nanogram</option>
                         <option>(mcg) microgram</option>
                         <option>(mg) milligram</option>
@@ -225,8 +210,8 @@
             <div class="accordion" onclick="area()">
                 <div class="unitType"><i class="fa fa-pie-chart" aria-hidden="true"></i> Area</div>
                 <div class="area">
-                    <input type="number" id="areaBefore">
-                    <select id="areaUnitA">
+                    <input type="number" id="areaBefore" class="unitInput">
+                    <select id="areaUnitA" class="select">
                         <option>square nanometer</option>
                         <option>square micrometer</option>
                         <option>square millimeter</option>
@@ -242,11 +227,11 @@
                         <option>acre</option>
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertArea()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="areaAfter">
-                    <select id="areaUnitB">
+                    <button class="convert" onclick="convertArea()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="areaAfter" class="unitInput">
+                    <select id="areaUnitB" class="select">
                         <option>square nanometer</option>
                         <option>square micrometer</option>
                         <option>square millimeter</option>
@@ -266,8 +251,8 @@
             <div class="accordion" onclick="volume()">
                 <div class="unitType"><i class="fa fa-flask" aria-hidden="true"></i> Volume</div>
                 <div class="volume">
-                    <input type="number" id="volumeBefore">
-                    <select id="volumeUnitA">
+                    <input type="number" id="volumeBefore" class="unitInput">
+                    <select id="volumeUnitA" class="select">
                         <option>(mcL) microliter</option>
                         <option>(mL) milliliter</option>
                         <option>(L) liter</option>
@@ -287,11 +272,11 @@
                         <option>(gal) gallon</option>
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertVolume()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="volumeAfter">
-                    <select id="volumeUnitB">
+                    <button class="convert" onclick="convertVolume()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="volumeAfter" class="unitInput">
+                    <select id="volumeUnitB" class="select">
                         <option>(mcL) microliter</option>
                         <option>(mL) milliliter</option>
                         <option>(L) liter</option>
@@ -319,18 +304,18 @@
                 <div class="unitType"><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i> Temperature
                 </div>
                 <div class="temperature">
-                    <input type="number" id="temperatureBefore">
-                    <select id="temperatureUnitA">
+                    <input type="number" id="temperatureBefore" class="unitInput">
+                    <select id="temperatureUnitA" class="select">
                         <option>(°C) Celsius</option>
                         <option>(°F) Fahrenheit</option>
                         <option>(K) Kelvin</option>
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertTemperature()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="temperatureAfter">
-                    <select id="temperatureUnitB">
+                    <button class="convert" onclick="convertTemperature()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="temperatureAfter" class="unitInput">
+                    <select id="temperatureUnitB" class="select">
                         <option>(°C) Celsius</option>
                         <option>(°F) Fahrenheit</option>
                         <option>(K) Kelvin</option>
@@ -341,8 +326,8 @@
             <div class="accordion" onclick="pressure()">
                 <div class="unitType"><i class="fa fa-compress" aria-hidden="true"></i> Pressure</div>
                 <div class="pressure">
-                    <input type="number" id="pressureBefore">
-                    <select id="pressureUnitA">
+                    <input type="number" id="pressureBefore" class="unitInput">
+                    <select id="pressureUnitA" class="select">
                         <option>Bar</option>
                         <option>Pascal</option>
                         <option>pound per square inch</option>
@@ -350,10 +335,10 @@
                     </select>
                     <br><br>
                     <button class="convert" onclick="convertPressure()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="pressureAfter">
-                    <select id="pressureUnitB">
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="pressureAfter" class="unitInput">
+                    <select id="pressureUnitB" class="select">
                         <option>Bar</option>
                         <option>Pascal</option>
                         <option>pound per square inch</option>
@@ -364,8 +349,8 @@
             <div class="accordion" onclick="energy()">
                 <div class="unitType"><i class="fa fa-bolt" aria-hidden="true"></i> Energy</div>
                 <div class="energy">
-                    <input type="number" id="energyBefore">
-                    <select id="energyUnitA">
+                    <input type="number" id="energyBefore" class="unitInput">
+                    <select id="energyUnitA" class="select">
                         <option>(J) Joule</option>
                         <option>(Wh) watt hour</option>
                         <option>(kWh) kilowatt hour</option>
@@ -376,11 +361,11 @@
                         <option>(BTU) British thermal unit</option>
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertEnergy()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="energyAfter">
-                    <select id="energyUnitB">
+                    <button class="convert" onclick="convertEnergy()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="energyAfter" class="unitInput">
+                    <select id="energyUnitB" class="select">
                         <option>(J) Joule</option>
                         <option>(Wh) watt hour</option>
                         <option>(kWh) kilowatt hour</option>
@@ -395,8 +380,8 @@
             <div class="accordion" onclick="bytes()">
                 <div class="unitType"><i class="fa fa-file" aria-hidden="true"></i> Bytes</div>
                 <div class="bytes">
-                    <input type="number" id="byteBefore">
-                    <select id="byteUnitA">
+                    <input type="number" id="byteBefore" class="unitInput">
+                    <select id="byteUnitA" class="select">
                         <option>(b) bit</option>
                         <option>(B) byte</option>
                         <option>(KB) kilobyte</option>
@@ -416,11 +401,11 @@
                         <option>(ZiB) zebibyte</option>
                     </select>
                     <br><br>
-                    <button class="convert" onclick="convertByte()">Convert</button>
-                    <br> <br>
-                    =
-                    <input type="number" id="byteAfter">
-                    <select id="byteUnitB">
+                    <button class="convert" onclick="convertByte()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                    <br>
+                    <span class="equal">=</span>
+                    <input type="number" id="byteAfter" class="unitInput">
+                    <select id="byteUnitB" class="select">
                         <option>(b) bit</option>
                         <option>(B) byte</option>
                         <option>(KB) kilobyte</option>
