@@ -243,15 +243,16 @@ input:checked + .slider:before {
 
 /*Local Time Clock*/
 #timeDate {
-    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family:Verdana;
     font-size: 1.5em;
     /*float: right;*/
     /*display: inline-block;*/
-    text-align: left;
-    width: 100%;
+    text-align: center;
+    width: 20%;
     margin-top: 120px;
     color: #fff;
-    /*border-left: 3px solid #ed1f24;*/
+    box-sizing:border-box;
+    border: 1px solid #D1E8E2;
     /*padding: 25px;*/
 }
 
