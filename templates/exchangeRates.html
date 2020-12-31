@@ -14,14 +14,18 @@
         <script src="https://use.fontawesome.com/1afaab5dda.js"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+        <link id="pagestyle" type="text/css" rel="stylesheet" href="../static/style.css">
 
 
-        <link rel="stylesheet" href="../static/style.css">
+
+
         <link rel="stylesheet" href="../static/money.css">
         <script src="../static/money.js"></script>
     </head>
     <body onload="initClock()">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #FF8A33;" id="navBar">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #c5d6d9;" id="navBar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><i class="fa fa-calculator" aria-hidden="true"></i> daCalculate</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,6 +33,16 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <div class="toggle" id="toggleDarkMode">
+                    <div class="toggle-track">
+                        🌙
+                        ☀️
+                    </div>
+                    <div class="toggle-button"></div>
+                </div>
+
+
                 <div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
@@ -45,7 +59,8 @@
                                                                                  aria-hidden="true"></i> Time Zones</a>
                                 </li>
                                 <li><a class="dropdown-item" href="/time"><i class="fa fa-calendar"
-                                                                             aria-hidden="true"></i> Calculate Dates /
+                                                                             aria-hidden="true"></i> Calculate Dates
+                                    /
                                     Calendar</a></li>
                             </ul>
                         </li>
@@ -57,7 +72,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="/exchange_rates"><i class="fa fa-usd"
-                                                                                       aria-hidden="true"></i> Exchange
+                                                                                       aria-hidden="true"></i>
+                                    Exchange
                                     Rates</a></li>
                                 <li><a class="dropdown-item" href="/inflation"><i class="fa fa-line-chart"
                                                                                   aria-hidden="true"></i> Calculate
@@ -74,7 +90,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="/random_generator"><i class="fa fa-key"
-                                                                                         aria-hidden="true"></i> Numbers
+                                                                                         aria-hidden="true"></i>
+                                    Numbers
                                     and
                                     Passwords</a></li>
                                 <li><a class="dropdown-item" href="/lotto"><i class="fa fa-money"
