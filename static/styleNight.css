@@ -9,8 +9,8 @@ html, body {
 body {
     /*background-color: #D9B08C;*/
     /*background-image: url("lamp.jpeg");*/
-    /*background-image: url("night_car.jpeg");*/
-    background-image: url("desert.jpeg");
+    background-image: url("night_car.jpeg");
+    /*background-image: url("desert.jpeg");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

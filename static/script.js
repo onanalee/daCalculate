@@ -1,3 +1,20 @@
+// function nightMode(sheet) {
+//     if (document.getElementById("slider").checked) {
+//         document.getElementById('pagestyle').setAttribute('href', "../static/styleNight.css");
+//     } else {
+//         document.getElementById('pagestyle').setAttribute('href', "../static/style.css");
+//     }
+// }
+
+function nightMode(sheet) {
+    if ($(sheet).prop("checked") == true) {
+        document.getElementById('pagestyle').setAttribute('href', '../static/styleNight.css');
+    } else {
+        document.getElementById('pagestyle').setAttribute('href', '../static/style.css');
+    }
+}
+
+
 function begin() {
     $('.length, .weight, .area, .volume, .temperature, .bytes, .pressure, .energy').hide();
 }
@@ -91,6 +108,7 @@ function initClock() {
 }
 
 
+// Calculator
 "use strict";
 
 var input = document.getElementById('input'); // input/output button
