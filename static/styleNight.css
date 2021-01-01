@@ -163,7 +163,7 @@ body {
     display: block;
 }
 
-.select {
+select {
     line-height: 1;
     padding: 0.7em 1.4em .5em .8em;
     box-sizing: border-box;
@@ -171,11 +171,10 @@ body {
     border: 1px solid #aaa;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
     border-radius: .5em;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+    /*-moz-appearance: none;*/
+    /*-webkit-appearance: none;*/
+    /*appearance: none;*/
     background-color: #fff;
-
 }
 
 .default {

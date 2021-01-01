@@ -28,7 +28,9 @@ body {
 }
 
 
-
+#wrap{
+    width:75%;
+}
 
 
 /*Start of Toggle*/
@@ -151,12 +153,10 @@ body {
     cursor: pointer;
     font-size: 16pt;
 }
-
-.unitType {
+.unitType{
     font-size: 1.65em;
     text-align: center;
 }
-
 .unitInput {
     padding: 0px 0px 0px 0px;
     font-size: 25px;
@@ -166,15 +166,9 @@ body {
     font-size: 30px;
 }
 
-.convert {
-    background-color: #FFDB58;
-    border-radius: 12px;
-    font-size: 20px;
-    margin: auto;
-    display: block;
-}
 
-.select {
+
+select {
     line-height: 1;
     padding: 0.7em 1.4em .5em .8em;
     box-sizing: border-box;
@@ -182,11 +176,10 @@ body {
     border: 1px solid #aaa;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
     border-radius: .5em;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+    /*-moz-appearance: none;*/
+    /*-webkit-appearance: none;*/
+    /*appearance: none;*/
     background-color: #fff;
-
 }
 
 .default {
@@ -436,4 +429,30 @@ div.equal:active {
     color:#ffcc00;
     text-align:center;
     font-family: 'Comfortaa', cursive;
+}
+
+
+/*Time.HTML-------------------------------------------------------*/
+
+#timeWrap{
+    width:80%;
+    margin-left:2vw;
+
+}
+.timeTitle{
+    width:30%;
+    border-top: 1px solid white;
+    font-size: 1.65em;
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+
+.convert {
+    background-color: #FFDB58;
+    border-radius: 12px;
+    font-size: 20px;
+    margin: auto;
+    display: block;
 }
