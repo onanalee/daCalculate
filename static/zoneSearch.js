@@ -1,66 +1,70 @@
-
 imageZoom("myimage", "myresult");
 
 function imageZoom(imgID, resultID) {
-  var img, lens, result, cx, cy;
-  img = document.getElementById(imgID);
-  result = document.getElementById(resultID);
-  /* Create lens: */
-  lens = document.createElement("DIV");
-  lens.setAttribute("class", "img-zoom-lens");
-  /* Insert lens: */
-  img.parentElement.insertBefore(lens, img);
-  /* Calculate the ratio between result DIV and lens: */
-  cx = 0.5 * (result.offsetWidth / lens.offsetWidth);
-  cy = 0.5 * (result.offsetHeight / lens.offsetHeight);
-  /* Set background properties for the result DIV */
-  result.style.backgroundImage = "url('" + img.src + "')";
-  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
-  /* Execute a function when someone moves the cursor over the image, or the lens: */
-  lens.addEventListener("mousemove", moveLens);
-  img.addEventListener("mousemove", moveLens);
-  /* And also for touch screens: */
-  lens.addEventListener("touchmove", moveLens);
-  img.addEventListener("touchmove", moveLens);
-  function moveLens(e) {
-    var pos, x, y;
-    /* Prevent any other actions that may occur when moving over the image */
-    e.preventDefault();
-    /* Get the cursor's x and y positions: */
-    pos = getCursorPos(e);
-    /* Calculate the position of the lens: */
-    x = pos.x - (lens.offsetWidth / 2);
-    y = pos.y - (lens.offsetHeight / 2);
-    /* Prevent the lens from being positioned outside the image: */
-    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
-    if (x < 0) {x = 0;}
-    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
-    if (y < 0) {y = 0;}
-    /* Set the position of the lens: */
-    lens.style.left = x + "px";
-    lens.style.top = y + "px";
-    /* Display what the lens "sees": */
-    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
-  }
-  function getCursorPos(e) {
-    var a, x = 0, y = 0;
-    e = e || window.event;
-    /* Get the x and y positions of the image: */
-    a = img.getBoundingClientRect();
-    /* Calculate the cursor's x and y coordinates, relative to the image: */
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
-    /* Consider any page scrolling: */
-    x = x - window.pageXOffset;
-    y = y - window.pageYOffset;
-    return {x : x, y : y};
-  }
+    var img, lens, result, cx, cy;
+    img = document.getElementById(imgID);
+    result = document.getElementById(resultID);
+    /* Create lens: */
+    lens = document.createElement("DIV");
+    lens.setAttribute("class", "img-zoom-lens");
+    /* Insert lens: */
+    img.parentElement.insertBefore(lens, img);
+    /* Calculate the ratio between result DIV and lens: */
+    cx = 0.5 * (result.offsetWidth / lens.offsetWidth);
+    cy = 0.5 * (result.offsetHeight / lens.offsetHeight);
+    /* Set background properties for the result DIV */
+    result.style.backgroundImage = "url('" + img.src + "')";
+    result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+    /* Execute a function when someone moves the cursor over the image, or the lens: */
+    lens.addEventListener("mousemove", moveLens);
+    img.addEventListener("mousemove", moveLens);
+    /* And also for touch screens: */
+    lens.addEventListener("touchmove", moveLens);
+    img.addEventListener("touchmove", moveLens);
+
+    function moveLens(e) {
+        var pos, x, y;
+        /* Prevent any other actions that may occur when moving over the image */
+        e.preventDefault();
+        /* Get the cursor's x and y positions: */
+        pos = getCursorPos(e);
+        /* Calculate the position of the lens: */
+        x = pos.x - (lens.offsetWidth / 2);
+        y = pos.y - (lens.offsetHeight / 2);
+        /* Prevent the lens from being positioned outside the image: */
+        if (x > img.width - lens.offsetWidth) {
+            x = img.width - lens.offsetWidth;
+        }
+        if (x < 0) {
+            x = 0;
+        }
+        if (y > img.height - lens.offsetHeight) {
+            y = img.height - lens.offsetHeight;
+        }
+        if (y < 0) {
+            y = 0;
+        }
+        /* Set the position of the lens: */
+        lens.style.left = x + "px";
+        lens.style.top = y + "px";
+        /* Display what the lens "sees": */
+        result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+    }
+
+    function getCursorPos(e) {
+        var a, x = 0, y = 0;
+        e = e || window.event;
+        /* Get the x and y positions of the image: */
+        a = img.getBoundingClientRect();
+        /* Calculate the cursor's x and y coordinates, relative to the image: */
+        x = e.pageX - a.left;
+        y = e.pageY - a.top;
+        /* Consider any page scrolling: */
+        x = x - window.pageXOffset;
+        y = y - window.pageYOffset;
+        return {x: x, y: y};
+    }
 }
-
-
-
-
-
 
 
 let users = [
@@ -575,9 +579,7 @@ let users = [
     "US/Arizona",
     "US/Central",
     "US/Eastern",
-    "US/East-Indiana",
     "US/Hawaii",
-    "US/Indiana_Starke",
     "US/Michigan",
     "US/Mountain",
     "US/Pacific",
@@ -762,6 +764,56 @@ function timezoneA() {
         let final = time.unixFmt('yyyy.MM.dd h:mm a');
         $('#timezoneA').text(final);
         return
+    } else if (timezone === "US/Alaska") {
+        let time = now.goto("America/Anchorage");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Aleutian") {
+        let time = now.goto("America/Adak");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Arizona") {
+        let time = now.goto("America/Phoenix");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Central") {
+        let time = now.goto("America/Chicago");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Eastern") {
+        let time = now.goto("America/New_York");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Hawaii") {
+        let time = now.goto("Pacific/Honolulu");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Michigan") {
+        let time = now.goto("America/Detroit");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Mountain") {
+        let time = now.goto("America/Denver");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Pacific") {
+        let time = now.goto("America/Los_Angeles");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
+    } else if (timezone === "US/Samoa") {
+        let time = now.goto("Pacific/Pago_Pago");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return;
     } else {
         let time = now.goto(timezone);
         let final = time.unixFmt('yyyy.MM.dd h:mm a');
@@ -774,7 +826,8 @@ function timezoneA() {
 //////////////////////////
 
 
-let B = document.getElementById("users-listB");
+let
+    B = document.getElementById("users-listB");
 
 var render_listsB = function (lists) {
     var li = "";
@@ -924,6 +977,56 @@ function timezoneB() {
         let final = time.unixFmt('yyyy.MM.dd h:mm a');
         $('#timezoneB').text(final);
         return
+    } else if (timezone === "US/Alaska") {
+        let time = now.goto("America/Anchorage");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Aleutian") {
+        let time = now.goto("America/Adak");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Arizona") {
+        let time = now.goto("America/Phoenix");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Central") {
+        let time = now.goto("America/Chicago");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Eastern") {
+        let time = now.goto("America/New_York");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Hawaii") {
+        let time = now.goto("Pacific/Honolulu");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Michigan") {
+        let time = now.goto("America/Detroit");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Mountain") {
+        let time = now.goto("America/Denver");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Pacific") {
+        let time = now.goto("America/Los_Angeles");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
+    } else if (timezone === "US/Samoa") {
+        let time = now.goto("Pacific/Pago_Pago");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneB').text(final);
+        return;
     } else {
         let time = now.goto(timezone);
         let final = time.unixFmt('yyyy.MM.dd h:mm a');

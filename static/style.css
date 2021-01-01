@@ -79,10 +79,6 @@ body {
 /*End of Toggle*/
 
 
-
-
-
-
 .instruction {
     margin-top: 100px;
     font-family: 'Comfortaa';
@@ -258,20 +254,20 @@ input:checked + .slider:before {
 
 /*Local Time Clock*/
 #timeDate {
-    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family:Verdana;
     font-size: 1.5em;
-    /*float: right;*/
     /*display: inline-block;*/
-    text-align: left;
-    width: 100%;
+    text-align: center;
+    width: 30%;
     margin-top: 120px;
     color: #fff;
-    /*border-left: 3px solid #ed1f24;*/
+    box-sizing:border-box;
+    border: 1px solid #D1E8E2;
     /*padding: 25px;*/
 }
 
 #localTime {
-    color: darkorange;
+    color: #a1cde3;
 }
 
 
@@ -384,4 +380,60 @@ div.equal:hover {
 
 div.equal:active {
     font-weight: bold;
+}
+
+
+
+/*TIME ZONE -----------------------------------------------------*/
+.chooseLocation{
+    margin-top: 20px;
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+    color:black;
+    margin-right: 1vw;
+    text-align:center;
+    text-decoration: underline;
+}
+
+#timezone_map{
+    width:80%;
+    display:block;
+    margin-top:30px;
+    margin-left:20px;
+}
+#timezoneWrap{
+    width:80%;
+    margin-left:30px;
+
+}
+.timeZone {
+    display: block;
+}
+.card{
+    background-color:transparent;
+    border: 1px solid whitesmoke;
+}
+
+
+#timezoneInputA, #timezoneInputB {
+    width: 35vw;
+    height: 5vw;
+    font-size: 1.5em;
+    text-align:center;
+    background-color:#d5e6f7;
+    color:black;
+}
+
+#users-listA, #users-listB {
+    width: 35vw;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a6c3e0;
+    color:black;
+}
+#timezoneA, #timezoneB{
+    color:#ffcc00;
+    text-align:center;
+    font-family: 'Comfortaa', cursive;
 }

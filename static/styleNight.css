@@ -245,7 +245,6 @@ input:checked + .slider:before {
 #timeDate {
     font-family:Verdana;
     font-size: 1.5em;
-    /*float: right;*/
     /*display: inline-block;*/
     text-align: center;
     width: 30%;
@@ -371,12 +370,22 @@ div.equal:hover {
 
 div.equal:active {
     font-weight: bold;
-}}
+}
 
 
 
 
 /*TIME ZONE -----------------------------------------------------*/
+
+.chooseLocation{
+    margin-top: 20px;
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+    color:gold;
+    margin-right: 1vw;
+    text-align:center;
+    text-decoration: underline;
+}
 #timezone_map{
     width:80%;
     display:block;
