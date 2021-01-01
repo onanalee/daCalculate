@@ -1,11 +1,26 @@
 /**
  * Tabs
  */
-#timezone_map{
-    width:80%;
-    display:block;
-    margin-top:30px;
-    margin-left:20px;
+
+.img-zoom-container {
+  position: relative;
+    display:flex;
+    padding:20px;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 400px;
+  height: 400px;
 }
 
 #filter_users {
@@ -76,54 +91,3 @@
     }
 }
 
-.timeZone {
-    display: block;
-}
-
-#timezoneInputA, #timezoneInputB {
-    width: 400px;
-    height: 50px;
-    font-size: 2em;
-}
-
-#timeDifference {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 31.67%;
-    width: auto;
-    opacity: 80%;
-}
-
-#users-listA, #users-listB {
-    width: 100%;
-    padding: 16px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #f1f1f1;
-}
-
-
-
-
-
-
-
-.img-zoom-container {
-  position: relative;
-    display:flex;
-}
-
-.img-zoom-lens {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  /*set the size of the lens:*/
-  width: 40px;
-  height: 40px;
-}
-
-.img-zoom-result {
-  border: 1px solid #d4d4d4;
-  /*set the size of the result div:*/
-  width: 400px;
-  height: 400px;
-}

@@ -104,64 +104,66 @@
                 </div>
             </div>
         </nav>
-        <div id="timeDate">
-            <span id="localTime">Current Local Time:</span>
-            <a id="mon">January</a>
-            <a id="d">1</a>,
-            <a id="y">0</a><br/>
-            <a id="h">12</a> :
-            <a id="m">00</a>:
-            <a id="s">00</a>
-        </div>
-        <br><br><br>
+        <div id="timezoneWrap">
+            <div id="timeDate">
+                <span id="localTime">Current Local Time:</span>
+                <a id="mon">January</a>
+                <a id="d">1</a>,
+                <a id="y">0</a><br/>
+                <a id="h">12</a> :
+                <a id="m">00</a>:
+                <a id="s">00</a>
+            </div>
 
-        <div class="tab">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">
-                                <input onsearch="timezoneA()" type="search" placeholder="Enter country or city name"
-                                       id="timezoneInputA"/>
+            <div class="instruction">Choose a location to display current time</div>
+            <div class="tab">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">
+                                    <input onsearch="timezoneA()" type="search" placeholder="Search by country or city name"
+                                           id="timezoneInputA"/>
 
-                                <select onchange="timezoneA()" id="users-listA" size="5">
+                                    <select onchange="timezoneA()" id="users-listA" size="5">
 
-                                </select>
-                            </h6>
-                            <h2 id="timezoneA">
-                            </h2>
+                                    </select>
+                                </h6>
+                                <h1 id="timezoneA">
+                                </h1>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 class="card-title">
-                                <input onsearch="timezoneB()" type="search" placeholder="Enter country or city name"
-                                       id="timezoneInputB"/>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">
+                                    <input onsearch="timezoneB()" type="search" placeholder="Search by country or city name"
+                                           id="timezoneInputB"/>
 
-                                <select onchange="timezoneB()" id="users-listB" size="5">
+                                    <select onchange="timezoneB()" id="users-listB" size="5">
 
-                                </select>
-                            </h6>
-                            <h2 id="timezoneB">
-                            </h2>
+                                    </select>
+                                </h6>
+                                <h1 id="timezoneB">
+                                </h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--        <div>-->
+            <!--            <img src="" id="timezone_map" onclick="zoomIn()">-->
+            <!--        </div>-->
+
+            <div class="instruction">Hover on the map to zoom in!</div>
+            <div class="img-zoom-container">
+                <img id="myimage" src="../static/timezone_map.png" width="800" height="432" alt="worldMap">
+                <div id="myresult" class="img-zoom-result"></div>
+            </div>
+
         </div>
-<!--        <div>-->
-<!--            <img src="" id="timezone_map" onclick="zoomIn()">-->
-<!--        </div>-->
-
-        <div class="img-zoom-container">
-            <img id="myimage" src="../static/timezone_map.png" width="800" height="432" alt="worldMap">
-            <div id="myresult" class="img-zoom-result"></div>
-        </div>
-
-
         <script src="../static/zoneSearch.js"></script>
         <script src="../static/script.js"></script>
     </body>

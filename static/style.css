@@ -83,7 +83,7 @@ body {
 
 
 
-#instruction {
+.instruction {
     margin-top: 100px;
     font-family: 'Comfortaa';
     font-size: 1.5rem;
