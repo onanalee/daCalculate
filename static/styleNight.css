@@ -157,7 +157,7 @@ body {
     color:#FFDB58;
 }
 
-select {
+.select {
     line-height: 1;
     padding: 0.7em 1.4em .5em .8em;
     box-sizing: border-box;
@@ -168,11 +168,11 @@ select {
     /*-moz-appearance: none;*/
     /*-webkit-appearance: none;*/
     /*appearance: none;*/
-    background-color: #fff;
+    background-color: #e0f6ff;
 }
 
 .default {
-    height: 30vh;
+    height: 35vh;
     width: 20vw;
     background-color: #116466;
     color: #D1E8E2;
@@ -181,7 +181,7 @@ select {
 }
 
 .expand {
-    height: 30vh;
+    height: 35vh;
     width: 80vw;
     background-color: #7ec2b0;
     color: #074142;
@@ -433,7 +433,7 @@ div.equal:active {
 
 }
 .timeTitle{
-    width:50%;
+    width:65%;
     border-top: 1px solid white;
     font-size: 2em;
     font-family:Comfortaa;
@@ -468,4 +468,46 @@ div.equal:active {
     color:black;
     margin-top:5px;
     margin-bottom:5px;
+}
+
+
+/*Exchange Rates---------------------*/
+.exchangeRate{
+    margin-top: 20px;
+    margin-bottom:20px;
+
+}
+
+#currencyDiv{
+    margin-top:150px;
+    margin-left:3vw;
+    width:75%;
+}
+#jan{
+    font-size: 0.75em;
+}
+#datePicker{
+    margin-top:15px;
+    font-family:Verdana;
+    color:#dcffd4;
+}
+#todayMessage, #pastMessage{
+    font-family:Verdana;
+    font-size:25px;
+    color:navajowhite;
+}
+.currency{
+    font-size:1.5em;
+    color:#dcffd4;
+}
+
+
+
+
+
+/*Inflation------------------------------*/
+
+
+#inflationDiv{
+    margin-top:150px;
 }

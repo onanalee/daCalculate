@@ -1,10 +1,11 @@
-$( document ).ready(function ready (){
-    for(i = 1913; i <2016; i++){
-    let option = `<option>${i}</option>`;
-    $('#year').append(option);
-}})
+$(document).ready(function ready() {
+    for (i = 1913; i < 2016; i++) {
+        let option = `<option>${i}</option>`;
+        $('#year').append(option);
+    }
+})
 
-function inflation(){
+function inflation() {
     $('#result').empty();
     let input = $('#inflation').val();
     let year = $('#year option:selected').val();
@@ -16,10 +17,12 @@ function inflation(){
         success: function (response) {
             let result = response['response']['adjustedValue'];
             $('#result').append(result);
-        }})
+        }
+    })
 }
 
 function exchange() {
+    $('#todayMessage').empty();
     let currencyA = $('#currencyA option:selected').val();
     let currencyB = $('#currencyB option:selected').val();
     let input = $('#inputA').val();
@@ -129,11 +132,16 @@ function exchange() {
             } else if (currencyB === '(ZAR) South Africa Rand') {
                 $('#inputB').val((input * zar).toFixed(2));
             }
+            let todayA = $('#inputA').val();
+            let todayB = $('#inputB').val();
+            let message = `Today, <span class="currency">${todayA}</span> ${currencyA} equals <span class="currency">${todayB}</span> ${currencyB}.`;
+            $('#todayMessage').append(message);
         }
     })
 };
 
 function exchangePast() {
+    $('#pastMessage').empty();
     let currencyA = $('#currencyPastA option:selected').val();
     let currencyB = $('#currencyPastB option:selected').val();
     let input = $('#pastA').val();
@@ -244,6 +252,11 @@ function exchangePast() {
             } else if (currencyB === '(ZAR) South Africa Rand') {
                 $('#pastB').val((input * zar).toFixed(2));
             }
+            let pastDate = $('#date').val();
+            let pastA = $('#pastA').val();
+            let pastB = $('#pastB').val();
+            let message = `On ${pastDate}, <span class="currency">${pastA}</span> ${currencyA} equalled <span class="currency">${pastB}</span> ${currencyB}.`;
+            $('#pastMessage').append(message);
         }
     })
 };
