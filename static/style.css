@@ -110,9 +110,7 @@ body {
 
 .navbar-brand {
     font-family: 'Audiowide';
-    font-size: 48px;
-
-
+    font-size: 2.5rem;
 }
 
 #collapse {
@@ -160,10 +158,12 @@ body {
 .unitInput {
     padding: 0px 0px 0px 0px;
     font-size: 25px;
+    text-align:right;
 }
 
 .equal {
     font-size: 30px;
+    color:#FFDB58;
 }
 
 
@@ -252,7 +252,7 @@ input:checked + .slider:before {
     /*display: inline-block;*/
     text-align: center;
     width: 30%;
-    margin-top: 120px;
+    margin-top: 100px;
     color: #fff;
     box-sizing:border-box;
     border: 1px solid #D1E8E2;
@@ -286,7 +286,7 @@ input:checked + .slider:before {
     padding-top: 10px;
     text-align: right;
     margin-right: 6px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     overflow-x: auto;
     transition: all .2s ease-in-out;
 }
@@ -440,19 +440,38 @@ div.equal:active {
 
 }
 .timeTitle{
-    width:30%;
+    width:50%;
     border-top: 1px solid white;
-    font-size: 1.65em;
+    font-size: 2em;
+    font-family:Comfortaa;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 35px;
+    color:#CCEEFC;
+    font-weight:bold;
 }
 
-
+.result{
+    font-family:Verdana;
+    font-size:1em;
+    color:darkred;
+    font-size:1.4em;
+}
 
 .convert {
     background-color: #FFDB58;
     border-radius: 12px;
     font-size: 20px;
-    margin: auto;
+    /*margin: auto;*/
     display: block;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.startDate{
+    color:#CCEEFC;
+    font-size:1.5em;
+}
+
+#startDate, #endDate, #startDate2, #plusMinus{
+    margin-top:5px;
+    margin-bottom:5px;
 }

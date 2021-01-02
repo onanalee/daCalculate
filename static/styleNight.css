@@ -97,9 +97,7 @@ body {
 
 .navbar-brand {
     font-family: 'Audiowide';
-    font-size: 48px;
-
-
+    font-size: 2.5rem;
 }
 
 #collapse {
@@ -149,18 +147,14 @@ body {
 .unitInput {
     padding: 0px 0px 0px 0px;
     font-size: 25px;
+    text-align:right;
+    background-color:#0d384a;
+    color:navajowhite;
 }
 
 .equal {
     font-size: 30px;
-}
-
-.convert {
-    background-color: #FFDB58;
-    border-radius: 12px;
-    font-size: 20px;
-    margin: auto;
-    display: block;
+    color:#FFDB58;
 }
 
 select {
@@ -247,7 +241,7 @@ input:checked + .slider:before {
     /*display: inline-block;*/
     text-align: center;
     width: 30%;
-    margin-top: 120px;
+    margin-top: 100px;
     color: #fff;
     box-sizing:border-box;
     border: 1px solid #D1E8E2;
@@ -281,10 +275,10 @@ input:checked + .slider:before {
     padding-top: 10px;
     text-align: right;
     margin-right: 6px;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    color:navajowhite;
     overflow-x: auto;
     transition: all .2s ease-in-out;
-    color: wheat;
 }
 
 .input:hover {
@@ -428,3 +422,50 @@ div.equal:active {
     font-family: 'Comfortaa', cursive;
 }
 
+
+
+
+/*Time.HTML-------------------------------------------------------*/
+
+#timeWrap{
+    width:80%;
+    margin-left:2vw;
+
+}
+.timeTitle{
+    width:50%;
+    border-top: 1px solid white;
+    font-size: 2em;
+    font-family:Comfortaa;
+    text-align: left;
+    margin-top: 35px;
+    color:#CCEEFC;
+    font-weight:bold;
+}
+
+.result{
+    font-family:Verdana;
+    color:gold;
+    font-size:1.4em;
+}
+
+.convert {
+    background-color: #FFDB58;
+    border-radius: 12px;
+    font-size: 20px;
+    /*margin: auto;*/
+    display: block;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.startDate{
+    color:#CCEEFC;
+    font-size:1.5em;
+}
+
+#startDate, #endDate, #startDate2, #plusMinus{
+    background-color:#e0f6ff;
+    color:black;
+    margin-top:5px;
+    margin-bottom:5px;
+}

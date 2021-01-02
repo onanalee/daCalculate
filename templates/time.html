@@ -119,25 +119,25 @@
 
 
             <div class="timeTitle">Days between two dates</div>
-            <div>start date:<input type="date" id="startDate"></div>
-            <div>end date:<input type="date" id="endDate"></div>
-            <button id="dateSubmit" onclick="dateCalculate()">Calculate</button>
-            <div>Result: <input id="result1" type="number"> days</div>
+            <div><span class="startDate">start date:</span><input type="date" id="startDate"></div>
+            <div><span class="startDate">end date:  </span><input type="date" id="endDate"></div>
+            <button id="dateSubmit" onclick="dateCalculate()" class="convert">Calculate</button>
+            <div class="result">Result: <input id="result1" type="number" class="unitInput"> days</div>
 
 
-            <div class="timeTitle"> Add or subtract from a date:</div>
-            <div>start date: <input id="startDate2" type="date"></div>
+            <div class="timeTitle"> Add or subtract from a date</div>
+            <div><span class="startDate">start date: </span><input id="startDate2" type="date"></div>
             <div>
                 <select id="plusMinus">
                     <option>+ (Add)</option>
                     <option>- (subtract)</option>
                 </select>
-                <input type="number" id="days"> days
-                <input type="number" id="weeks"> weeks
+                <input type="number" id="days" class="unitInput"> <span class="startDate">days and </span>
+                <input type="number" id="weeks" class="unitInput"> <span class="startDate">weeks</span>
             </div>
 
-            <button onclick="addDate()">Calculate</button>
-            <div>Result: <input type="text" id="result"></div>
+            <button onclick="addDate()" class="convert">Calculate</button>
+            <div class="result">Result: <input type="text" id="result" class="unitInput"></div>
 
 
 
