@@ -565,5 +565,59 @@ svg path, svg rect {
 /*Lotto ------------------------------*/
 #lottoDiv {
     margin-left: 3vw;
-    width: 75%;
+    width:75%;
+}
+
+#lottoHistory {
+    text-align: center;
+    font-family: Comfortaa;
+    width: 200px;
+    height: 300px;
+    padding: 20px 0;
+    border-radius: 20px;
+    background-color: #264032;
+    color:#a1c2b0;
+    float: left;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+.clearfix {
+    clear: both;
+}
+
+.floatfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+.position {
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 420px;
+    border:1px solid white;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-left: 50px;
+}
+
+.ball {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #3d3c3a;
+    border-radius: 100%;
+    float: left;
+    background-color: #badbca;
+    margin: 10px;
+    font-weight: 500;
+    box-shadow: 1px 1px 0.5px #000;
 }
