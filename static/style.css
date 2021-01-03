@@ -457,9 +457,8 @@ div.equal:active {
 
 .result {
     font-family: Verdana;
-    font-size: 1em;
     color: darkred;
-    font-size: 1.4em;
+    font-size: 1.7em;
 }
 
 .convert {
@@ -539,13 +538,25 @@ div.equal:active {
 #resultInflation {
     margin-bottom: 10vh;
 }
-
+svg path, svg rect{
+  fill: navajowhite;
+}
 
 /*Random Generator -----------------------*/
 
 #randomDiv {
     margin-left: 3vw;
     width: 75%;
+}
+.randomDiv{
+    margin-top:20px;
+    font-size:1.5rem;
+}
+#randomNumber{
+    font-size: 1.9rem;
+}
+#number, #upper, #special{
+    transform: scale(1.5);
 }
 
 
@@ -554,4 +565,77 @@ div.equal:active {
     margin-left: 3vw;
     width:75%;
 }
+#lottoTitle{
+    text-align: center;
+    color: #bffce6;
+    text-shadow: 1px 1px 1px #000;
+    font-family: "Chewy";
+    font-size: 50px;
+}
 
+#generateLotto {
+    display: block;
+    background-color: #ef6d3b;
+    outline: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 50px auto;
+    width: 120px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-family: "Chewy";
+    color: #3f2860;
+}
+#lottoHistory {
+    text-align: center;
+    width: 200px;
+    height: 300px;
+    padding: 20px 0;
+    border-radius: 20px;
+    background-color: #90c5a9;
+    float: left;
+    margin-left: 50px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+.clearfix {
+    clear: both;
+}
+
+.floatfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+.position {
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 420px;
+    background-color: #90c5a9;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-left: 50px;
+}
+
+.wrapper .ball {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #3d3c3a;
+    border-radius: 100%;
+    float: left;
+    background-color: #fff;
+    margin: 10px;
+    font-weight: 500;
+    box-shadow: 1px 1px 0.5px #000;
+}

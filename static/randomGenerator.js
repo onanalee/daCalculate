@@ -1,5 +1,5 @@
 function reset(){
-    $('#history').empty();
+    $('#lottoHistory').empty();
 }
 
 function randomNumber() {
@@ -101,7 +101,7 @@ function generateLotto() {
 
     //add numbers to history
     var history = [];
-    var historyDiv = document.getElementById("history");
+    var historyDiv = document.getElementById("lottoHistory");
     var para = document.createElement("p");
     history.push(numbers.join(", "));
 

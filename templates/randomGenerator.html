@@ -112,34 +112,42 @@
                 <a id="m">00</a>:
                 <a id="s">00</a>
             </div>
-            <div>
-                <button onclick="randomNumber()">get random number</button>
-                <div>
-                    Minimum:<input type="number" id="valueMin">
-                </div>
-                <div>
-                    Maximum: <input type="number" id="valueMax">
-                </div>
-                <div id="randomNum">
 
-                </div>
+
+            <div class="timeTitle">
+                <span id="randomNumber">Get a random number between two values</span>
             </div>
-            <div>
+            <div class="randomDiv">
+                Minimum:<input type="number" id="valueMin">
+            </div>
+            <div class="randomDiv">
+                Maximum: <input type="number" id="valueMax">
+            </div>
+            <button onclick="randomNumber()" class="convert">Generate</button>
+            <div id="randomNum" class="result" class="randomDiv">
+
+            </div>
+
+            <div class="timeTitle">
+                Generate random password string
+            </div>
+            <div class="randomDiv">
                 Length: <input type="Number" id="length">
-                <input type="checkbox" id="number" checked> Include Number
-                <input type="checkbox" id="upper" checked> Include Uppercase
-                <input type="checkbox" id="special" checked> Include Special Characters
-
-
+                <div><input type="checkbox" id="number" checked> Include numbers</div>
+                <div><input type="checkbox" id="upper" checked> Include uppercase</div>
+                <div><input type="checkbox" id="special" checked> Include special characters</div>
             </div>
+
+
             <div>
-                <button onclick="generatePassword()">Generate random password</button>
+                <button onclick="generatePassword()" class="convert">Generate</button>
             </div>
 
-            <div id="password"></div>
+            <div id="password" class="result"></div>
 
 
         </div>
+
         <script src="../static/script.js"></script>
     </body>
 </html>
