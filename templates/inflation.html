@@ -19,7 +19,6 @@
         <link id="pagestyle" type="text/css" rel="stylesheet" href="../static/style.css">
 
 
-
         <link rel="stylesheet" href="../static/money.css">
         <script src="../static/money.js"></script>
     </head>
@@ -104,17 +103,22 @@
         </nav>
 
         <div id="inflationDiv">
-            <div>Value: <input id="inflation" type="number"></div>
-            <div>Year: <select id="year"></select></div>
-            <div>
-                <button onclick="inflation()">Calculate</button>
+            <span id="euroLink">** Calculations are based on US Dollar's historical consumer price index published by the <a class="aTag" href="https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator/consumer-price-index-1913-" target="_blank">Federal Reserve Bank of Minneapolis.</a> </span>
+            <div class="timeTitle">
+                Calculate dollar's worth in the past
             </div>
-            <div id="result">
+
+            <div class="inflationCalc">Value: <input id="inflation" type="number" class="unitInput"></div>
+            <div class="inflationCalc">Year: <select id="year" class="select"></select></div>
+            <div class="inflationCalc">
+                <button onclick="inflation()" class="convert">Calculate</button>
+            </div>
+            <div id="result" class="inflationCalc">
 
             </div>
-        </div>
 
-        <div class="calculator">
+
+            <div class="calculator">
                 <div class="input" id="input"></div>
                 <div class="buttons">
                     <div class="operators">
@@ -148,6 +152,7 @@
                     <div class="equal" id="calc">=</div>
                 </div>
             </div>
+        </div>
 
         <script src="../static/script.js"></script>
     </body>

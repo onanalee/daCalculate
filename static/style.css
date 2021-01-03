@@ -497,7 +497,7 @@ div.equal:active {
 }
 #todayMessage, #pastMessage{
     font-family:Verdana;
-    font-size:25px;
+    font-size:20px;
 }
 .currency{
     font-size:1.5em;
@@ -513,8 +513,17 @@ div.equal:active {
 
 /*Inflation------------------------------*/
 
-
+.aTag{
+    color:#004fbd;
+}
 #inflationDiv{
-    margin-top:150px;
     margin-left:3vw;
+    width: 75%;
+}
+.inflationCalc{
+    font-size:20px;
+    margin-top:10px;
+}
+#result{
+    margin-bottom:10vh;
 }

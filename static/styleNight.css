@@ -489,20 +489,20 @@ div.equal:active {
 #datePicker{
     margin-top:15px;
     font-family:Verdana;
-    color:#dcffd4;
+    color:#97d48a;
 }
 #todayMessage, #pastMessage{
     font-family:Verdana;
-    font-size:25px;
+    font-size:20px;
     color:navajowhite;
 }
 .currency{
     font-size:1.5em;
-    color:#dcffd4;
+    color:#97d48a;
 }
 #euroLink{
     font-family:Verdana;
-    color:white;
+    color:#93c99f;
 }
 
 
@@ -512,7 +512,18 @@ div.equal:active {
 
 /*Inflation------------------------------*/
 
-
+.aTag{
+    color:#458bed;
+}
 #inflationDiv{
-    margin-top:150px;
+    margin-left:3vw;
+    width: 75%;
+}
+.inflationCalc{
+    font-size:20px;
+    margin-top:10px;
+    color:antiquewhite;
+}
+#result{
+    margin-bottom:10vh;
 }
