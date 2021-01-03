@@ -28,8 +28,8 @@ body {
 }
 
 
-#wrap{
-    width:75%;
+#wrap {
+    width: 75%;
 }
 
 
@@ -86,7 +86,7 @@ body {
     font-family: 'Comfortaa';
     font-size: 1.5rem;
     margin-right: 17vw;
-    text-align:center;
+    text-align: center;
     text-decoration: underline;
 }
 
@@ -151,21 +151,22 @@ body {
     cursor: pointer;
     font-size: 16pt;
 }
-.unitType{
+
+.unitType {
     font-size: 1.65em;
     text-align: center;
 }
+
 .unitInput {
     padding: 0px 0px 0px 0px;
     font-size: 25px;
-    text-align:right;
+    text-align: right;
 }
 
 .equal {
     font-size: 30px;
-    color:#FFDB58;
+    color: #FFDB58;
 }
-
 
 
 .select {
@@ -247,14 +248,14 @@ input:checked + .slider:before {
 
 /*Local Time Clock*/
 #timeDate {
-    font-family:Verdana;
+    font-family: Verdana;
     font-size: 1.5em;
     /*display: inline-block;*/
     text-align: center;
     width: 30%;
     margin-top: 100px;
     color: #fff;
-    box-sizing:border-box;
+    box-sizing: border-box;
     border: 1px solid #D1E8E2;
     /*padding: 25px;*/
 }
@@ -376,34 +377,36 @@ div.equal:active {
 }
 
 
-
 /*TIME ZONE -----------------------------------------------------*/
-.chooseLocation{
+.chooseLocation {
     margin-top: 20px;
     font-family: 'Comfortaa';
     font-size: 1.5rem;
-    color:black;
+    color: black;
     margin-right: 1vw;
-    text-align:center;
+    text-align: center;
     text-decoration: underline;
 }
 
-#timezone_map{
-    width:80%;
-    display:block;
-    margin-top:30px;
-    margin-left:20px;
+#timezone_map {
+    width: 80%;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
 }
-#timezoneWrap{
-    width:80%;
-    margin-left:30px;
+
+#timezoneWrap {
+    width: 80%;
+    margin-left: 30px;
 
 }
+
 .timeZone {
     display: block;
 }
-.card{
-    background-color:transparent;
+
+.card {
+    background-color: transparent;
     border: 1px solid whitesmoke;
 }
 
@@ -412,9 +415,9 @@ div.equal:active {
     width: 35vw;
     height: 5vw;
     font-size: 1.5em;
-    text-align:center;
-    background-color:#d5e6f7;
-    color:black;
+    text-align: center;
+    background-color: #d5e6f7;
+    color: black;
 }
 
 #users-listA, #users-listB {
@@ -423,38 +426,40 @@ div.equal:active {
     border: none;
     border-radius: 4px;
     background-color: #a6c3e0;
-    color:black;
+    color: black;
 }
-#timezoneA, #timezoneB{
-    color:#ffcc00;
-    text-align:center;
+
+#timezoneA, #timezoneB {
+    color: #ffcc00;
+    text-align: center;
     font-family: 'Comfortaa', cursive;
 }
 
 
 /*Time.HTML-------------------------------------------------------*/
 
-#timeWrap{
-    width:80%;
-    margin-left:2vw;
+#timeWrap {
+    width: 80%;
+    margin-left: 2vw;
 
 }
-.timeTitle{
-    width:65%;
+
+.timeTitle {
+    width: 65%;
     border-top: 1px solid white;
     font-size: 2em;
-    font-family:Comfortaa;
+    font-family: Comfortaa;
     text-align: left;
     margin-top: 35px;
-    color:#CCEEFC;
-    font-weight:bold;
+    color: #CCEEFC;
+    font-weight: bold;
 }
 
-.result{
-    font-family:Verdana;
-    font-size:1em;
-    color:darkred;
-    font-size:1.4em;
+.result {
+    font-family: Verdana;
+    font-size: 1em;
+    color: darkred;
+    font-size: 1.4em;
 }
 
 .convert {
@@ -463,67 +468,90 @@ div.equal:active {
     font-size: 20px;
     /*margin: auto;*/
     display: block;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-.startDate{
-    color:#CCEEFC;
-    font-size:1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#startDate, #endDate, #startDate2, #plusMinus{
-    margin-top:5px;
-    margin-bottom:5px;
+.startDate {
+    color: #CCEEFC;
+    font-size: 1.5em;
+}
+
+#startDate, #endDate, #startDate2, #plusMinus {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 
 /*Exchange Rates---------------------*/
-.exchangeRate{
+.exchangeRate {
     margin-top: 20px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 }
-#currencyDiv{
-    margin-left:3vw;
-    width:75%;
+
+#currencyDiv {
+    margin-left: 3vw;
+    width: 75%;
 }
-#jan{
+
+#jan {
     font-size: 0.75em;
 }
-#datePicker{
-    margin-top:15px;
-    font-family:Verdana;
-    color:darkred;
-}
-#todayMessage, #pastMessage{
-    font-family:Verdana;
-    font-size:20px;
-}
-.currency{
-    font-size:1.5em;
-    color:darkred;
-}
-#euroLink{
-    font-family:Verdana;
+
+#datePicker {
+    margin-top: 15px;
+    font-family: Verdana;
+    color: darkred;
 }
 
+#todayMessage, #pastMessage {
+    font-family: Verdana;
+    font-size: 20px;
+}
 
+.currency {
+    font-size: 1.5em;
+    color: darkred;
+}
 
+#euroLink {
+    font-family: Verdana;
+}
 
 
 /*Inflation------------------------------*/
 
-.aTag{
-    color:#004fbd;
+.aTag {
+    color: #004fbd;
 }
-#inflationDiv{
-    margin-left:3vw;
+
+#inflationDiv {
+    margin-left: 3vw;
     width: 75%;
 }
-.inflationCalc{
-    font-size:20px;
-    margin-top:10px;
+
+.inflationCalc {
+    font-size: 20px;
+    margin-top: 10px;
 }
-#result{
-    margin-bottom:10vh;
+
+#resultInflation {
+    margin-bottom: 10vh;
 }
+
+
+/*Random Generator -----------------------*/
+
+#randomDiv {
+    margin-left: 3vw;
+    width: 75%;
+}
+
+
+/*Lotto ------------------------------*/
+#lottoDiv {
+    margin-left: 3vw;
+    width:75%;
+}
+

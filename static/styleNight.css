@@ -71,12 +71,11 @@ body {
     margin-top: 100px;
     font-family: 'Comfortaa';
     font-size: 1.5rem;
-    color:#f2ce00;
+    color:#d4b717;
     margin-right: 17vw;
     text-align:center;
     text-decoration: underline;
 }
-
 
 .navbar-nav {
     align-content: end;
@@ -374,7 +373,7 @@ div.equal:active {
     margin-top: 20px;
     font-family: 'Comfortaa';
     font-size: 1.5rem;
-    color:gold;
+    color:#d4b717;
     margin-right: 1vw;
     text-align:center;
     text-decoration: underline;
@@ -524,6 +523,6 @@ div.equal:active {
     margin-top:10px;
     color:antiquewhite;
 }
-#result{
-    margin-bottom:10vh;
+#resultInflation {
+    margin-bottom: 10vh;
 }
