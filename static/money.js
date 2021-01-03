@@ -16,7 +16,9 @@ function inflation() {
         data: {},
         success: function (response) {
             let result = response['response']['adjustedValue'];
-            $('#result').append(result);
+            let message = `In <span class="currency">${year}</span> ...  <span class="currency">${input}</span> dollar(s) had about the same purchasing power as today's <span class="currency">${result}</span> dollar(s).`
+
+            $('#result').append(message);
         }
     })
 }
@@ -255,7 +257,7 @@ function exchangePast() {
             let pastDate = $('#date').val();
             let pastA = $('#pastA').val();
             let pastB = $('#pastB').val();
-            let message = `On ${pastDate}, <span class="currency">${pastA}</span> ${currencyA} equalled <span class="currency">${pastB}</span> ${currencyB}.`;
+            let message = `On <span class="currency">${pastDate} ... </span> <span class="currency">${pastA}</span> ${currencyA} equalled <span class="currency">${pastB}</span> ${currencyB}.`;
             $('#pastMessage').append(message);
         }
     })

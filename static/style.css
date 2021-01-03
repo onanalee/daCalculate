@@ -483,9 +483,7 @@ div.equal:active {
     margin-bottom:20px;
 
 }
-
 #currencyDiv{
-    margin-top:150px;
     margin-left:3vw;
     width:75%;
 }
@@ -505,6 +503,9 @@ div.equal:active {
     font-size:1.5em;
     color:darkred;
 }
+#euroLink{
+    font-family:Verdana;
+}
 
 
 
@@ -515,4 +516,5 @@ div.equal:active {
 
 #inflationDiv{
     margin-top:150px;
+    margin-left:3vw;
 }
