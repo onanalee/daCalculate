@@ -39,7 +39,11 @@ function exchange() {
         type: 'GET',
         url: 'https://api.exchangeratesapi.io/latest?base=' + url,
         data: {},
+        beforeSend: function () {
+            $('.loader').show();
+        },
         success: function (response) {
+            $('.loader').hide();
             let cad = response['rates']['CAD'];
             let hkd = response['rates']['HKD'];
             let isk = response['rates']['ISK'];
@@ -159,7 +163,11 @@ function exchangePast() {
         type: 'GET',
         url: 'https://api.exchangeratesapi.io/' + date + '?base=' + url,
         data: {},
+        beforeSend: function () {
+            $('.loader').show();
+        },
         success: function (response) {
+            $('.loader').hide();
             let cad = response['rates']['CAD'];
             let hkd = response['rates']['HKD'];
             let isk = response['rates']['ISK'];

@@ -7,24 +7,16 @@ html, body {
 }
 
 body {
-    /*background-color: #D9B08C;*/
-    background-image: url("lamp.jpeg");
-    /*background-image: url("night_car.jpeg");*/
-    background-image: url("desert.jpeg");
-    /*background-image: url("yellow_wall.jpeg");*/
-    /*background-image: url("pyramid.jpeg");*/
-    /*background-image: url("yellow_pencil.jpeg");*/
-    /*background-size:100%;*/
-    background-color: antiquewhite;
-    /*background-image: url("cherry.jpeg");*/
 
+    background-image: url("lamp.jpeg");
+
+    background-image: url("desert.jpeg");
+
+    background-color: antiquewhite;
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 
@@ -270,9 +262,6 @@ input:checked + .slider:before {
     margin: 4% auto;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 5px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     padding: 20px;
     -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
@@ -459,6 +448,7 @@ div.equal:active {
     font-family: Verdana;
     color: darkred;
     font-size: 1.7em;
+    max-width:75%;
 }
 
 .convert {

@@ -131,12 +131,12 @@ let users = [
     "America/Argentina/ComodRivadavia",
     "America/Argentina/Cordoba",
     "America/Argentina/Jujuy",
-    "America/Argentina/La_Rioja", "La Rioja",
+    "America/Argentina/La_Rioja",
     "America/Argentina/Mendoza",
-    "America/Argentina/Rio_Gallegos", "Rio Gallegos",
+    "America/Argentina/Rio_Gallegos",
     "America/Argentina/Salta",
-    "America/Argentina/San_Juan", "San Juan",
-    "America/Argentina/San_Luis", "San Luis",
+    "America/Argentina/San_Juan",
+    "America/Argentina/San_Luis",
     "America/Argentina/Tucuman",
     "America/Argentina/Ushuaia",
     "America/Aruba",
@@ -148,7 +148,7 @@ let users = [
     "America/Barbados",
     "America/Belem",
     "America/Belize",
-    "America/Blanc-Sablon", "Blanc Sablon",
+    "America/Blanc-Sablon",
     "America/Boa_Vista",
     "America/Bogota",
     "America/Boise",
@@ -248,7 +248,7 @@ let users = [
     "America/Paramaribo",
     "America/Phoenix",
     "America/Port_of_Spain", "Port of Spain",
-    "America/Port-au-Prince", "Port au Prince",
+    "America/Port-au-Prince",
     "America/Porto_Acre",
     "America/Porto_Velho",
     "America/Puerto_Rico", "Puerto Rico",
@@ -329,7 +329,7 @@ let users = [
     "Asia/Harbin",
     "Asia/Hebron",
     "Asia/Ho_Chi_Minh", "Ho Chi Minh",
-    "Asia/Hong_Kong", "Hongkong", "Hong Kong", "Macau", "Mongolia", "Taiwan", "Brunei", "Central Indonesia", "Malaysia", "Philippines",
+    "Asia/Hong_Kong", "Hong Kong", "Macau", "Mongolia", "Taiwan", "Brunei", "Central Indonesia", "Malaysia", "Philippines",
     "Asia/Hovd",
     "Asia/Irkutsk",
     "Asia/Istanbul",
@@ -443,7 +443,6 @@ let users = [
     "Cuba",
     "Egypt",
     "Etc/GMT",
-    "Etc/UCT",
     "Etc/Universal",
     "Etc/Zulu",
     "Europe/Amsterdam",
@@ -506,7 +505,6 @@ let users = [
     "Europe/Zaporozhye",
     "Europe/Zurich",
     "GMT",
-    "GMT0",
     "Greenwich",
     "Indian/Antananarivo",
     "Indian/Chagos",
@@ -527,7 +525,6 @@ let users = [
     "Mexico/BajaNorte",
     "Mexico/BajaSur",
     "Mexico/General",
-    "Navajo",
     "Pacific/Apia",
     "Pacific/Auckland",
     "Pacific/Chatham",
@@ -917,6 +914,11 @@ function timezoneB() {
         let final = time.unixFmt('yyyy.MM.dd h:mm a');
         $('#timezoneB').text(final);
         return;
+    } else if (timezone === "Hongkong" || timezone === "Hong Kong" || timezone === "Macau" || timezone === "Mongolia" || timezone === "Taiwan" || timezone === "Brunei" || timezone === "Central Indonesia" || timezone === "Malaysia" || timezone === "Philippines") {
+        let time = now.goto("Asia/Singapore");
+        let final = time.unixFmt('yyyy.MM.dd h:mm a');
+        $('#timezoneA').text(final);
+        return
     } else if (timezone === "Botswana" || timezone === "Democratic Republic of the Congo (eest)" || timezone === "Burundi" || timezone === "Malawi" || timezone === "Mozambique" || timezone === "Namibia" || timezone === "Rwanda" || timezone === "Sudan" || timezone === "Zambia" || timezone === "Zimbabwe") {
         let time = now.goto("Africa/Gaborone");
         let final = time.unixFmt('yyyy.MM.dd h:mm a');
@@ -969,11 +971,6 @@ function timezoneB() {
         return
     } else if (timezone === "Cambodia" || timezone === "Western Indonesia" || timezone === "Laos" || timezone === "Thailand" || timezone === "Vietnam") {
         let time = now.goto("Asia/Bangkok");
-        let final = time.unixFmt('yyyy.MM.dd h:mm a');
-        $('#timezoneB').text(final);
-        return
-    } else if (timezone === "Hongkong" || timezone === "Hong Kong" || timezone === "Macau" || timezone === "Mongolia" || timezone === "Taiwan" || timezone === "Brunei" || timezone === "Central Indonesia" || timezone === "Malaysia" || timezone === "Philippines") {
-        let time = now.goto("Asia/Singapore");
         let final = time.unixFmt('yyyy.MM.dd h:mm a');
         $('#timezoneB').text(final);
         return
@@ -1034,51 +1031,3 @@ function timezoneB() {
         return;
     }
 }
-
-//// get time difference
-//
-// $(document).ready(function () {
-//     difference();
-//     window.setInterval("difference()", 1000);
-// })
-//
-// function difference() {
-//     let a = $('#timezoneA').text();
-//     let b = $('#timezoneB').text();
-//
-//     let yearA = a.substring(0,4);
-//     let monthA = a.substring(5,7);
-//     let dayA = a.substring(8,10);
-//     let hourA = a.slice(-8, -6);
-//     let minuteA = a.slice(-5,-3);
-//     let ampmA = a.includes('PM');
-//     if(ampmA===false){
-//         hourA = Number(hourA) + 12;
-//     }
-//
-//     let yearB = b.substring(0,4);
-//     let monthB = b.substring(5,7);
-//     let dayB = b.substring(8,10);
-//     let hourB = b.slice(-8, -6);
-//     let minuteB = b.slice(-5,-3);
-//     let ampmB = b.includes('PM');
-//     if(ampmB===false){
-//         hourB = Number(hourB) + 12;
-//     }
-//
-//     let before = spacetime([yearA, monthA, dayA, hourA, minuteA])
-//     let now = spacetime([yearB, monthB, dayB, hourB, minuteB])
-//     let difference = now.since(before);
-//     let diffDay = difference['diff']['days'];
-//     let diffHour = difference['diff']['hours'];
-//     let diffMinutes = difference['diff']['minutes'];
-//
-//     console.log(diffDay, diffHour, diffMinutes);
-//     // console.log(difference);
-//
-//     // if (ampm === True){
-//     // }
-//
-//     // let difference = ;
-//     // $('#difference').text(difference);
-// }

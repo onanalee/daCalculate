@@ -68,7 +68,7 @@ function generatePassword() {
             password += upperSymbols.substring(character, character + 1);
         }
     }
-    $('#password').html(password);
+    $('#password').text(password);
 }
 
 function generateLotto() {

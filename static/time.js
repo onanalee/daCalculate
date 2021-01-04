@@ -14,6 +14,7 @@ let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'
 // });
 $(document).ready(function () {
     document.getElementById('startDate').valueAsDate = today;
+    document.getElementById('startDate2').valueAsDate = today;
 });
 
 
