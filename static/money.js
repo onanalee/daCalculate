@@ -1,4 +1,3 @@
-
 $(document).ready(function ready() {
     $('.loader').hide();
     for (i = 1913; i < 2016; i++) {
@@ -28,7 +27,6 @@ function inflation() {
         }
     })
 }
-
 function exchange() {
     $('#todayMessage').empty();
     let currencyA = $('#currencyA option:selected').val();
