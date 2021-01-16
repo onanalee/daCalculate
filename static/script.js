@@ -1,10 +1,3 @@
-// function nightMode(sheet) {
-//     if (document.getElementById("slider").checked) {
-//         document.getElementById('pagestyle').setAttribute('href', "../static/styleNight.css");
-//     } else {
-//         document.getElementById('pagestyle').setAttribute('href', "../static/style.css");
-//     }
-// }
 const KEY = 'dark_mode';
 let isInDarkMode = localStorage.getItem(KEY) === 'true';
 

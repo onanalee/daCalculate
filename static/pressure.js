@@ -82,7 +82,4 @@ function convertPressure(){
         let after = before * 1;
         $('#pressureAfter').val(after);
     }
-
-
-
 }

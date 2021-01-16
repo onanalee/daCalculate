@@ -7,13 +7,8 @@ html, body {
 }
 
 body {
-
-    background-image: url("lamp.jpeg");
-
     background-image: url("desert.jpeg");
-
     background-color: antiquewhite;
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

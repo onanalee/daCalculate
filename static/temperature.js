@@ -47,5 +47,4 @@ function convertTemperature() {
         let after = before * 1;
         $('#temperatureAfter').val(after);
     }
-
 }

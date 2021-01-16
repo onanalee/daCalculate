@@ -230,14 +230,12 @@ input:checked + .slider:before {
 #timeDate {
     font-family: Verdana;
     font-size: 1.5em;
-    /*display: inline-block;*/
     text-align: center;
     width: 30%;
     margin-top: 100px;
     color: #fff;
     box-sizing: border-box;
     border: 1px solid #D1E8E2;
-    /*padding: 25px;*/
 }
 
 #localTime {
